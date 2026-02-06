@@ -1,96 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Safe Trace Design System
+   Muted lavender & soft gray palette
+   Humanist typography for warmth and approachability
+   Trauma-informed: calm, non-aggressive, protective
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core backgrounds - soft, calming */
+    --background: 250 20% 98%;
+    --foreground: 250 15% 20%;
 
+    /* Cards - slightly elevated, warm */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 250 15% 20%;
 
+    /* Popover */
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 250 15% 20%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - muted lavender */
+    --primary: 265 35% 55%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - soft gray with warmth */
+    --secondary: 250 15% 94%;
+    --secondary-foreground: 250 15% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted - gentle gray */
+    --muted: 250 12% 92%;
+    --muted-foreground: 250 10% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - slightly warmer lavender */
+    --accent: 275 30% 92%;
+    --accent-foreground: 265 35% 35%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Destructive - softened, not alarming */
+    --destructive: 0 55% 55%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Borders - very soft */
+    --border: 250 15% 88%;
+    --input: 250 15% 88%;
+    --ring: 265 35% 55%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Safety mode - calm teal for action items */
+    --safety: 175 45% 45%;
+    --safety-foreground: 0 0% 100%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Quick exit - neutral but visible */
+    --exit: 250 10% 40%;
+    --exit-foreground: 0 0% 100%;
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Lavender gradient for hero */
+    --gradient-start: 265 35% 65%;
+    --gradient-end: 285 25% 75%;
 
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Typography */
+    --font-display: 'Quicksand', sans-serif;
+    --font-body: 'Nunito', sans-serif;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 250 20% 8%;
+    --foreground: 250 10% 92%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 250 18% 12%;
+    --card-foreground: 250 10% 92%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 250 18% 12%;
+    --popover-foreground: 250 10% 92%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 265 40% 65%;
+    --primary-foreground: 250 20% 10%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 250 15% 18%;
+    --secondary-foreground: 250 10% 85%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 250 12% 20%;
+    --muted-foreground: 250 10% 60%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 275 25% 22%;
+    --accent-foreground: 265 35% 80%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 50% 45%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 250 15% 22%;
+    --input: 250 15% 22%;
+    --ring: 265 40% 65%;
+
+    --safety: 175 40% 50%;
+    --safety-foreground: 0 0% 100%;
+
+    --exit: 250 10% 70%;
+    --exit-foreground: 250 20% 10%;
+  }
+
+  /* High contrast mode for accessibility */
+  .high-contrast {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+    --primary: 265 60% 40%;
+    --primary-foreground: 0 0% 100%;
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 20%;
+    --border: 0 0% 70%;
+  }
+
+  .high-contrast.dark {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --primary: 265 50% 70%;
+    --primary-foreground: 0 0% 0%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 80%;
+    --border: 0 0% 40%;
   }
 }
 
@@ -99,7 +131,107 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
-  body {
-    @apply bg-background text-foreground;
+  html {
+    font-family: var(--font-body);
+    scroll-behavior: smooth;
   }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    @apply font-semibold tracking-tight;
+  }
+
+  /* Font size scaling for accessibility */
+  html.text-sm body {
+    font-size: 14px;
+  }
+
+  html.text-base body {
+    font-size: 16px;
+  }
+
+  html.text-lg body {
+    font-size: 18px;
+  }
+
+  html.text-xl body {
+    font-size: 20px;
+  }
+}
+
+@layer utilities {
+  /* Soft gradient backgrounds */
+  .bg-gradient-lavender {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--gradient-start)) 0%,
+      hsl(var(--gradient-end)) 100%
+    );
+  }
+
+  .bg-gradient-soft {
+    background: linear-gradient(
+      180deg,
+      hsl(var(--background)) 0%,
+      hsl(var(--muted)) 100%
+    );
+  }
+
+  /* Calm transitions */
+  .transition-calm {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  /* Focus states - visible but not jarring */
+  .focus-calm {
+    @apply focus:outline-none focus:ring-2 focus:ring-primary/40 focus:ring-offset-2 focus:ring-offset-background;
+  }
+
+  /* Safe text - gentle appearance */
+  .text-safe {
+    @apply text-foreground/90 leading-relaxed;
+  }
+
+  /* Disguise mode styles */
+  .disguise-mode {
+    font-family: 'SF Mono', 'Monaco', 'Consolas', monospace !important;
+  }
+
+  .disguise-mode * {
+    font-family: inherit !important;
+  }
+}
+
+/* Animations - gentle, non-startling */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-gentle {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out forwards;
+}
+
+.animate-pulse-gentle {
+  animation: pulse-gentle 2s ease-in-out infinite;
 }
