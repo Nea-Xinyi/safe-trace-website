@@ -32,7 +32,7 @@ export default function Purpose() {
   return (
     <Layout>
       {/* Hero */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-primary/8 via-accent/20 to-background">
+      <section className="py-16 md:py-24 bg-gradient-to-b from-primary/15 via-accent/25 to-background">
         <div className="container max-w-3xl">
           <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
             Why Safe Trace Exists
