@@ -10,8 +10,7 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center gap-2">
-              <Shield className="h-6 w-6 text-primary" strokeWidth={1.5} />
-              <span className="font-display text-lg font-semibold">Safe Trace</span>
+              <img src={logo} alt="SafeTrace" className="h-8 w-auto" />
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Built by young women, for women. Your digital safety is our priority.
