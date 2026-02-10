@@ -235,3 +235,9 @@
 .animate-pulse-gentle {
   animation: pulse-gentle 2s ease-in-out infinite;
 }
+
+/* Scroll-triggered animations */
+.animate-on-scroll.animate-visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
