@@ -8,9 +8,9 @@ export default function Index() {
     <Layout>
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        {/* Soft gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-accent/50 via-background to-background -z-10" />
-        <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-lavender opacity-10 blur-3xl -z-10" />
+        {/* Richer purple gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/15 via-accent/30 to-background -z-10" />
+        <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-lavender opacity-20 blur-3xl -z-10" />
         
         <div className="container py-20 md:py-32">
           <div className="max-w-3xl mx-auto text-center space-y-8 animate-fade-up">
