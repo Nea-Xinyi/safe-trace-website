@@ -6,6 +6,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AccessibilityProvider } from "@/contexts/AccessibilityContext";
 import Index from "./pages/Index";
 import Resources from "./pages/Resources";
+import Policies from "./pages/Policies";
+import Purpose from "./pages/Purpose";
+import Businesses from "./pages/Businesses";
+import Research from "./pages/Research";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -20,7 +24,10 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/resources" element={<Resources />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="/policies" element={<Policies />} />
+            <Route path="/purpose" element={<Purpose />} />
+            <Route path="/businesses" element={<Businesses />} />
+            <Route path="/research" element={<Research />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

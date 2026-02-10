@@ -23,7 +23,7 @@ export default function Businesses() {
     setSubmitted(true);
     toast({
       title: 'Thank you for your commitment',
-      description: 'We'll review your submission and be in touch.',
+      description: "We'll review your submission and be in touch.",
     });
   };
 

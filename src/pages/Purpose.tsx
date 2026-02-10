@@ -24,7 +24,7 @@ const sections = [
     icon: Users,
     title: 'Who We Are',
     content:
-      'Young women who got tired of waiting for someone else to fix it. We're researchers, designers, and advocates building what the system never did: a standard for digital safety that centers survivors, not corporations. We believe women shouldn't have to choose between participating online and being safe.',
+      "Young women who got tired of waiting for someone else to fix it. We're researchers, designers, and advocates building what the system never did: a standard for digital safety that centers survivors, not corporations. We believe women shouldn't have to choose between participating online and being safe.",
   },
 ];
 

@@ -62,7 +62,7 @@ const policies = [
     color: 'text-primary',
     bg: 'bg-primary/10',
     content:
-      'Every design decision is filtered through one question: does this protect the most vulnerable user? Features that could be weaponized are redesigned or removed. Safety always outweighs convenience.',
+      "Every design decision is filtered through one question: does this protect the most vulnerable user? Features that could be weaponized are redesigned or removed. Safety always outweighs convenience.",
   },
 ];
 
