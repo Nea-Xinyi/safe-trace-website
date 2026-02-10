@@ -14,26 +14,28 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <AccessibilityProvider>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/resources" element={<Resources />} />
-            <Route path="/policies" element={<Policies />} />
-            <Route path="/purpose" element={<Purpose />} />
-            <Route path="/businesses" element={<Businesses />} />
-            <Route path="/research" element={<Research />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
-      </TooltipProvider>
-    </AccessibilityProvider>
-  </QueryClientProvider>
-);
+function App() {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <AccessibilityProvider>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/resources" element={<Resources />} />
+              <Route path="/policies" element={<Policies />} />
+              <Route path="/purpose" element={<Purpose />} />
+              <Route path="/businesses" element={<Businesses />} />
+              <Route path="/research" element={<Research />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </BrowserRouter>
+        </TooltipProvider>
+      </AccessibilityProvider>
+    </QueryClientProvider>
+  );
+}
 
 export default App;
