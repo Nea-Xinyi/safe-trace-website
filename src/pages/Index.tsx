@@ -48,7 +48,7 @@ export default function Index() {
       </section>
 
       {/* Values Section */}
-      <section className="py-16 md:py-24 bg-muted/30">
+      <section className="py-16 md:py-24 bg-primary/5">
         <div className="container">
           <div className="max-w-2xl mx-auto text-center mb-12">
             <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground mb-4">
