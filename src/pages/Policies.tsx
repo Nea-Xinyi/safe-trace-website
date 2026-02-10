@@ -54,7 +54,7 @@ const policies = [
     color: 'text-safety',
     bg: 'bg-safety/10',
     content:
-      'If a breach occurs, you will know within 72 hours — the actual scope, what was exposed, and what we're doing about it. No vague statements, no corporate spin. You deserve the truth.',
+      "If a breach occurs, you will know within 72 hours — the actual scope, what was exposed, and what we're doing about it. No vague statements, no corporate spin. You deserve the truth.",
   },
   {
     icon: Heart,
