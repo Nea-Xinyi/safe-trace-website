@@ -32,10 +32,10 @@ export default function Businesses() {
       {/* Hero */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-primary/12 via-accent/20 to-background">
         <div className="container max-w-3xl">
-          <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h1 className="font-display text-4xl md:text-5xl font-bold text-primary mb-4 animate-fade-up" style={{ animationDelay: '0ms' }}>
             Commit to Safe Trace
           </h1>
-          <p className="text-lg text-muted-foreground leading-relaxed">
+          <p className="text-lg text-muted-foreground leading-relaxed animate-fade-up" style={{ animationDelay: '200ms' }}>
             Doxxing isn't a niche issue — it's a governance failure. Organizations that collect personal data have a responsibility to protect the people behind it.
           </p>
         </div>
@@ -44,39 +44,23 @@ export default function Businesses() {
       {/* Why It Matters */}
       <section className="py-12 md:py-20">
         <div className="container max-w-3xl space-y-8">
-          <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground">
+          <h2 className="font-display text-2xl md:text-3xl font-semibold text-primary">
             Why your organization should care
           </h2>
 
           <div className="grid gap-6 sm:grid-cols-2">
-            <div className="p-6 rounded-xl bg-card border border-border/60 space-y-3">
-              <Building2 className="h-6 w-6 text-primary" />
-              <h3 className="font-display font-semibold">Governance Gap</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Most data protection policies weren't designed with technology-facilitated abuse in mind. Safe Trace fills that gap.
-              </p>
-            </div>
-            <div className="p-6 rounded-xl bg-card border border-border/60 space-y-3">
-              <ShieldCheck className="h-6 w-6 text-safety" />
-              <h3 className="font-display font-semibold">Beyond Compliance</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Our policies align with and exceed SOC 2, ISO 27001, GDPR, and Quebec Law 25 requirements for data protection.
-              </p>
-            </div>
-            <div className="p-6 rounded-xl bg-card border border-border/60 space-y-3">
-              <Globe className="h-6 w-6 text-primary" />
-              <h3 className="font-display font-semibold">Public Trust</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Committing to survivor-centered policies signals that your organization takes data safety seriously — beyond legal minimums.
-              </p>
-            </div>
-            <div className="p-6 rounded-xl bg-card border border-border/60 space-y-3">
-              <FileText className="h-6 w-6 text-safety" />
-              <h3 className="font-display font-semibold">Clear Standards</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Safe Trace policies are specific, actionable, and auditable — not vague promises buried in legal documents.
-              </p>
-            </div>
+            {[
+              { icon: Building2, title: 'Governance Gap', color: 'text-primary', desc: 'Most data protection policies weren\'t designed with technology-facilitated abuse in mind. Safe Trace fills that gap.' },
+              { icon: ShieldCheck, title: 'Beyond Compliance', color: 'text-safety', desc: 'Our policies align with and exceed SOC 2, ISO 27001, GDPR, and Quebec Law 25 requirements for data protection.' },
+              { icon: Globe, title: 'Public Trust', color: 'text-primary', desc: 'Committing to survivor-centered policies signals that your organization takes data safety seriously — beyond legal minimums.' },
+              { icon: FileText, title: 'Clear Standards', color: 'text-safety', desc: 'Safe Trace policies are specific, actionable, and auditable — not vague promises buried in legal documents.' },
+            ].map((item, i) => (
+              <div key={i} className="p-6 rounded-xl bg-card border border-border/60 space-y-3 animate-fade-in-up opacity-0" style={{ animationDelay: `${i * 100}ms`, animationFillMode: 'forwards' }}>
+                <item.icon className={`h-6 w-6 ${item.color}`} />
+                <h3 className="font-display font-semibold">{item.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -84,7 +68,7 @@ export default function Businesses() {
       {/* Framework Alignment */}
       <section className="py-12 md:py-20 bg-primary/5">
         <div className="container max-w-3xl space-y-6">
-          <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground">
+          <h2 className="font-display text-2xl md:text-3xl font-semibold text-primary">
             Framework Alignment
           </h2>
           <p className="text-muted-foreground leading-relaxed">
@@ -110,7 +94,7 @@ export default function Businesses() {
       {/* Commitment Form */}
       <section className="py-12 md:py-20">
         <div className="container max-w-xl space-y-6">
-          <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground">
+          <h2 className="font-display text-2xl md:text-3xl font-semibold text-primary">
             Make Your Commitment
           </h2>
           <p className="text-muted-foreground">

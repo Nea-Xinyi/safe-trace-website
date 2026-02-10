@@ -34,10 +34,10 @@ export default function Purpose() {
       {/* Hero */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-primary/15 via-accent/25 to-background">
         <div className="container max-w-3xl">
-          <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h1 className="font-display text-4xl md:text-5xl font-bold text-primary mb-4 animate-fade-up" style={{ animationDelay: '0ms' }}>
             Why Safe Trace Exists
           </h1>
-          <p className="text-lg text-muted-foreground leading-relaxed">
+          <p className="text-lg text-muted-foreground leading-relaxed animate-fade-up" style={{ animationDelay: '200ms' }}>
             Because the systems meant to protect women weren't built by women, and it shows.
           </p>
         </div>
@@ -47,12 +47,12 @@ export default function Purpose() {
       <section className="py-12 md:py-20">
         <div className="container max-w-3xl space-y-16">
           {sections.map((section, i) => (
-            <div key={i} className="space-y-4">
+            <div key={i} className="space-y-4 animate-fade-in-up opacity-0" style={{ animationDelay: `${i * 150}ms`, animationFillMode: 'forwards' }}>
               <div className="flex items-center gap-3">
                 <div className="p-2.5 rounded-full bg-primary/10">
                   <section.icon className="h-5 w-5 text-primary" />
                 </div>
-                <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground">
+                <h2 className="font-display text-2xl md:text-3xl font-semibold text-primary">
                   {section.title}
                 </h2>
               </div>
@@ -67,7 +67,7 @@ export default function Purpose() {
       {/* Closing */}
       <section className="py-12 md:py-20 bg-primary/5">
         <div className="container max-w-3xl text-center space-y-4">
-          <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground">
+          <h2 className="font-display text-2xl md:text-3xl font-semibold text-primary">
             This is just the beginning.
           </h2>
           <p className="text-muted-foreground leading-relaxed max-w-xl mx-auto">
