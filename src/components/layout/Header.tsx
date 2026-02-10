@@ -45,6 +45,18 @@ export function Header() {
           >
             Our Purpose
           </Link>
+          <Link 
+            to="/businesses" 
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-calm"
+          >
+            For Businesses
+          </Link>
+          <Link 
+            to="/research" 
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-calm"
+          >
+            Research
+          </Link>
         </nav>
 
         {/* Right side controls */}

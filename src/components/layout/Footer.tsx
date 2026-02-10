@@ -43,6 +43,9 @@ export function Footer() {
               <Link to="/research" className="text-sm text-muted-foreground hover:text-foreground transition-calm">
                 Our Research
               </Link>
+              <Link to="/purpose" className="text-sm text-muted-foreground hover:text-foreground transition-calm">
+                Our Purpose
+              </Link>
             </nav>
           </div>
 

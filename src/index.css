@@ -24,8 +24,8 @@
     --popover: 0 0% 100%;
     --popover-foreground: 250 15% 20%;
 
-    /* Primary - muted lavender */
-    --primary: 265 35% 55%;
+    /* Primary - richer lavender */
+    --primary: 260 45% 55%;
     --primary-foreground: 0 0% 100%;
 
     /* Secondary - soft gray with warmth */
