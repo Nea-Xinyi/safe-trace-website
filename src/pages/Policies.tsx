@@ -22,7 +22,7 @@ const policies = [
     color: 'text-primary',
     bg: 'bg-primary/10',
     content:
-      'Every interaction on Safe Trace requires clear, informed consent. No dark patterns, no pre-checked boxes, no confusing language. You always know what you're agreeing to, and you can change your mind at any time.',
+      "Every interaction on Safe Trace requires clear, informed consent. No dark patterns, no pre-checked boxes, no confusing language. You always know what you're agreeing to, and you can change your mind at any time.",
   },
   {
     icon: MapPin,
