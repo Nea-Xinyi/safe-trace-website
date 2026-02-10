@@ -58,7 +58,7 @@ export default function Research() {
       </section>
 
       {/* Summary */}
-      <section className="py-12 md:py-20 bg-muted/30">
+      <section className="py-12 md:py-20 bg-primary/5">
         <div className="container max-w-3xl space-y-6">
           <div className="flex items-center gap-3">
             <div className="p-2.5 rounded-full bg-primary/10">
