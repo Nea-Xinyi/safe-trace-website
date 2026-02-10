@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Heart, Shield, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Layout } from '@/components/layout/Layout';
+import { useEffect, useRef } from 'react';
 
 export default function Index() {
   return (
