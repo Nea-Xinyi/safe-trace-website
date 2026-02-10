@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { 
   ShieldAlert, 
   Trash2, 
-  Eye, 
   MapPin, 
   Key,
   CheckCircle2,
@@ -16,7 +15,6 @@ import {
   DialogTitle,
 } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
-import { useAccessibility } from '@/contexts/AccessibilityContext';
 import { useToast } from '@/hooks/use-toast';
 
 interface SafetyModePanelProps {
@@ -25,17 +23,13 @@ interface SafetyModePanelProps {
 }
 
 export function SafetyModePanel({ open, onOpenChange }: SafetyModePanelProps) {
-  const { disguiseMode, setDisguiseMode } = useAccessibility();
   const { toast } = useToast();
   const [actionStates, setActionStates] = useState<Record<string, 'idle' | 'done'>>({});
 
   const clearLocalData = () => {
     try {
-      // Clear localStorage
       localStorage.clear();
-      // Clear sessionStorage
       sessionStorage.clear();
-      // Clear cookies (as much as possible from JS)
       document.cookie.split(';').forEach((cookie) => {
         const eqPos = cookie.indexOf('=');
         const name = eqPos > -1 ? cookie.substring(0, eqPos) : cookie;
@@ -56,17 +50,6 @@ export function SafetyModePanel({ open, onOpenChange }: SafetyModePanelProps) {
     }
   };
 
-  const toggleDisguiseMode = () => {
-    setDisguiseMode(!disguiseMode);
-    setActionStates(prev => ({ ...prev, disguise: disguiseMode ? 'idle' : 'done' }));
-    toast({
-      title: disguiseMode ? 'Normal view restored' : 'Disguise mode activated',
-      description: disguiseMode 
-        ? 'The page now looks normal again.' 
-        : 'The page now looks like a simple notes app.',
-    });
-  };
-
   const actions = [
     {
       id: 'clearData',
@@ -75,16 +58,6 @@ export function SafetyModePanel({ open, onOpenChange }: SafetyModePanelProps) {
       description: 'Remove browsing history, cookies, and stored data from this site',
       action: clearLocalData,
       buttonText: 'Clear Now',
-    },
-    {
-      id: 'disguise',
-      icon: Eye,
-      title: 'Disguise Mode',
-      description: 'Make this page look like a calculator or notes app',
-      action: toggleDisguiseMode,
-      buttonText: disguiseMode ? 'Turn Off' : 'Activate',
-      isToggle: true,
-      isActive: disguiseMode,
     },
     {
       id: 'location',
@@ -140,11 +113,11 @@ export function SafetyModePanel({ open, onOpenChange }: SafetyModePanelProps) {
               </div>
               <Button
                 onClick={action.action}
-                variant={action.isActive ? 'default' : 'outline'}
+                variant="outline"
                 size="sm"
-                className={`shrink-0 ${action.isActive ? 'bg-safety hover:bg-safety/90' : ''}`}
+                className="shrink-0"
               >
-                {actionStates[action.id] === 'done' && !action.isToggle ? (
+                {actionStates[action.id] === 'done' ? (
                   <CheckCircle2 className="h-4 w-4 mr-1" />
                 ) : null}
                 {action.buttonText}

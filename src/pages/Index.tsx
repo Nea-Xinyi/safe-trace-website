@@ -112,7 +112,7 @@ export default function Index() {
       <section className="py-16 md:py-24 bg-gradient-to-b from-background to-primary/8">
         <div className="container">
           <div className="max-w-2xl mx-auto text-center space-y-6">
-            <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground">
+            <h2 className="font-display text-2xl md:text-3xl font-semibold text-primary">
               Need help right now?
             </h2>
             <p className="text-muted-foreground leading-relaxed">
