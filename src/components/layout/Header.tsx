@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
-import { Shield, ExternalLink } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { AccessibilityControls } from './AccessibilityControls';
 import { SafetyModeButton } from '@/components/safety/SafetyModeButton';
+import logo from '@/assets/SafeTrace_Company_Logo.png';
 
 export function Header() {
   const handleQuickExit = () => {
