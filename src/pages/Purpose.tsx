@@ -18,7 +18,7 @@ const sections = [
     icon: Lock,
     title: 'Why Existing Solutions Fail Survivors',
     content:
-      'Privacy tools are paywalled. Reporting mechanisms are slow and dismissive. Platform moderation is reactive and inconsistent. Legal protections vary wildly by jurisdiction and rarely keep pace with technology. The burden of proof falls on the person being harmed, not the person causing harm.',
+      "Privacy tools are paywalled. Reporting mechanisms are slow and dismissive. Platform moderation is reactive and inconsistent. Legal protections vary wildly by jurisdiction and rarely keep pace with technology. The burden of proof falls on the person being harmed, not the person causing harm.",
   },
   {
     icon: Users,
