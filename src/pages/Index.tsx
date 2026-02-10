@@ -66,7 +66,7 @@ export default function Index() {
       <section className="py-16 md:py-24 bg-primary/5">
         <div className="container">
           <div className="max-w-2xl mx-auto text-center mb-12">
-            <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground mb-4">
+            <h2 className="font-display text-2xl md:text-3xl font-semibold text-primary mb-4">
               Built on trust, not tracking
             </h2>
             <p className="text-muted-foreground">
