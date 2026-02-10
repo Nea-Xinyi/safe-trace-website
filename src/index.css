@@ -24,21 +24,21 @@
     --popover: 0 0% 100%;
     --popover-foreground: 250 15% 20%;
 
-    /* Primary - richer lavender */
-    --primary: 260 45% 55%;
+    /* Primary - deep purple */
+    --primary: 270 50% 45%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary - soft gray with warmth */
-    --secondary: 250 15% 94%;
-    --secondary-foreground: 250 15% 25%;
+    /* Secondary - soft purple tint */
+    --secondary: 270 20% 93%;
+    --secondary-foreground: 270 30% 25%;
 
-    /* Muted - gentle gray */
-    --muted: 250 12% 92%;
-    --muted-foreground: 250 10% 45%;
+    /* Muted - lavender-gray */
+    --muted: 265 15% 91%;
+    --muted-foreground: 260 12% 42%;
 
-    /* Accent - slightly warmer lavender */
-    --accent: 275 30% 92%;
-    --accent-foreground: 265 35% 35%;
+    /* Accent - warmer purple */
+    --accent: 280 35% 90%;
+    --accent-foreground: 270 40% 30%;
 
     /* Destructive - softened, not alarming */
     --destructive: 0 55% 55%;
