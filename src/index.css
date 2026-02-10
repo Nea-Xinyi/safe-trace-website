@@ -197,13 +197,20 @@
     @apply text-foreground/90 leading-relaxed;
   }
 
-  /* Disguise mode styles */
-  .disguise-mode {
+  /* Disguise mode styles - transforms page to look like a notes app */
+  .disguise-mode,
+  .disguise-mode * {
     font-family: 'SF Mono', 'Monaco', 'Consolas', monospace !important;
   }
 
-  .disguise-mode * {
-    font-family: inherit !important;
+  .disguise-mode img,
+  .disguise-mode svg {
+    visibility: hidden !important;
+  }
+
+  .disguise-mode .bg-gradient-lavender,
+  .disguise-mode .bg-gradient-soft {
+    background: none !important;
   }
 }
 

@@ -20,7 +20,7 @@ export function Header() {
           className="flex items-center gap-2 transition-calm hover:opacity-80"
           aria-label="Safe Trace - Home"
         >
-          <img src={logo} alt="SafeTrace" className="h-9 w-auto" />
+          <img src={logo} alt="SafeTrace" className="h-9 w-auto mix-blend-multiply dark:mix-blend-screen opacity-90" />
         </Link>
 
         {/* Navigation - hidden on mobile, shown in menu */}

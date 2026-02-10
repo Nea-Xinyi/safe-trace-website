@@ -36,12 +36,17 @@ export function AccessibilityProvider({ children }: { children: ReactNode }) {
   }, [highContrast]);
 
   useEffect(() => {
-    // Apply disguise mode class
+    // Apply disguise mode class to both html and body
+    const html = document.documentElement;
     const body = document.body;
     if (disguiseMode) {
+      html.classList.add('disguise-mode');
       body.classList.add('disguise-mode');
+      document.title = 'Notes App';
     } else {
+      html.classList.remove('disguise-mode');
       body.classList.remove('disguise-mode');
+      document.title = 'Safe Trace';
     }
   }, [disguiseMode]);
 
