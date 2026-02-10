@@ -97,7 +97,7 @@ export default function Index() {
       </section>
 
       {/* Gentle CTA Section */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-gradient-to-b from-background to-primary/8">
         <div className="container">
           <div className="max-w-2xl mx-auto text-center space-y-6">
             <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground">
@@ -108,7 +108,7 @@ export default function Index() {
               understanding your legal options, and finding emotional support. 
               No sign-up required.
             </p>
-            <Button asChild variant="secondary" size="lg" className="mt-4">
+            <Button asChild size="lg" className="mt-4">
               <Link to="/resources">
                 Access Resources
                 <ArrowRight className="ml-2 h-4 w-4" />

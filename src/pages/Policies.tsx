@@ -7,6 +7,9 @@ import {
   Bell,
   Heart,
   Building2,
+  Lock,
+  FileText,
+  Scale,
 } from 'lucide-react';
 import {
   Accordion,
@@ -21,48 +24,91 @@ const policies = [
     title: 'Explicit, Informed Consent',
     color: 'text-primary',
     bg: 'bg-primary/10',
-    content:
-      "Every interaction on Safe Trace requires clear, informed consent. No dark patterns, no pre-checked boxes, no confusing language. You always know what you're agreeing to, and you can change your mind at any time.",
+    content: [
+      'All data collection requires affirmative, unambiguous consent obtained through clear, plain-language disclosures prior to any processing activity.',
+      'Consent interfaces must be free of dark patterns, pre-checked boxes, or manipulative design. Users must actively opt in — never be opted in by default.',
+      'Consent must be granular: users can agree to specific processing activities independently (e.g., consenting to account creation without consenting to analytics).',
+      'Consent can be withdrawn at any time through a process no more complex than the one used to grant it, in compliance with GDPR Article 7(3).',
+      'Records of consent (timestamp, scope, method) must be maintained and auditable.',
+    ],
   },
   {
     icon: MapPin,
-    title: 'Anti-Stalking Safeguards',
-    color: 'text-safety',
-    bg: 'bg-safety/10',
-    content:
-      'Location data is never stored without explicit permission. Emergency disable features let you cut off all location sharing instantly. We build alerts, not surveillance — you stay in control of who knows where you are.',
-  },
-  {
-    icon: Shield,
-    title: 'Data Minimization',
+    title: 'Anti-Stalking & Location Safeguards',
     color: 'text-primary',
     bg: 'bg-primary/10',
-    content:
-      "We only collect what is absolutely essential. No behavioral tracking, no advertising profiles, no selling data to third parties. If we don't need it to serve you, we don't collect it.",
+    content: [
+      'Location data is classified as sensitive personal information and is never collected, stored, or processed without explicit, purpose-limited consent.',
+      'Any location-sharing feature must include a one-tap emergency disable that immediately and irrevocably ceases all location transmission and purges cached location data.',
+      'Location data must not be retained beyond the active session unless the user explicitly opts into storage, with a maximum retention period of 24 hours.',
+      'Geofencing, movement pattern analysis, or predictive location modeling is prohibited without independent ethical review and explicit user authorization.',
+      'All location-related access logs must be available to the user in real time, showing exactly who accessed their location and when.',
+    ],
+  },
+  {
+    icon: Lock,
+    title: 'Data Minimization & Purpose Limitation',
+    color: 'text-primary',
+    bg: 'bg-primary/10',
+    content: [
+      'Only data strictly necessary for the stated purpose may be collected. No speculative, behavioural, or advertising-related data collection is permitted.',
+      'Each data field collected must have a documented legal basis and specific purpose, reviewable upon request (aligned with GDPR Article 5(1)(b)).',
+      'Data may not be repurposed beyond the original stated intent without obtaining fresh, specific consent.',
+      'Third-party data sharing is prohibited except where required by law, and any such disclosure must be communicated to the user within 72 hours.',
+      'Regular data audits must be conducted quarterly to identify and purge any data that no longer serves its original purpose.',
+    ],
   },
   {
     icon: Trash2,
-    title: 'Rapid Data Deletion',
-    color: 'text-destructive',
-    bg: 'bg-destructive/10',
-    content:
-      'Request deletion of your data at any time, and we act within 48 hours — not 30 days, not "when we get around to it." Your right to disappear is non-negotiable.',
+    title: 'Rapid Data Deletion & Portability',
+    color: 'text-primary',
+    bg: 'bg-primary/10',
+    content: [
+      'Users may request complete deletion of their personal data at any time. Deletion must be executed within 48 hours — not the 30-day maximum permitted under GDPR Article 17.',
+      'Deletion must extend to all backups, replicas, third-party processors, and derived datasets. A certificate of deletion must be provided upon request.',
+      'Users have the right to export all their data in a machine-readable, interoperable format (JSON, CSV) at any time, in compliance with GDPR Article 20.',
+      'Account deletion must not require contacting support, navigating complex workflows, or providing justification. One-click deletion must be available.',
+      'Automated data retention limits must be enforced: inactive account data is purged after 12 months with 30-day advance notification.',
+    ],
   },
   {
     icon: Bell,
     title: 'Transparency & Breach Notification',
-    color: 'text-safety',
-    bg: 'bg-safety/10',
-    content:
-      "If a breach occurs, you will know within 72 hours — the actual scope, what was exposed, and what we're doing about it. No vague statements, no corporate spin. You deserve the truth.",
+    color: 'text-primary',
+    bg: 'bg-primary/10',
+    content: [
+      'In the event of a data breach, affected users must be notified within 72 hours with a clear, non-technical disclosure of: what data was compromised, the scope of the breach, and specific remediation steps being taken.',
+      'Breach notifications must not contain corporate euphemisms. Language must be direct and actionable ("Your email address and phone number were accessed by an unauthorized party" — not "a security incident may have impacted some user data").',
+      'An annual transparency report must be published detailing: number of data requests received from law enforcement, number of breaches, data retention statistics, and third-party processor audits.',
+      'All algorithmic decisions that affect user safety, content visibility, or data exposure must be documented and explainable to the user upon request.',
+      'Security audit results from independent third parties must be published in summary form at least annually.',
+    ],
   },
   {
     icon: Heart,
     title: 'Survivor-Centered Design',
     color: 'text-primary',
     bg: 'bg-primary/10',
-    content:
-      "Every design decision is filtered through one question: does this protect the most vulnerable user? Features that could be weaponized are redesigned or removed. Safety always outweighs convenience.",
+    content: [
+      'Every feature, interface, and data flow must be evaluated through a threat model that asks: "Could this be weaponized against the most vulnerable user?" Features that present exploitation risk must be redesigned or removed.',
+      'Safety-critical features (quick exit, data purge, account lockdown) must be accessible within two interactions from any page and must not require authentication to activate.',
+      'No feature may be deployed that enables surveillance, location tracking, or behavioural monitoring of one user by another, unless the monitored user has independent, revocable control.',
+      'Content moderation and reporting systems must be designed to protect the reporter — not expose them to retaliation. Reporter identity must never be disclosed to the reported party.',
+      'All design decisions must be informed by direct consultation with survivor advocacy organizations. Compliance with this principle must be documented in product decision logs.',
+    ],
+  },
+  {
+    icon: Scale,
+    title: 'Regulatory Alignment & Accountability',
+    color: 'text-primary',
+    bg: 'bg-primary/10',
+    content: [
+      'Safe Trace policies are designed to meet or exceed the requirements of GDPR (EU), Quebec Law 25 (Canada), PIPEDA (Canada), ISO 27001, and SOC 2 Type II.',
+      'Compliance is treated as a floor, not a ceiling. Where regulations fall short on survivor protection, Safe Trace policies apply the stricter standard.',
+      'Organizations adopting these policies must designate a Data Protection Officer (or equivalent) responsible for ongoing compliance monitoring.',
+      'Annual third-party audits against these policies must be conducted, with results made available to users in summary form.',
+      'Non-compliance with any of these policies must be self-reported within 30 days and accompanied by a remediation plan with defined timelines.',
+    ],
   },
 ];
 
@@ -70,13 +116,13 @@ export default function Policies() {
   return (
     <Layout>
       {/* Hero */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-accent/40 to-background">
+      <section className="py-16 md:py-24 bg-gradient-to-b from-primary/12 via-accent/30 to-background">
         <div className="container max-w-3xl">
           <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
             Clear policies. No hidden compromises.
           </h1>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            We believe the platforms that protect women should hold themselves to a higher standard than the ones that fail them. Here's exactly how we operate.
+            We believe the platforms that protect women should hold themselves to a higher standard than the ones that fail them. These are the specific, enforceable commitments that Safe Trace — and every organization that signs on — must uphold.
           </p>
         </div>
       </section>
@@ -89,7 +135,7 @@ export default function Policies() {
               <AccordionItem
                 key={i}
                 value={`policy-${i}`}
-                className="border border-border/60 rounded-xl px-6 data-[state=open]:bg-card"
+                className="border border-primary/20 rounded-xl px-6 data-[state=open]:bg-primary/5 data-[state=open]:border-primary/30"
               >
                 <AccordionTrigger className="hover:no-underline py-5">
                   <div className="flex items-center gap-4 text-left">
@@ -101,8 +147,15 @@ export default function Policies() {
                     </span>
                   </div>
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed pb-6 pl-16">
-                  {policy.content}
+                <AccordionContent className="pb-6 pl-16">
+                  <ul className="space-y-3">
+                    {policy.content.map((item, j) => (
+                      <li key={j} className="flex gap-3 text-muted-foreground leading-relaxed">
+                        <span className="text-primary font-bold mt-0.5 shrink-0">•</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </AccordionContent>
               </AccordionItem>
             ))}
@@ -111,7 +164,7 @@ export default function Policies() {
       </section>
 
       {/* Why These Policies Exist */}
-      <section className="py-12 md:py-20 bg-muted/30">
+      <section className="py-12 md:py-20 bg-primary/5">
         <div className="container max-w-3xl space-y-6">
           <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground">
             Why these policies exist
@@ -120,7 +173,10 @@ export default function Policies() {
             Current laws and platforms consistently fail survivors of technology-facilitated abuse. Most privacy policies are written to protect the company, not the user. Most platforms moderate reactively — after harm has already been done.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            Safe Trace policies are preventive. They're modeled on the strongest international standards — GDPR, Quebec's Law 25, ISO 27001 — and then go further, because compliance is a floor, not a ceiling.
+            Safe Trace policies are preventive. They are modeled on the strongest international standards — GDPR, Quebec's Law 25, ISO 27001, SOC 2 — and then go further, because compliance is a floor, not a ceiling.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            Every policy above is designed to be specific, auditable, and enforceable. Vague commitments to "user safety" are insufficient. These are the concrete standards we hold ourselves and our partners to.
           </p>
         </div>
       </section>
@@ -143,7 +199,7 @@ export default function Policies() {
             </a>{' '}
             page.
           </p>
-          <div className="p-8 rounded-xl border border-dashed border-border text-center text-muted-foreground">
+          <div className="p-8 rounded-xl border border-dashed border-primary/30 text-center text-muted-foreground bg-primary/5">
             Be the first organization to commit.
           </div>
         </div>

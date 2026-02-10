@@ -65,7 +65,7 @@ export default function Purpose() {
       </section>
 
       {/* Closing */}
-      <section className="py-12 md:py-20 bg-muted/30">
+      <section className="py-12 md:py-20 bg-primary/5">
         <div className="container max-w-3xl text-center space-y-4">
           <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground">
             This is just the beginning.

@@ -103,7 +103,7 @@ export default function Research() {
       </section>
 
       {/* Download */}
-      <section className="py-12 md:py-20 bg-muted/30">
+      <section className="py-12 md:py-20 bg-primary/5">
         <div className="container max-w-3xl text-center space-y-6">
           <div className="p-2.5 rounded-full bg-primary/10 w-fit mx-auto">
             <FileDown className="h-5 w-5 text-primary" />
