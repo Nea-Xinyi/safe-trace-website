@@ -38,7 +38,7 @@ const policies = [
     color: 'text-primary',
     bg: 'bg-primary/10',
     content:
-      'We only collect what is absolutely essential. No behavioral tracking, no advertising profiles, no selling data to third parties. If we don't need it to serve you, we don't collect it.',
+      "We only collect what is absolutely essential. No behavioral tracking, no advertising profiles, no selling data to third parties. If we don't need it to serve you, we don't collect it.",
   },
   {
     icon: Trash2,
