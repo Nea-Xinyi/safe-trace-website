@@ -8,9 +8,9 @@ export default function Index() {
     <Layout>
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        {/* Soft gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-accent/50 via-background to-background -z-10" />
-        <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-lavender opacity-10 blur-3xl -z-10" />
+        {/* Richer purple gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/15 via-accent/30 to-background -z-10" />
+        <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-lavender opacity-20 blur-3xl -z-10" />
         
         <div className="container py-20 md:py-32">
           <div className="max-w-3xl mx-auto text-center space-y-8 animate-fade-up">
@@ -48,7 +48,7 @@ export default function Index() {
       </section>
 
       {/* Values Section */}
-      <section className="py-16 md:py-24 bg-muted/30">
+      <section className="py-16 md:py-24 bg-primary/5">
         <div className="container">
           <div className="max-w-2xl mx-auto text-center mb-12">
             <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground mb-4">
@@ -97,7 +97,7 @@ export default function Index() {
       </section>
 
       {/* Gentle CTA Section */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-gradient-to-b from-background to-primary/8">
         <div className="container">
           <div className="max-w-2xl mx-auto text-center space-y-6">
             <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground">
@@ -108,7 +108,7 @@ export default function Index() {
               understanding your legal options, and finding emotional support. 
               No sign-up required.
             </p>
-            <Button asChild variant="secondary" size="lg" className="mt-4">
+            <Button asChild size="lg" className="mt-4">
               <Link to="/resources">
                 Access Resources
                 <ArrowRight className="ml-2 h-4 w-4" />

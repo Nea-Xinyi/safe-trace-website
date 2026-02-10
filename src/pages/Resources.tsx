@@ -28,7 +28,7 @@ export default function Resources() {
     <Layout>
       <div className={`${plainTextMode ? 'font-mono text-sm' : ''}`}>
         {/* Header */}
-        <section className="py-12 md:py-16 bg-accent/30">
+        <section className="py-12 md:py-16 bg-gradient-to-b from-primary/12 via-accent/25 to-background">
           <div className="container">
             <div className="max-w-3xl">
               <h1 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">

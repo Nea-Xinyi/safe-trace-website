@@ -30,7 +30,7 @@ export default function Businesses() {
   return (
     <Layout>
       {/* Hero */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-safety/8 via-accent/15 to-background">
+      <section className="py-16 md:py-24 bg-gradient-to-b from-primary/12 via-accent/20 to-background">
         <div className="container max-w-3xl">
           <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
             Commit to Safe Trace
@@ -82,7 +82,7 @@ export default function Businesses() {
       </section>
 
       {/* Framework Alignment */}
-      <section className="py-12 md:py-20 bg-muted/30">
+      <section className="py-12 md:py-20 bg-primary/5">
         <div className="container max-w-3xl space-y-6">
           <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground">
             Framework Alignment

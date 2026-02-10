@@ -1,16 +1,16 @@
 import { Link } from 'react-router-dom';
-import { Shield, Heart } from 'lucide-react';
+import { Heart } from 'lucide-react';
+import logo from '@/assets/SafeTrace_Company_Logo.png';
 
 export function Footer() {
   return (
-    <footer className="border-t border-border/40 bg-muted/30">
+    <footer className="border-t border-primary/20 bg-primary/5">
       <div className="container py-12">
         <div className="grid gap-8 md:grid-cols-4">
           {/* Brand */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center gap-2">
-              <Shield className="h-6 w-6 text-primary" strokeWidth={1.5} />
-              <span className="font-display text-lg font-semibold">Safe Trace</span>
+              <img src={logo} alt="SafeTrace" className="h-8 w-auto" />
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Built by young women, for women. Your digital safety is our priority.

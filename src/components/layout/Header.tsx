@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
-import { Shield, ExternalLink } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { AccessibilityControls } from './AccessibilityControls';
 import { SafetyModeButton } from '@/components/safety/SafetyModeButton';
+import logo from '@/assets/SafeTrace_Company_Logo.png';
 
 export function Header() {
   const handleQuickExit = () => {
@@ -19,10 +20,7 @@ export function Header() {
           className="flex items-center gap-2 transition-calm hover:opacity-80"
           aria-label="Safe Trace - Home"
         >
-          <Shield className="h-7 w-7 text-primary" strokeWidth={1.5} />
-          <span className="font-display text-xl font-semibold text-foreground">
-            Safe Trace
-          </span>
+          <img src={logo} alt="SafeTrace" className="h-9 w-auto" />
         </Link>
 
         {/* Navigation - hidden on mobile, shown in menu */}

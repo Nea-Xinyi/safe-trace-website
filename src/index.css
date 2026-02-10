@@ -24,21 +24,21 @@
     --popover: 0 0% 100%;
     --popover-foreground: 250 15% 20%;
 
-    /* Primary - richer lavender */
-    --primary: 260 45% 55%;
+    /* Primary - deep purple */
+    --primary: 270 50% 45%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary - soft gray with warmth */
-    --secondary: 250 15% 94%;
-    --secondary-foreground: 250 15% 25%;
+    /* Secondary - soft purple tint */
+    --secondary: 270 20% 93%;
+    --secondary-foreground: 270 30% 25%;
 
-    /* Muted - gentle gray */
-    --muted: 250 12% 92%;
-    --muted-foreground: 250 10% 45%;
+    /* Muted - lavender-gray */
+    --muted: 265 15% 91%;
+    --muted-foreground: 260 12% 42%;
 
-    /* Accent - slightly warmer lavender */
-    --accent: 275 30% 92%;
-    --accent-foreground: 265 35% 35%;
+    /* Accent - warmer purple */
+    --accent: 280 35% 90%;
+    --accent-foreground: 270 40% 30%;
 
     /* Destructive - softened, not alarming */
     --destructive: 0 55% 55%;
@@ -47,7 +47,7 @@
     /* Borders - very soft */
     --border: 250 15% 88%;
     --input: 250 15% 88%;
-    --ring: 265 35% 55%;
+    --ring: 270 50% 45%;
 
     --radius: 0.75rem;
 
@@ -78,8 +78,8 @@
     --popover: 250 18% 12%;
     --popover-foreground: 250 10% 92%;
 
-    --primary: 265 40% 65%;
-    --primary-foreground: 250 20% 10%;
+    --primary: 270 50% 60%;
+    --primary-foreground: 270 20% 10%;
 
     --secondary: 250 15% 18%;
     --secondary-foreground: 250 10% 85%;
@@ -87,8 +87,8 @@
     --muted: 250 12% 20%;
     --muted-foreground: 250 10% 60%;
 
-    --accent: 275 25% 22%;
-    --accent-foreground: 265 35% 80%;
+    --accent: 280 30% 22%;
+    --accent-foreground: 270 40% 80%;
 
     --destructive: 0 50% 45%;
     --destructive-foreground: 0 0% 100%;
