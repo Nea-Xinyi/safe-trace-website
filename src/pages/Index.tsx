@@ -33,19 +33,19 @@ export default function Index() {
         
         <div className="container py-20 md:py-32">
           <div className="max-w-3xl mx-auto text-center space-y-8">
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary/70 leading-tight animate-fade-up" style={{ animationDelay: '0ms' }}>
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight animate-fade-up" style={{ animationDelay: '0ms' }}>
               Your digital safety is our priority.
             </h1>
             
-            <p className="text-xl md:text-2xl text-primary font-display font-medium animate-fade-up" style={{ animationDelay: '150ms' }}>
+            <p className="text-xl md:text-2xl text-primary/80 font-display font-medium animate-fade-up" style={{ animationDelay: '300ms' }}>
               Made by young women, to protect women.
             </p>
             
-            <p className="text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed animate-fade-up" style={{ animationDelay: '300ms' }}>
+            <p className="text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed animate-fade-up" style={{ animationDelay: '600ms' }}>
               Designed for moments when privacy means survival.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4 animate-fade-up" style={{ animationDelay: '450ms' }}>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4 animate-fade-up" style={{ animationDelay: '900ms' }}>
               <Button asChild size="lg" className="text-base px-8">
                 <Link to="/policies">
                   Read Our Policies
@@ -66,7 +66,7 @@ export default function Index() {
       <section className="py-16 md:py-24 bg-primary/5">
         <div className="container">
           <div className="max-w-2xl mx-auto text-center mb-12">
-            <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground mb-4">
+            <h2 className="font-display text-2xl md:text-3xl font-semibold text-primary mb-4">
               Built on trust, not tracking
             </h2>
             <p className="text-muted-foreground">
@@ -112,7 +112,7 @@ export default function Index() {
       <section className="py-16 md:py-24 bg-gradient-to-b from-background to-primary/8">
         <div className="container">
           <div className="max-w-2xl mx-auto text-center space-y-6">
-            <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground">
+            <h2 className="font-display text-2xl md:text-3xl font-semibold text-primary">
               Need help right now?
             </h2>
             <p className="text-muted-foreground leading-relaxed">

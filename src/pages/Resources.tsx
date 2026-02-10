@@ -31,15 +31,15 @@ export default function Resources() {
         <section className="py-12 md:py-16 bg-gradient-to-b from-primary/12 via-accent/25 to-background">
           <div className="container">
             <div className="max-w-3xl">
-              <h1 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+              <h1 className="font-display text-3xl md:text-4xl font-bold text-primary mb-4 animate-fade-up" style={{ animationDelay: '0ms' }}>
                 Resources for Digital Safety
               </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-lg text-muted-foreground leading-relaxed animate-fade-up" style={{ animationDelay: '200ms' }}>
                 Practical help for protecting yourself online. No account needed, no tracking on this page.
               </p>
               
               {/* Plain text mode toggle */}
-              <div className="flex items-center gap-3 mt-6 p-4 rounded-lg bg-card border border-border">
+              <div className="flex items-center gap-3 mt-6 p-4 rounded-lg bg-card border border-border animate-fade-up" style={{ animationDelay: '400ms' }}>
                 <Eye className="h-5 w-5 text-muted-foreground" />
                 <div className="flex-1">
                   <Label htmlFor="plain-text" className="font-medium">Plain Text Mode</Label>
@@ -63,12 +63,12 @@ export default function Resources() {
             <div className="max-w-3xl space-y-12">
               
               {/* Section 1: If Your Information Was Leaked */}
-              <div className="space-y-4">
+              <div className="space-y-4 animate-fade-in-up opacity-0" style={{ animationDelay: '100ms', animationFillMode: 'forwards' }}>
                 <div className="flex items-center gap-3">
                   <div className="p-2 rounded-full bg-destructive/10">
                     <AlertTriangle className="h-5 w-5 text-destructive" />
                   </div>
-                  <h2 className="font-display text-xl md:text-2xl font-semibold">
+                  <h2 className="font-display text-xl md:text-2xl font-semibold text-primary">
                     If Your Information Was Leaked
                   </h2>
                 </div>
@@ -109,12 +109,12 @@ export default function Resources() {
               </div>
 
               {/* Section 2: Digital Self-Defense */}
-              <div className="space-y-4">
+              <div className="space-y-4 animate-fade-in-up opacity-0" style={{ animationDelay: '250ms', animationFillMode: 'forwards' }}>
                 <div className="flex items-center gap-3">
                   <div className="p-2 rounded-full bg-safety/10">
                     <Shield className="h-5 w-5 text-safety" />
                   </div>
-                  <h2 className="font-display text-xl md:text-2xl font-semibold">
+                  <h2 className="font-display text-xl md:text-2xl font-semibold text-primary">
                     Digital Self-Defense
                   </h2>
                 </div>
@@ -191,12 +191,12 @@ export default function Resources() {
               </div>
 
               {/* Section 3: Legal Context */}
-              <div className="space-y-4">
+              <div className="space-y-4 animate-fade-in-up opacity-0" style={{ animationDelay: '400ms', animationFillMode: 'forwards' }}>
                 <div className="flex items-center gap-3">
                   <div className="p-2 rounded-full bg-primary/10">
                     <Scale className="h-5 w-5 text-primary" />
                   </div>
-                  <h2 className="font-display text-xl md:text-2xl font-semibold">
+                  <h2 className="font-display text-xl md:text-2xl font-semibold text-primary">
                     Legal Context
                   </h2>
                 </div>
@@ -233,12 +233,12 @@ export default function Resources() {
               </div>
 
               {/* Section 4: Emotional Support */}
-              <div className="space-y-4">
+              <div className="space-y-4 animate-fade-in-up opacity-0" style={{ animationDelay: '550ms', animationFillMode: 'forwards' }}>
                 <div className="flex items-center gap-3">
                   <div className="p-2 rounded-full bg-primary/10">
                     <Heart className="h-5 w-5 text-primary" />
                   </div>
-                  <h2 className="font-display text-xl md:text-2xl font-semibold">
+                  <h2 className="font-display text-xl md:text-2xl font-semibold text-primary">
                     Emotional Support
                   </h2>
                 </div>

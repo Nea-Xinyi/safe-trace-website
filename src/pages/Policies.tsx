@@ -118,10 +118,10 @@ export default function Policies() {
       {/* Hero */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-primary/12 via-accent/30 to-background">
         <div className="container max-w-3xl">
-          <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h1 className="font-display text-4xl md:text-5xl font-bold text-primary mb-4 animate-fade-up" style={{ animationDelay: '0ms' }}>
             Clear policies. No hidden compromises.
           </h1>
-          <p className="text-lg text-muted-foreground leading-relaxed">
+          <p className="text-lg text-muted-foreground leading-relaxed animate-fade-up" style={{ animationDelay: '200ms' }}>
             We believe the platforms that protect women should hold themselves to a higher standard than the ones that fail them. These are the specific, enforceable commitments that Safe Trace — and every organization that signs on — must uphold.
           </p>
         </div>
@@ -135,7 +135,8 @@ export default function Policies() {
               <AccordionItem
                 key={i}
                 value={`policy-${i}`}
-                className="border border-primary/20 rounded-xl px-6 data-[state=open]:bg-primary/5 data-[state=open]:border-primary/30"
+                className="border border-primary/20 rounded-xl px-6 data-[state=open]:bg-primary/5 data-[state=open]:border-primary/30 animate-fade-in-up opacity-0"
+                style={{ animationDelay: `${i * 100}ms`, animationFillMode: 'forwards' }}
               >
                 <AccordionTrigger className="hover:no-underline py-5">
                   <div className="flex items-center gap-4 text-left">
@@ -166,7 +167,7 @@ export default function Policies() {
       {/* Why These Policies Exist */}
       <section className="py-12 md:py-20 bg-primary/5">
         <div className="container max-w-3xl space-y-6">
-          <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground">
+          <h2 className="font-display text-2xl md:text-3xl font-semibold text-primary">
             Why these policies exist
           </h2>
           <p className="text-muted-foreground leading-relaxed">
@@ -188,7 +189,7 @@ export default function Policies() {
             <div className="p-2.5 rounded-full bg-primary/10">
               <Building2 className="h-5 w-5 text-primary" />
             </div>
-            <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground">
+            <h2 className="font-display text-2xl md:text-3xl font-semibold text-primary">
               Companies That Agree
             </h2>
           </div>

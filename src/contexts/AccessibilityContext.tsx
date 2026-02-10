@@ -7,8 +7,6 @@ interface AccessibilityContextType {
   setFontSize: (size: FontSize) => void;
   highContrast: boolean;
   setHighContrast: (enabled: boolean) => void;
-  disguiseMode: boolean;
-  setDisguiseMode: (enabled: boolean) => void;
 }
 
 const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
@@ -16,17 +14,14 @@ const AccessibilityContext = createContext<AccessibilityContextType | undefined>
 export function AccessibilityProvider({ children }: { children: ReactNode }) {
   const [fontSize, setFontSize] = useState<FontSize>('text-base');
   const [highContrast, setHighContrast] = useState(false);
-  const [disguiseMode, setDisguiseMode] = useState(false);
 
   useEffect(() => {
-    // Apply font size class to html element
     const html = document.documentElement;
     html.classList.remove('text-sm', 'text-base', 'text-lg', 'text-xl');
     html.classList.add(fontSize);
   }, [fontSize]);
 
   useEffect(() => {
-    // Apply high contrast class
     const html = document.documentElement;
     if (highContrast) {
       html.classList.add('high-contrast');
@@ -35,21 +30,6 @@ export function AccessibilityProvider({ children }: { children: ReactNode }) {
     }
   }, [highContrast]);
 
-  useEffect(() => {
-    // Apply disguise mode class to both html and body
-    const html = document.documentElement;
-    const body = document.body;
-    if (disguiseMode) {
-      html.classList.add('disguise-mode');
-      body.classList.add('disguise-mode');
-      document.title = 'Notes App';
-    } else {
-      html.classList.remove('disguise-mode');
-      body.classList.remove('disguise-mode');
-      document.title = 'Safe Trace';
-    }
-  }, [disguiseMode]);
-
   return (
     <AccessibilityContext.Provider
       value={{
@@ -57,8 +37,6 @@ export function AccessibilityProvider({ children }: { children: ReactNode }) {
         setFontSize,
         highContrast,
         setHighContrast,
-        disguiseMode,
-        setDisguiseMode,
       }}
     >
       {children}
