@@ -5,33 +5,47 @@ import { Layout } from '@/components/layout/Layout';
 import { useEffect, useRef } from 'react';
 
 export default function Index() {
+  const heroRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-visible');
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    const elements = document.querySelectorAll('.animate-on-scroll');
+    elements.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        {/* Richer purple gradient background */}
+      <section className="relative overflow-hidden" ref={heroRef}>
         <div className="absolute inset-0 bg-gradient-to-b from-primary/15 via-accent/30 to-background -z-10" />
         <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-lavender opacity-20 blur-3xl -z-10" />
         
         <div className="container py-20 md:py-32">
-          <div className="max-w-3xl mx-auto text-center space-y-8 animate-fade-up">
-            {/* Primary headline */}
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+          <div className="max-w-3xl mx-auto text-center space-y-8">
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary/70 leading-tight animate-fade-up" style={{ animationDelay: '0ms' }}>
               Your digital safety is our priority.
             </h1>
             
-            {/* Supporting line */}
-            <p className="text-xl md:text-2xl text-primary font-display font-medium">
+            <p className="text-xl md:text-2xl text-primary font-display font-medium animate-fade-up" style={{ animationDelay: '150ms' }}>
               Made by young women, to protect women.
             </p>
             
-            {/* Subtext */}
-            <p className="text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed">
+            <p className="text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed animate-fade-up" style={{ animationDelay: '300ms' }}>
               Designed for moments when privacy means survival.
             </p>
 
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4 animate-fade-up" style={{ animationDelay: '450ms' }}>
               <Button asChild size="lg" className="text-base px-8">
                 <Link to="/policies">
                   Read Our Policies
