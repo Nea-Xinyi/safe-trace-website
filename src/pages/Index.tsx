@@ -2,7 +2,9 @@ import { Link } from 'react-router-dom';
 import { ArrowDown, Heart, Shield, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Layout } from '@/components/layout/Layout';
+import { AccessibilityControls } from '@/components/layout/AccessibilityControls';
 import { useEffect, useRef } from 'react';
+import logo from '@/assets/ribbon-logo.png';
 
 export default function Index() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -25,39 +27,73 @@ export default function Index() {
   }, []);
 
   return (
-    <Layout>
-      {/* Hero Section */}
-      <section className="relative overflow-hidden" ref={heroRef}>
-        <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover opacity-50 -z-20">
-          <source src="/videos/hero-bg.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/15 via-accent/30 to-background -z-10" />
-        <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-lavender opacity-20 blur-3xl -z-10" />
-        
-        <div className="container py-20 md:py-32">
-          <div className="max-w-3xl mx-auto text-center space-y-8">
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight animate-fade-up" style={{ animationDelay: '0ms' }}>
-              Because Every Pixel Tells a Story.
-            </h1>
-            
-            <p className="text-xl md:text-2xl text-primary/80 font-display font-medium animate-fade-up" style={{ animationDelay: '300ms' }}>
-              Made by young women, for women.
-            </p>
+    <Layout hideHeader>
+      {/* Video background that spans behind the header area */}
+      <div className="relative">
+        {/* Video peek above the header */}
+        <div className="h-[120px] relative overflow-hidden">
+          <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-[calc(120px+64px+400px)] object-cover opacity-50">
+            <source src="/videos/hero-bg.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/15 via-accent/10 to-transparent" />
+        </div>
 
-            <div className="pt-4 animate-fade-up" style={{ animationDelay: '600ms' }}>
-              <Button
-                size="lg"
-                variant="outline"
-                className="text-base px-8 rounded-full"
-                onClick={() => document.getElementById('values-section')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Explore
-                <ArrowDown className="ml-2 h-4 w-4" />
-              </Button>
+        {/* Header bar overlaying - rendered inline here */}
+        <div className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+          <div className="container flex h-16 items-center justify-between">
+            <Link 
+              to="/" 
+              className="flex items-center gap-3 transition-calm hover:opacity-80"
+              aria-label="Safe Trace - Home"
+            >
+              <img src={logo} alt="SafeTrace" className="h-11 w-auto" />
+              <span className="font-display text-lg font-semibold text-primary">SafeTrace</span>
+            </Link>
+            <nav className="hidden md:flex items-center gap-6">
+              <Link to="/resources" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-calm">Resources</Link>
+              <Link to="/policies" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-calm">Policies</Link>
+              <Link to="/purpose" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-calm">Our Purpose</Link>
+              <Link to="/businesses" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-calm">For Businesses</Link>
+              <Link to="/research" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-calm">Research</Link>
+            </nav>
+            <div className="flex items-center gap-2">
+              <AccessibilityControls />
             </div>
           </div>
         </div>
-      </section>
+
+        {/* Hero content below header with video continuing */}
+        <section className="relative overflow-hidden" ref={heroRef}>
+          <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover opacity-50 -z-20">
+            <source src="/videos/hero-bg.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/15 via-accent/30 to-background -z-10" />
+          
+          <div className="container py-20 md:py-32">
+            <div className="max-w-3xl mx-auto text-center space-y-8">
+              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight animate-fade-up" style={{ animationDelay: '0ms' }}>
+                Because Every Pixel Tells a Story.
+              </h1>
+              
+              <p className="text-xl md:text-2xl text-primary/80 font-display font-medium animate-fade-up" style={{ animationDelay: '300ms' }}>
+                Made by young women, for women.
+              </p>
+
+              <div className="pt-4 animate-fade-up" style={{ animationDelay: '600ms' }}>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="text-base px-8 rounded-full"
+                  onClick={() => document.getElementById('values-section')?.scrollIntoView({ behavior: 'smooth' })}
+                >
+                  Explore
+                  <ArrowDown className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
 
       {/* Values Section */}
       <section id="values-section" className="py-16 md:py-24 bg-primary/5">
