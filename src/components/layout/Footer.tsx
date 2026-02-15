@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Heart } from 'lucide-react';
-import logo from '@/assets/SafeTrace_Company_Logo.png';
+import logo from '@/assets/ribbon-logo.png';
 
 export function Footer() {
   return (

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { AccessibilityControls } from './AccessibilityControls';
-import logo from '@/assets/SafeTrace_Company_Logo.png';
+import logo from '@/assets/ribbon-logo.png';
 
 export function Header() {
   return (
