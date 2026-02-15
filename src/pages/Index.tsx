@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, Heart, Shield, Users } from 'lucide-react';
+import { ArrowDown, Heart, Shield, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Layout } from '@/components/layout/Layout';
 import { useEffect, useRef } from 'react';
@@ -37,28 +37,22 @@ export default function Index() {
         <div className="container py-20 md:py-32">
           <div className="max-w-3xl mx-auto text-center space-y-8">
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight animate-fade-up" style={{ animationDelay: '0ms' }}>
-              Your digital safety is our priority.
+              Because Every Pixel Tells a Story.
             </h1>
             
             <p className="text-xl md:text-2xl text-primary/80 font-display font-medium animate-fade-up" style={{ animationDelay: '300ms' }}>
-              Because Every Pixel Tells a Story.
-            </p>
-            
-            <p className="text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed animate-fade-up" style={{ animationDelay: '600ms' }}>
-              Designed for moments when privacy means survival.
+              Made by young women, for women.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4 animate-fade-up" style={{ animationDelay: '900ms' }}>
-              <Button asChild size="lg" className="text-base px-8">
-                <Link to="/policies">
-                  Read Our Policies
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="text-base px-8">
-                <Link to="/resources">
-                  Find Support Resources
-                </Link>
+            <div className="pt-4 animate-fade-up" style={{ animationDelay: '600ms' }}>
+              <Button
+                size="lg"
+                variant="outline"
+                className="text-base px-8 rounded-full"
+                onClick={() => document.getElementById('values-section')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                Explore
+                <ArrowDown className="ml-2 h-4 w-4" />
               </Button>
             </div>
           </div>
@@ -66,7 +60,7 @@ export default function Index() {
       </section>
 
       {/* Values Section */}
-      <section className="py-16 md:py-24 bg-primary/5">
+      <section id="values-section" className="py-16 md:py-24 bg-primary/5">
         <div className="container">
           <div className="max-w-2xl mx-auto text-center mb-12">
             <h2 className="font-display text-2xl md:text-3xl font-semibold text-primary mb-4">
@@ -126,7 +120,7 @@ export default function Index() {
             <Button asChild size="lg" className="mt-4">
               <Link to="/resources">
                 Access Resources
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowDown className="ml-2 h-4 w-4" />
               </Link>
             </Button>
           </div>

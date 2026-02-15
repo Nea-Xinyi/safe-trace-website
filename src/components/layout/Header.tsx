@@ -1,26 +1,19 @@
 import { Link } from 'react-router-dom';
-import { ExternalLink } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 import { AccessibilityControls } from './AccessibilityControls';
-import { SafetyModeButton } from '@/components/safety/SafetyModeButton';
 import logo from '@/assets/SafeTrace_Company_Logo.png';
 
 export function Header() {
-  const handleQuickExit = () => {
-    // Clear current history entry and redirect to neutral site
-    window.location.replace('https://www.google.com');
-  };
-
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         {/* Logo */}
         <Link 
           to="/" 
-          className="flex items-center gap-2 transition-calm hover:opacity-80"
+          className="flex items-center gap-3 transition-calm hover:opacity-80"
           aria-label="Safe Trace - Home"
         >
-          <img src={logo} alt="SafeTrace" className="h-9 w-auto mix-blend-multiply dark:mix-blend-screen opacity-90" />
+          <img src={logo} alt="SafeTrace" className="h-9 w-auto opacity-20" />
+          <span className="font-display text-lg font-semibold text-primary">SafeTrace</span>
         </Link>
 
         {/* Navigation - hidden on mobile, shown in menu */}
@@ -60,20 +53,6 @@ export function Header() {
         {/* Right side controls */}
         <div className="flex items-center gap-2">
           <AccessibilityControls />
-          
-          <SafetyModeButton />
-
-          {/* Quick Exit - always visible */}
-          <Button
-            onClick={handleQuickExit}
-            variant="outline"
-            size="sm"
-            className="bg-exit text-exit-foreground hover:bg-exit/90 border-none gap-1.5"
-            aria-label="Quick exit - leaves this site immediately"
-          >
-            <ExternalLink className="h-4 w-4" />
-            <span className="hidden sm:inline">Exit</span>
-          </Button>
         </div>
       </div>
     </header>
