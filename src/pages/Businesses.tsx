@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Layout } from '@/components/layout/Layout';
 import { Building2, CheckCircle2, ShieldCheck, Globe, FileText } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -18,6 +18,22 @@ export default function Businesses() {
   const { toast } = useToast();
   const [submitted, setSubmitted] = useState(false);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-visible');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    const elements = document.querySelectorAll('.animate-on-scroll');
+    elements.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSubmitted(true);
@@ -26,6 +42,13 @@ export default function Businesses() {
       description: "We'll review your submission and be in touch.",
     });
   };
+
+  const cards = [
+    { icon: Building2, title: 'Governance Gap', color: 'bg-primary/5 border-primary/15', iconColor: 'text-primary', desc: 'Most data protection policies weren\'t designed with technology-facilitated abuse in mind. Safe Trace fills that gap.' },
+    { icon: ShieldCheck, title: 'Beyond Compliance', color: 'bg-[hsl(175_45%_45%/0.05)] border-[hsl(175_45%_45%/0.15)]', iconColor: 'text-safety', desc: 'Our policies align with and exceed SOC 2, ISO 27001, GDPR, and Quebec Law 25 requirements for data protection.' },
+    { icon: Globe, title: 'Public Trust', color: 'bg-accent/20 border-accent/30', iconColor: 'text-primary', desc: 'Committing to survivor-centered policies signals that your organization takes data safety seriously — beyond legal minimums.' },
+    { icon: FileText, title: 'Clear Standards', color: 'bg-destructive/5 border-destructive/15', iconColor: 'text-safety', desc: 'Safe Trace policies are specific, actionable, and auditable — not vague promises buried in legal documents.' },
+  ];
 
   return (
     <Layout>
@@ -49,14 +72,13 @@ export default function Businesses() {
           </h2>
 
           <div className="grid gap-6 sm:grid-cols-2">
-            {[
-              { icon: Building2, title: 'Governance Gap', color: 'text-primary', desc: 'Most data protection policies weren\'t designed with technology-facilitated abuse in mind. Safe Trace fills that gap.' },
-              { icon: ShieldCheck, title: 'Beyond Compliance', color: 'text-safety', desc: 'Our policies align with and exceed SOC 2, ISO 27001, GDPR, and Quebec Law 25 requirements for data protection.' },
-              { icon: Globe, title: 'Public Trust', color: 'text-primary', desc: 'Committing to survivor-centered policies signals that your organization takes data safety seriously — beyond legal minimums.' },
-              { icon: FileText, title: 'Clear Standards', color: 'text-safety', desc: 'Safe Trace policies are specific, actionable, and auditable — not vague promises buried in legal documents.' },
-            ].map((item, i) => (
-              <div key={i} className="p-6 rounded-xl bg-card border border-border/60 space-y-3 animate-fade-in-up opacity-0" style={{ animationDelay: `${i * 100}ms`, animationFillMode: 'forwards' }}>
-                <item.icon className={`h-6 w-6 ${item.color}`} />
+            {cards.map((item, i) => (
+              <div
+                key={i}
+                className={`p-6 rounded-xl border ${item.color} space-y-3 animate-on-scroll opacity-0 translate-y-4 transition-all duration-700 hover:shadow-md`}
+                style={{ transitionDelay: `${i * 100}ms` }}
+              >
+                <item.icon className={`h-6 w-6 ${item.iconColor}`} />
                 <h3 className="font-display font-semibold">{item.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
               </div>
@@ -66,7 +88,7 @@ export default function Businesses() {
       </section>
 
       {/* Framework Alignment */}
-      <section className="py-12 md:py-20 bg-primary/5">
+      <section className="py-12 md:py-20 bg-gradient-to-b from-primary/8 to-accent/15">
         <div className="container max-w-3xl space-y-6">
           <h2 className="font-display text-2xl md:text-3xl font-semibold text-primary">
             Framework Alignment
@@ -75,10 +97,11 @@ export default function Businesses() {
             Safe Trace policies align with the following international standards — and go further where they fall short on survivor protection.
           </p>
           <div className="grid gap-4 sm:grid-cols-2">
-            {alignments.map((a) => (
+            {alignments.map((a, i) => (
               <div
                 key={a.label}
-                className="flex items-center gap-3 p-4 rounded-lg bg-card border border-border/60"
+                className="flex items-center gap-3 p-4 rounded-lg bg-card border border-border/60 animate-on-scroll opacity-0 translate-y-4 transition-all duration-700 hover:border-primary/30"
+                style={{ transitionDelay: `${i * 80}ms` }}
               >
                 <CheckCircle2 className="h-5 w-5 text-safety shrink-0" />
                 <div>
