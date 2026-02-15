@@ -28,6 +28,9 @@ export default function Index() {
     <Layout>
       {/* Hero Section */}
       <section className="relative overflow-hidden" ref={heroRef}>
+        <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover opacity-50 -z-20">
+          <source src="/videos/hero-bg.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-b from-primary/15 via-accent/30 to-background -z-10" />
         <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-lavender opacity-20 blur-3xl -z-10" />
         
@@ -38,7 +41,7 @@ export default function Index() {
             </h1>
             
             <p className="text-xl md:text-2xl text-primary/80 font-display font-medium animate-fade-up" style={{ animationDelay: '300ms' }}>
-              Made by young women, to protect women.
+              Because Every Pixel Tells a Story.
             </p>
             
             <p className="text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed animate-fade-up" style={{ animationDelay: '600ms' }}>
