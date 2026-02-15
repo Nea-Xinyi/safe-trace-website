@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Layout } from '@/components/layout/Layout';
 import {
   Shield,
@@ -24,6 +25,7 @@ const policies = [
     title: 'Explicit, Informed Consent',
     color: 'text-primary',
     bg: 'bg-primary/10',
+    sectionBg: 'bg-primary/5',
     content: [
       'All data collection requires affirmative, unambiguous consent obtained through clear, plain-language disclosures prior to any processing activity.',
       'Consent interfaces must be free of dark patterns, pre-checked boxes, or manipulative design. Users must actively opt in — never be opted in by default.',
@@ -35,8 +37,9 @@ const policies = [
   {
     icon: MapPin,
     title: 'Anti-Stalking & Location Safeguards',
-    color: 'text-primary',
-    bg: 'bg-primary/10',
+    color: 'text-destructive',
+    bg: 'bg-destructive/10',
+    sectionBg: 'bg-destructive/5',
     content: [
       'Location data is classified as sensitive personal information and is never collected, stored, or processed without explicit, purpose-limited consent.',
       'Any location-sharing feature must include a one-tap emergency disable that immediately and irrevocably ceases all location transmission and purges cached location data.',
@@ -50,6 +53,7 @@ const policies = [
     title: 'Data Minimization & Purpose Limitation',
     color: 'text-primary',
     bg: 'bg-primary/10',
+    sectionBg: 'bg-primary/5',
     content: [
       'Only data strictly necessary for the stated purpose may be collected. No speculative, behavioural, or advertising-related data collection is permitted.',
       'Each data field collected must have a documented legal basis and specific purpose, reviewable upon request (aligned with GDPR Article 5(1)(b)).',
@@ -61,8 +65,9 @@ const policies = [
   {
     icon: Trash2,
     title: 'Rapid Data Deletion & Portability',
-    color: 'text-primary',
-    bg: 'bg-primary/10',
+    color: 'text-safety',
+    bg: 'bg-safety/10',
+    sectionBg: 'bg-[hsl(175_45%_45%/0.05)]',
     content: [
       'Users may request complete deletion of their personal data at any time. Deletion must be executed within 48 hours — not the 30-day maximum permitted under GDPR Article 17.',
       'Deletion must extend to all backups, replicas, third-party processors, and derived datasets. A certificate of deletion must be provided upon request.',
@@ -76,6 +81,7 @@ const policies = [
     title: 'Transparency & Breach Notification',
     color: 'text-primary',
     bg: 'bg-primary/10',
+    sectionBg: 'bg-primary/5',
     content: [
       'In the event of a data breach, affected users must be notified within 72 hours with a clear, non-technical disclosure of: what data was compromised, the scope of the breach, and specific remediation steps being taken.',
       'Breach notifications must not contain corporate euphemisms. Language must be direct and actionable ("Your email address and phone number were accessed by an unauthorized party" — not "a security incident may have impacted some user data").',
@@ -88,7 +94,8 @@ const policies = [
     icon: Heart,
     title: 'Survivor-Centered Design',
     color: 'text-primary',
-    bg: 'bg-primary/10',
+    bg: 'bg-accent',
+    sectionBg: 'bg-accent/20',
     content: [
       'Every feature, interface, and data flow must be evaluated through a threat model that asks: "Could this be weaponized against the most vulnerable user?" Features that present exploitation risk must be redesigned or removed.',
       'Safety-critical features (quick exit, data purge, account lockdown) must be accessible within two interactions from any page and must not require authentication to activate.',
@@ -102,6 +109,7 @@ const policies = [
     title: 'Regulatory Alignment & Accountability',
     color: 'text-primary',
     bg: 'bg-primary/10',
+    sectionBg: 'bg-primary/5',
     content: [
       'Safe Trace policies are designed to meet or exceed the requirements of GDPR (EU), Quebec Law 25 (Canada), PIPEDA (Canada), ISO 27001, and SOC 2 Type II.',
       'Compliance is treated as a floor, not a ceiling. Where regulations fall short on survivor protection, Safe Trace policies apply the stricter standard.',
@@ -113,6 +121,22 @@ const policies = [
 ];
 
 export default function Policies() {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-visible');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    const elements = document.querySelectorAll('.animate-on-scroll');
+    elements.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <Layout>
       {/* Hero */}
@@ -135,8 +159,8 @@ export default function Policies() {
               <AccordionItem
                 key={i}
                 value={`policy-${i}`}
-                className="border border-primary/20 rounded-xl px-6 data-[state=open]:bg-primary/5 data-[state=open]:border-primary/30 animate-fade-in-up opacity-0"
-                style={{ animationDelay: `${i * 100}ms`, animationFillMode: 'forwards' }}
+                className={`border rounded-xl px-6 ${policy.sectionBg} border-primary/20 data-[state=open]:border-primary/40 animate-on-scroll opacity-0 translate-y-4 transition-all duration-700 hover:shadow-md`}
+                style={{ transitionDelay: `${i * 80}ms` }}
               >
                 <AccordionTrigger className="hover:no-underline py-5">
                   <div className="flex items-center gap-4 text-left">
@@ -165,7 +189,7 @@ export default function Policies() {
       </section>
 
       {/* Why These Policies Exist */}
-      <section className="py-12 md:py-20 bg-primary/5">
+      <section className="py-12 md:py-20 bg-gradient-to-b from-primary/8 to-accent/15">
         <div className="container max-w-3xl space-y-6">
           <h2 className="font-display text-2xl md:text-3xl font-semibold text-primary">
             Why these policies exist

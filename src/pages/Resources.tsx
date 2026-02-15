@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { 
   AlertTriangle, 
   Shield, 
@@ -24,11 +24,27 @@ import { Label } from '@/components/ui/label';
 export default function Resources() {
   const [plainTextMode, setPlainTextMode] = useState(false);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-visible');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    const elements = document.querySelectorAll('.animate-on-scroll');
+    elements.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <Layout>
       <div className={`${plainTextMode ? 'font-mono text-sm' : ''}`}>
         {/* Header */}
-        <section className="py-12 md:py-16 bg-gradient-to-b from-primary/12 via-accent/25 to-background">
+        <section className="py-12 md:py-16 bg-gradient-to-b from-destructive/8 via-accent/20 to-background">
           <div className="container">
             <div className="max-w-3xl">
               <h1 className="font-display text-3xl md:text-4xl font-bold text-primary mb-4 animate-fade-up" style={{ animationDelay: '0ms' }}>
@@ -63,7 +79,7 @@ export default function Resources() {
             <div className="max-w-3xl space-y-12">
               
               {/* Section 1: If Your Information Was Leaked */}
-              <div className="space-y-4 animate-fade-in-up opacity-0" style={{ animationDelay: '100ms', animationFillMode: 'forwards' }}>
+              <div className="space-y-4 animate-on-scroll opacity-0 translate-y-4 transition-all duration-700 p-6 rounded-2xl bg-destructive/5 border border-destructive/15">
                 <div className="flex items-center gap-3">
                   <div className="p-2 rounded-full bg-destructive/10">
                     <AlertTriangle className="h-5 w-5 text-destructive" />
@@ -109,7 +125,7 @@ export default function Resources() {
               </div>
 
               {/* Section 2: Digital Self-Defense */}
-              <div className="space-y-4 animate-fade-in-up opacity-0" style={{ animationDelay: '250ms', animationFillMode: 'forwards' }}>
+              <div className="space-y-4 animate-on-scroll opacity-0 translate-y-4 transition-all duration-700 p-6 rounded-2xl bg-[hsl(175_45%_45%/0.05)] border border-[hsl(175_45%_45%/0.15)]">
                 <div className="flex items-center gap-3">
                   <div className="p-2 rounded-full bg-safety/10">
                     <Shield className="h-5 w-5 text-safety" />
@@ -191,7 +207,7 @@ export default function Resources() {
               </div>
 
               {/* Section 3: Legal Context */}
-              <div className="space-y-4 animate-fade-in-up opacity-0" style={{ animationDelay: '400ms', animationFillMode: 'forwards' }}>
+              <div className="space-y-4 animate-on-scroll opacity-0 translate-y-4 transition-all duration-700 p-6 rounded-2xl bg-primary/5 border border-primary/15">
                 <div className="flex items-center gap-3">
                   <div className="p-2 rounded-full bg-primary/10">
                     <Scale className="h-5 w-5 text-primary" />
@@ -233,7 +249,7 @@ export default function Resources() {
               </div>
 
               {/* Section 4: Emotional Support */}
-              <div className="space-y-4 animate-fade-in-up opacity-0" style={{ animationDelay: '550ms', animationFillMode: 'forwards' }}>
+              <div className="space-y-4 animate-on-scroll opacity-0 translate-y-4 transition-all duration-700 p-6 rounded-2xl bg-accent/30 border border-accent/40">
                 <div className="flex items-center gap-3">
                   <div className="p-2 rounded-full bg-primary/10">
                     <Heart className="h-5 w-5 text-primary" />
@@ -282,7 +298,7 @@ export default function Resources() {
 
 function ChecklistItem({ children, checked }: { children: React.ReactNode; checked: boolean }) {
   return (
-    <div className="flex gap-3 p-3 rounded-lg bg-card border border-border">
+    <div className="flex gap-3 p-3 rounded-lg bg-card border border-border hover:border-primary/30 transition-calm">
       <div className={`mt-0.5 h-5 w-5 rounded border-2 flex items-center justify-center shrink-0 ${
         checked ? 'bg-safety border-safety' : 'border-muted-foreground/30'
       }`}>

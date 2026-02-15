@@ -1,15 +1,32 @@
+import { useEffect } from 'react';
 import { Layout } from '@/components/layout/Layout';
 import { BookOpen, BarChart3, FileDown, FlaskConical } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const stats = [
-  { value: '1 in 4', label: 'women experience online harassment that makes them fear for their safety', source: 'Pew Research Center, 2021' },
-  { value: '73%', label: 'of women who experienced online abuse reported anxiety, stress, or panic attacks', source: 'The Economist Intelligence Unit, 2021' },
-  { value: '58%', label: 'of teen girls have experienced some form of technology-facilitated abuse', source: 'Plan International, 2020' },
-  { value: '$0', label: 'is the cost of most "privacy tools" that actually work — because they don\'t exist yet', source: 'Safe Trace Research, 2025' },
+  { value: '1 in 4', label: 'women experience online harassment that makes them fear for their safety', source: 'Pew Research Center, 2021', color: 'bg-destructive/5 border-destructive/15' },
+  { value: '73%', label: 'of women who experienced online abuse reported anxiety, stress, or panic attacks', source: 'The Economist Intelligence Unit, 2021', color: 'bg-primary/5 border-primary/15' },
+  { value: '58%', label: 'of teen girls have experienced some form of technology-facilitated abuse', source: 'Plan International, 2020', color: 'bg-accent/30 border-accent/40' },
+  { value: '$0', label: 'is the cost of most "privacy tools" that actually work — because they don\'t exist yet', source: 'Safe Trace Research, 2025', color: 'bg-[hsl(175_45%_45%/0.05)] border-[hsl(175_45%_45%/0.15)]' },
 ];
 
 export default function Research() {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-visible');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    const elements = document.querySelectorAll('.animate-on-scroll');
+    elements.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <Layout>
       {/* Hero */}
@@ -40,8 +57,8 @@ export default function Research() {
             {stats.map((stat, i) => (
               <div
                 key={i}
-                className="p-6 rounded-xl bg-card border border-border/60 space-y-3 animate-fade-in-up opacity-0"
-                style={{ animationDelay: `${i * 120}ms`, animationFillMode: 'forwards' }}
+                className={`p-6 rounded-xl border ${stat.color} space-y-3 animate-on-scroll opacity-0 translate-y-4 transition-all duration-700 hover:shadow-md`}
+                style={{ transitionDelay: `${i * 120}ms` }}
               >
                 <p className="font-display text-3xl font-bold text-primary">
                   {stat.value}
@@ -59,7 +76,7 @@ export default function Research() {
       </section>
 
       {/* Summary */}
-      <section className="py-12 md:py-20 bg-primary/5">
+      <section className="py-12 md:py-20 bg-gradient-to-b from-primary/8 to-accent/15">
         <div className="container max-w-3xl space-y-6">
           <div className="flex items-center gap-3">
             <div className="p-2.5 rounded-full bg-primary/10">
@@ -85,7 +102,7 @@ export default function Research() {
 
       {/* Methodology */}
       <section className="py-12 md:py-20">
-        <div className="container max-w-3xl space-y-6">
+        <div className="container max-w-3xl space-y-6 animate-on-scroll opacity-0 translate-y-4 transition-all duration-700">
           <div className="flex items-center gap-3">
             <div className="p-2.5 rounded-full bg-safety/10">
               <FlaskConical className="h-5 w-5 text-safety" />
@@ -104,7 +121,7 @@ export default function Research() {
       </section>
 
       {/* Download */}
-      <section className="py-12 md:py-20 bg-primary/5">
+      <section className="py-12 md:py-20 bg-gradient-to-b from-accent/15 to-primary/8">
         <div className="container max-w-3xl text-center space-y-6">
           <div className="p-2.5 rounded-full bg-primary/10 w-fit mx-auto">
             <FileDown className="h-5 w-5 text-primary" />

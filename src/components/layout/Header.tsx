@@ -12,7 +12,7 @@ export function Header() {
           className="flex items-center gap-3 transition-calm hover:opacity-80"
           aria-label="Safe Trace - Home"
         >
-          <img src={logo} alt="SafeTrace" className="h-9 w-auto opacity-20" />
+          <img src={logo} alt="SafeTrace" className="h-9 w-auto opacity-10" />
           <span className="font-display text-lg font-semibold text-primary">SafeTrace</span>
         </Link>
 
