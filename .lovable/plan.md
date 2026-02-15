@@ -1,107 +1,28 @@
 
 
-# Safe Trace — Implementation Plan
+## Homepage Video Background + Tagline Update
 
-## Overview
-A survivor-centered website providing digital safety resources, clear privacy policies, and immediate safety tools for women experiencing technology-facilitated abuse. Built with a muted lavender and soft gray palette, humanist typography, and trauma-informed design principles.
+### Changes
 
----
+**1. Copy video to project**
+- Copy `user-uploads://20260215_1537_01khhg84kkf50snbyhpwf1x756.mp4` to `public/videos/hero-bg.mp4` (using `public/` since video files are large and shouldn't go through the JS bundler)
 
-## Phase 1: Core Foundation (Initial Build)
+**2. Update hero section in `src/pages/Index.tsx`**
+- Add a `<video>` element as a background layer in the hero section, positioned absolutely behind the content with:
+  - `autoPlay`, `muted`, `loop`, `playsInline` attributes
+  - 50% opacity (`opacity-50`)
+  - `object-cover` to fill the section
+  - Placed behind the gradient overlay (`-z-20`) so it sits beneath the existing gradient
+- Replace the tagline text from "Made by young women, to protect women." to **"Because Every Pixel Tells a Story."**
 
-### Homepage — Mission First
-- **Hero Section**: Large, comforting headline ("Your digital safety is our priority") with supporting text about being made by young women, for women
-- **Calm visual design**: Muted lavender accents, soft gray backgrounds, generous white space, rounded humanist sans-serif typography
-- **Primary CTAs**: "Read Our Policies" and "Find Support Resources"
-- **No aggressive imagery** — soft gradients or abstract shapes that feel protective, not alarming
+### Technical Details
 
-### Persistent Safety Elements (All Pages)
-- **Safe Trace logo** (top-left) — simple, recognizable, non-corporate
-- **Quick Exit button** (top-right) — redirects immediately to a neutral site (Google, weather, etc.)
-- **Accessibility controls** — font size toggle, high contrast mode
-- **Emergency Safety Mode button** — always visible, distinct but not alarming
+The video element will be structured as:
+```
+<video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover opacity-50 -z-20">
+  <source src="/videos/hero-bg.mp4" type="video/mp4" />
+</video>
+```
 
-### Resources Page — Immediate Help
-- **No tracking or analytics** on this page
-- **Plain-text mode option** for users on monitored devices
-- **Sections**:
-  - If your information was leaked (actionable checklists)
-  - Digital self-defense (account audits, location safety, AI image risks)
-  - Legal context (honest framing of what protection exists)
-  - Emotional support (validating language, acknowledgment of fear and isolation)
-- **Avoids "just report it"** framing — centers survivor agency
-
-### Safety Mode — Functional Local Actions
-- **One-click panel** with clear, immediate actions:
-  - Clear all local browser data (cookies, storage)
-  - Switch to disguised interface (calculator or notes appearance)
-  - Guide to disable location sharing on device
-  - Guide to revoke third-party app access
-- **Works without requiring login** — pure client-side functionality
-- **Fast, visible, requires no explanation**
-
----
-
-## Phase 2: Policy & Purpose
-
-### Policies Page — Manifesto-Driven
-- **Headline**: "Clear policies. No hidden compromises."
-- **Expandable policy cards** organized by:
-  - Explicit, informed consent (no dark patterns)
-  - Anti-stalking safeguards (location alerts, emergency disable)
-  - Data minimization (essential data only)
-  - Rapid data deletion
-  - Transparency & 72-hour breach notification
-  - Survivor-centered design principles
-- **Research integration**: Explain why these policies exist (current laws and platforms fail survivors)
-- **Companies That Agree section**: Display committed organizations with logo grid
-
-### Our Purpose / Origin Page
-- **Title**: Why Safe Trace Exists
-- **Sections** (plain language, non-academic):
-  - What We Saw (women being tracked, exposed, silenced)
-  - What Was Missing (prevention, not reaction)
-  - Why Existing Solutions Fail Survivors (paywalled privacy, reactive moderation)
-  - Who We Are (young women building what the system never did)
-- **Tone**: Validating, informative, not overwhelming or graphic
-
----
-
-## Phase 3: Business & Research
-
-### For Businesses Page
-- **Frame doxxing as governance failure**, not niche issue
-- **Explain how Safe Trace policies fill gaps** in current regulation
-- **Alignment callouts**: SOC 2, ISO 27000, GDPR, Quebec Law 25
-- **Commitment Form**: Businesses can submit their commitment to the policies
-  - Collects company name, contact, and pledge confirmation
-  - Submissions stored in database for your review before display
-- **CTA**: "Commit to Safe Trace Policies"
-
-### Research Page
-- **Plain-language summary** of academic findings
-- **Key statistics** with clear sourcing (expandable for detail)
-- **Downloadable research paper** (PDF link)
-- **Methodology note**: Feminist framework, survivor-informed lens
-
----
-
-## Design Principles (Applied Throughout)
-
-- **No dark patterns** — every interaction is clear and honest
-- **No forced sign-ups** — resources accessible without accounts
-- **No unnecessary data collection** — minimal footprint
-- **Safety over engagement** — no metrics that compromise privacy
-- **Mobile-first** — many survivors access from phones, possibly monitored
-- **Hypervigilance-aware** — nothing startling, calm transitions, clear navigation
-
----
-
-## Technical Notes
-
-- **Backend Required**: Database for business commitments (using Supabase/Lovable Cloud)
-- **Disguise Mode**: CSS-based transformation to calculator/notes interface
-- **Quick Exit**: JavaScript redirect to neutral external site
-- **Accessibility**: Built-in font scaling, contrast toggle, screen reader support
-- **No analytics** on Resources page; minimal elsewhere
+This keeps the existing gradient overlay on top of the video for readability, while the video plays subtly in the background at half transparency.
 
