@@ -1,29 +1,20 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { 
   AlertTriangle, 
   Shield, 
   Scale, 
   Heart, 
-  ChevronDown,
-  ExternalLink,
-  FileText,
   CheckCircle2,
-  Eye
 } from 'lucide-react';
 import { Layout } from '@/components/layout/Layout';
-import { Button } from '@/components/ui/button';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import { Switch } from '@/components/ui/switch';
-import { Label } from '@/components/ui/label';
 
 export default function Resources() {
-  const [plainTextMode, setPlainTextMode] = useState(false);
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -42,7 +33,7 @@ export default function Resources() {
 
   return (
     <Layout>
-      <div className={`${plainTextMode ? 'font-mono text-sm' : ''}`}>
+      <div>
         {/* Header */}
         <section className="py-8 md:py-12 bg-gradient-to-b from-destructive/8 via-accent/20 to-background">
           <div className="container">
@@ -53,22 +44,6 @@ export default function Resources() {
               <p className="text-lg text-muted-foreground leading-relaxed animate-fade-up" style={{ animationDelay: '200ms' }}>
                 Practical help for protecting yourself online. No account needed, no tracking on this page.
               </p>
-              
-              {/* Plain text mode toggle */}
-              <div className="flex items-center gap-3 mt-6 p-4 rounded-lg bg-card border border-border animate-fade-up" style={{ animationDelay: '400ms' }}>
-                <Eye className="h-5 w-5 text-muted-foreground" />
-                <div className="flex-1">
-                  <Label htmlFor="plain-text" className="font-medium">Plain Text Mode</Label>
-                  <p className="text-sm text-muted-foreground">
-                    Simpler display for monitored devices
-                  </p>
-                </div>
-                <Switch
-                  id="plain-text"
-                  checked={plainTextMode}
-                  onCheckedChange={setPlainTextMode}
-                />
-              </div>
             </div>
           </div>
         </section>
