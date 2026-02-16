@@ -3,6 +3,7 @@ import { ArrowDown, Heart, Shield, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Layout } from '@/components/layout/Layout';
 import { AccessibilityControls } from '@/components/layout/AccessibilityControls';
+import { ThemeToggle } from '@/components/layout/ThemeToggle';
 import { useEffect, useRef } from 'react';
 import logo from '@/assets/ribbon-logo.png';
 
@@ -55,6 +56,7 @@ export default function Index() {
               <Link to="/research" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-calm">Research</Link>
             </nav>
             <div className="flex items-center gap-2">
+              <ThemeToggle />
               <AccessibilityControls />
             </div>
           </div>
