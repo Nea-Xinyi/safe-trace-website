@@ -68,7 +68,7 @@ export default function Index() {
             </h1>
             
             <p className="text-xl md:text-2xl text-primary/80 font-display font-medium animate-fade-up" style={{ animationDelay: '300ms' }}>
-              Made by young women, for women.
+              Made by young women, for all women.
             </p>
 
             <div className="pt-4 animate-fade-up" style={{ animationDelay: '600ms' }}>
