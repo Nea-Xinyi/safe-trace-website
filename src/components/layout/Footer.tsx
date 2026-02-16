@@ -6,13 +6,13 @@ export function Footer() {
   return (
     <footer className="border-t border-primary/20 bg-primary/5">
       <div className="container py-8">
-        <div className="grid gap-8 md:grid-cols-4">
+        <div className="grid gap-8 md:grid-cols-3 text-center">
           {/* Brand */}
-          <div className="space-y-4">
+          <div className="space-y-4 flex flex-col items-center">
             <Link to="/" className="flex items-center gap-2">
               <img src={logo} alt="SafeTrace" className="h-10 w-auto" />
             </Link>
-            <p className="text-sm text-muted-foreground leading-relaxed">
+            <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
               Built by young women, for women. Your digital safety is our priority.
             </p>
           </div>
@@ -20,7 +20,7 @@ export function Footer() {
           {/* Quick Links */}
           <div className="space-y-4">
             <h4 className="font-display font-semibold text-foreground">Quick Links</h4>
-            <nav className="flex flex-col gap-2">
+            <nav className="flex flex-col items-center gap-2">
               <Link to="/resources" className="text-sm text-muted-foreground hover:text-foreground transition-calm">
                 Resources
               </Link>
@@ -36,7 +36,7 @@ export function Footer() {
           {/* For Organizations */}
           <div className="space-y-4">
             <h4 className="font-display font-semibold text-foreground">For Organizations</h4>
-            <nav className="flex flex-col gap-2">
+            <nav className="flex flex-col items-center gap-2">
               <Link to="/businesses" className="text-sm text-muted-foreground hover:text-foreground transition-calm">
                 Commit to Safe Trace
               </Link>
@@ -48,7 +48,6 @@ export function Footer() {
               </Link>
             </nav>
           </div>
-
         </div>
 
         <div className="mt-8 pt-4 border-t border-border/40">
