@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { AccessibilityControls } from './AccessibilityControls';
+import { ThemeToggle } from './ThemeToggle';
 import logo from '@/assets/ribbon-logo.png';
 
 export function Header() {
@@ -52,6 +53,7 @@ export function Header() {
 
         {/* Right side controls */}
         <div className="flex items-center gap-2">
+          <ThemeToggle />
           <AccessibilityControls />
         </div>
       </div>
