@@ -49,14 +49,6 @@ export function Footer() {
             </nav>
           </div>
 
-          {/* Safety Note */}
-          <div className="space-y-4">
-            <h4 className="font-display font-semibold text-foreground">Your Safety</h4>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              If you're in immediate danger, please contact local emergency services. 
-              The Quick Exit button will take you away from this site instantly.
-            </p>
-          </div>
         </div>
 
         <div className="mt-12 pt-6 border-t border-border/40">
