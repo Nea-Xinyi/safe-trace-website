@@ -44,10 +44,10 @@ export default function Businesses() {
   };
 
   const cards = [
-    { icon: Building2, title: 'Governance Gap', color: 'bg-primary/5 border-primary/15', iconColor: 'text-primary', desc: 'Most data protection policies weren\'t designed with technology-facilitated abuse in mind. Safe Trace fills that gap.' },
-    { icon: ShieldCheck, title: 'Beyond Compliance', color: 'bg-[hsl(175_45%_45%/0.05)] border-[hsl(175_45%_45%/0.15)]', iconColor: 'text-safety', desc: 'Our policies align with and exceed SOC 2, ISO 27001, GDPR, and Quebec Law 25 requirements for data protection.' },
-    { icon: Globe, title: 'Public Trust', color: 'bg-accent/20 border-accent/30', iconColor: 'text-primary', desc: 'Committing to survivor-centered policies signals that your organization takes data safety seriously — beyond legal minimums.' },
-    { icon: FileText, title: 'Clear Standards', color: 'bg-destructive/5 border-destructive/15', iconColor: 'text-safety', desc: 'Safe Trace policies are specific, actionable, and auditable — not vague promises buried in legal documents.' },
+    { icon: Building2, title: 'Governance Gap', color: 'bg-primary/5 dark:bg-primary/10 border-primary/15', iconColor: 'text-primary', desc: 'Most data protection policies weren\'t designed with technology-facilitated abuse in mind. Safe Trace fills that gap.' },
+    { icon: ShieldCheck, title: 'Beyond Compliance', color: 'bg-[hsl(175_45%_45%/0.05)] dark:bg-[hsl(175_45%_45%/0.12)] border-[hsl(175_45%_45%/0.15)]', iconColor: 'text-safety', desc: 'Our policies align with and exceed SOC 2, ISO 27001, GDPR, and Quebec Law 25 requirements for data protection.' },
+    { icon: Globe, title: 'Public Trust', color: 'bg-accent/20 dark:bg-accent/30 border-accent/30', iconColor: 'text-primary', desc: 'Committing to survivor-centered policies signals that your organization takes data safety seriously — beyond legal minimums.' },
+    { icon: FileText, title: 'Clear Standards', color: 'bg-destructive/5 dark:bg-destructive/10 border-destructive/15', iconColor: 'text-safety', desc: 'Safe Trace policies are specific, actionable, and auditable — not vague promises buried in legal documents.' },
   ];
 
   return (

@@ -79,7 +79,7 @@ export default function Resources() {
             <div className="max-w-3xl space-y-8">
               
               {/* Section 1: If Your Information Was Leaked */}
-              <div className="space-y-4 animate-on-scroll opacity-0 translate-y-4 transition-all duration-700 p-6 rounded-2xl bg-destructive/5 border border-destructive/15">
+              <div className="space-y-4 animate-on-scroll opacity-0 translate-y-4 transition-all duration-700 p-6 rounded-2xl bg-destructive/5 dark:bg-destructive/10 border border-destructive/15">
                 <div className="flex items-center gap-3">
                   <div className="p-2 rounded-full bg-destructive/10">
                     <AlertTriangle className="h-5 w-5 text-destructive" />
@@ -125,7 +125,7 @@ export default function Resources() {
               </div>
 
               {/* Section 2: Digital Self-Defense */}
-              <div className="space-y-4 animate-on-scroll opacity-0 translate-y-4 transition-all duration-700 p-6 rounded-2xl bg-[hsl(175_45%_45%/0.05)] border border-[hsl(175_45%_45%/0.15)]">
+              <div className="space-y-4 animate-on-scroll opacity-0 translate-y-4 transition-all duration-700 p-6 rounded-2xl bg-[hsl(175_45%_45%/0.05)] dark:bg-[hsl(175_45%_45%/0.12)] border border-[hsl(175_45%_45%/0.15)]">
                 <div className="flex items-center gap-3">
                   <div className="p-2 rounded-full bg-safety/10">
                     <Shield className="h-5 w-5 text-safety" />
@@ -207,7 +207,7 @@ export default function Resources() {
               </div>
 
               {/* Section 3: Legal Context */}
-              <div className="space-y-4 animate-on-scroll opacity-0 translate-y-4 transition-all duration-700 p-6 rounded-2xl bg-primary/5 border border-primary/15">
+              <div className="space-y-4 animate-on-scroll opacity-0 translate-y-4 transition-all duration-700 p-6 rounded-2xl bg-primary/5 dark:bg-primary/10 border border-primary/15">
                 <div className="flex items-center gap-3">
                   <div className="p-2 rounded-full bg-primary/10">
                     <Scale className="h-5 w-5 text-primary" />
@@ -249,7 +249,7 @@ export default function Resources() {
               </div>
 
               {/* Section 4: Emotional Support */}
-              <div className="space-y-4 animate-on-scroll opacity-0 translate-y-4 transition-all duration-700 p-6 rounded-2xl bg-accent/30 border border-accent/40">
+              <div className="space-y-4 animate-on-scroll opacity-0 translate-y-4 transition-all duration-700 p-6 rounded-2xl bg-accent/30 dark:bg-accent/40 border border-accent/40">
                 <div className="flex items-center gap-3">
                   <div className="p-2 rounded-full bg-primary/10">
                     <Heart className="h-5 w-5 text-primary" />

@@ -93,7 +93,7 @@ export default function Index() {
       </div>
 
       {/* Values Section */}
-      <section id="values-section" className="py-16 md:py-24 bg-primary/5">
+      <section id="values-section" className="py-16 md:py-24 bg-primary/5 dark:bg-primary/10">
         <div className="container">
           <div className="max-w-2xl mx-auto text-center mb-12">
             <h2 className="font-display text-2xl md:text-3xl font-semibold text-primary mb-4">
@@ -105,7 +105,7 @@ export default function Index() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="p-6 rounded-2xl bg-card border border-border/50 hover:border-primary/30 transition-calm animate-on-scroll opacity-0 translate-y-4 transition-all duration-500" style={{ transitionDelay: '0ms' }}>
+            <div className="p-6 rounded-2xl bg-card dark:bg-card/80 border border-border/50 hover:border-primary/30 transition-calm animate-on-scroll opacity-0 translate-y-4 transition-all duration-500" style={{ transitionDelay: '0ms' }}>
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                 <Shield className="h-6 w-6 text-primary" />
               </div>
@@ -115,7 +115,7 @@ export default function Index() {
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-card border border-border/50 hover:border-primary/30 transition-calm animate-on-scroll opacity-0 translate-y-4 transition-all duration-500" style={{ transitionDelay: '150ms' }}>
+            <div className="p-6 rounded-2xl bg-card dark:bg-card/80 border border-border/50 hover:border-primary/30 transition-calm animate-on-scroll opacity-0 translate-y-4 transition-all duration-500" style={{ transitionDelay: '150ms' }}>
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                 <Heart className="h-6 w-6 text-primary" />
               </div>
@@ -125,7 +125,7 @@ export default function Index() {
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-card border border-border/50 hover:border-primary/30 transition-calm animate-on-scroll opacity-0 translate-y-4 transition-all duration-500" style={{ transitionDelay: '300ms' }}>
+            <div className="p-6 rounded-2xl bg-card dark:bg-card/80 border border-border/50 hover:border-primary/30 transition-calm animate-on-scroll opacity-0 translate-y-4 transition-all duration-500" style={{ transitionDelay: '300ms' }}>
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                 <Users className="h-6 w-6 text-primary" />
               </div>
