@@ -61,7 +61,7 @@ export default function Purpose() {
   return (
     <Layout>
       {/* Hero */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-primary/15 via-accent/25 to-background">
+      <section className="py-10 md:py-14 bg-gradient-to-b from-primary/15 via-accent/25 to-background">
         <div className="container max-w-3xl">
           <h1 className="font-display text-4xl md:text-5xl font-bold text-primary mb-4 animate-fade-up" style={{ animationDelay: '0ms' }}>
             Why Safe Trace Exists
@@ -73,8 +73,8 @@ export default function Purpose() {
       </section>
 
       {/* Sections */}
-      <section className="py-6 md:py-10">
-        <div className="container max-w-3xl space-y-6">
+      <section className="py-2 md:py-4">
+        <div className="container max-w-3xl space-y-5">
           {sections.map((section, i) => (
             <div
               key={i}
@@ -98,7 +98,7 @@ export default function Purpose() {
       </section>
 
       {/* Closing */}
-      <section className="py-6 md:py-10 bg-gradient-to-b from-primary/8 to-accent/15">
+      <section className="py-4 md:py-6 bg-gradient-to-b from-primary/8 to-accent/15">
         <div className="container max-w-3xl text-center space-y-4">
           <h2 className="font-display text-2xl md:text-3xl font-semibold text-primary">
             This is just the beginning.
