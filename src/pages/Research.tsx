@@ -4,10 +4,10 @@ import { BookOpen, BarChart3, FileDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const stats = [
-  { value: '1 in 4', label: 'women experience online harassment that makes them fear for their safety', source: 'Pew Research Center, 2021', color: 'bg-destructive/5 border-destructive/15' },
-  { value: '73%', label: 'of women who experienced online abuse reported anxiety, stress, or panic attacks', source: 'The Economist Intelligence Unit, 2021', color: 'bg-primary/5 border-primary/15' },
-  { value: '58%', label: 'of teen girls have experienced some form of technology-facilitated abuse', source: 'Plan International, 2020', color: 'bg-accent/30 border-accent/40' },
-  { value: '$0', label: 'is the cost of most "privacy tools" that actually work — because they don\'t exist yet', source: 'Safe Trace Research, 2025', color: 'bg-[hsl(175_45%_45%/0.05)] border-[hsl(175_45%_45%/0.15)]' },
+  { value: '1 in 4', label: 'women experience online harassment that makes them fear for their safety', source: 'Pew Research Center, 2021', color: 'bg-destructive/5 dark:bg-destructive/10 border-destructive/15' },
+  { value: '73%', label: 'of women who experienced online abuse reported anxiety, stress, or panic attacks', source: 'The Economist Intelligence Unit, 2021', color: 'bg-primary/5 dark:bg-primary/10 border-primary/15' },
+  { value: '58%', label: 'of teen girls have experienced some form of technology-facilitated abuse', source: 'Plan International, 2020', color: 'bg-accent/30 dark:bg-accent/40 border-accent/40' },
+  { value: '$0', label: 'is the cost of most "privacy tools" that actually work — because they don\'t exist yet', source: 'Safe Trace Research, 2025', color: 'bg-[hsl(175_45%_45%/0.05)] dark:bg-[hsl(175_45%_45%/0.12)] border-[hsl(175_45%_45%/0.15)]' },
 ];
 
 export default function Research() {
@@ -42,7 +42,7 @@ export default function Research() {
       </section>
 
       {/* Key Statistics */}
-      <section className="py-8 md:py-14 bg-destructive/5">
+      <section className="py-8 md:py-14 bg-destructive/5 dark:bg-destructive/10">
         <div className="container max-w-3xl space-y-6">
           <div className="flex items-center gap-3">
             <div className="p-2.5 rounded-full bg-destructive/10">

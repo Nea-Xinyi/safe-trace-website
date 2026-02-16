@@ -6,7 +6,7 @@ const sections = [
   {
     icon: Eye,
     title: 'What We Saw',
-    color: 'bg-destructive/5 border-destructive/15',
+    color: 'bg-destructive/5 dark:bg-destructive/10 border-destructive/15',
     iconBg: 'bg-destructive/10',
     iconColor: 'text-destructive',
     content:
@@ -15,7 +15,7 @@ const sections = [
   {
     icon: ShieldOff,
     title: 'What Was Missing',
-    color: 'bg-[hsl(175_45%_45%/0.05)] border-[hsl(175_45%_45%/0.15)]',
+    color: 'bg-[hsl(175_45%_45%/0.05)] dark:bg-[hsl(175_45%_45%/0.12)] border-[hsl(175_45%_45%/0.15)]',
     iconBg: 'bg-safety/10',
     iconColor: 'text-safety',
     content:
@@ -24,7 +24,7 @@ const sections = [
   {
     icon: Lock,
     title: 'Why Existing Solutions Fail Survivors',
-    color: 'bg-primary/5 border-primary/15',
+    color: 'bg-primary/5 dark:bg-primary/10 border-primary/15',
     iconBg: 'bg-primary/10',
     iconColor: 'text-primary',
     content:
@@ -33,7 +33,7 @@ const sections = [
   {
     icon: Users,
     title: 'Who We Are',
-    color: 'bg-accent/30 border-accent/40',
+    color: 'bg-accent/30 dark:bg-accent/40 border-accent/40',
     iconBg: 'bg-accent',
     iconColor: 'text-accent-foreground',
     content:
