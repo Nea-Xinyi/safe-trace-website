@@ -73,8 +73,8 @@ export default function Purpose() {
       </section>
 
       {/* Sections */}
-      <section className="py-12 md:py-20">
-        <div className="container max-w-3xl space-y-8">
+      <section className="py-6 md:py-10">
+        <div className="container max-w-3xl space-y-6">
           {sections.map((section, i) => (
             <div
               key={i}
@@ -98,7 +98,7 @@ export default function Purpose() {
       </section>
 
       {/* Closing */}
-      <section className="py-12 md:py-20 bg-gradient-to-b from-primary/8 to-accent/15">
+      <section className="py-6 md:py-10 bg-gradient-to-b from-primary/8 to-accent/15">
         <div className="container max-w-3xl text-center space-y-4">
           <h2 className="font-display text-2xl md:text-3xl font-semibold text-primary">
             This is just the beginning.
