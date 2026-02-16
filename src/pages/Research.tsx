@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Layout } from '@/components/layout/Layout';
-import { BookOpen, BarChart3, FileDown, FlaskConical } from 'lucide-react';
+import { BookOpen, BarChart3, FileDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const stats = [
@@ -36,28 +36,28 @@ export default function Research() {
             Our Research
           </h1>
           <p className="text-lg text-muted-foreground leading-relaxed animate-fade-up" style={{ animationDelay: '200ms' }}>
-            The data behind Safe Trace — plain language, clear sources, no jargon.
+            The data behind Safe Trace — plain language, clear sources.
           </p>
         </div>
       </section>
 
       {/* Key Statistics */}
-      <section className="py-12 md:py-20">
-        <div className="container max-w-3xl space-y-8">
+      <section className="py-8 md:py-14 bg-destructive/5">
+        <div className="container max-w-3xl space-y-6">
           <div className="flex items-center gap-3">
-            <div className="p-2.5 rounded-full bg-primary/10">
-              <BarChart3 className="h-5 w-5 text-primary" />
+            <div className="p-2.5 rounded-full bg-destructive/10">
+              <BarChart3 className="h-5 w-5 text-destructive" />
             </div>
             <h2 className="font-display text-2xl md:text-3xl font-semibold text-primary">
               Key Statistics
             </h2>
           </div>
 
-          <div className="grid gap-6 sm:grid-cols-2">
+          <div className="grid gap-5 sm:grid-cols-2">
             {stats.map((stat, i) => (
               <div
                 key={i}
-                className={`p-6 rounded-xl border ${stat.color} space-y-3 animate-on-scroll opacity-0 translate-y-4 transition-all duration-700 hover:shadow-md`}
+                className={`p-5 rounded-xl border ${stat.color} space-y-2.5 animate-on-scroll opacity-0 translate-y-4 transition-all duration-700 hover:shadow-md`}
                 style={{ transitionDelay: `${i * 120}ms` }}
               >
                 <p className="font-display text-3xl font-bold text-primary">
@@ -76,8 +76,8 @@ export default function Research() {
       </section>
 
       {/* Summary */}
-      <section className="py-12 md:py-20 bg-gradient-to-b from-primary/8 to-accent/15">
-        <div className="container max-w-3xl space-y-6">
+      <section className="py-8 md:py-14 bg-primary/8">
+        <div className="container max-w-3xl space-y-5">
           <div className="flex items-center gap-3">
             <div className="p-2.5 rounded-full bg-primary/10">
               <BookOpen className="h-5 w-5 text-primary" />
@@ -86,7 +86,7 @@ export default function Research() {
               Research Summary
             </h2>
           </div>
-          <div className="space-y-4 text-muted-foreground leading-relaxed">
+          <div className="space-y-3 text-muted-foreground leading-relaxed">
             <p>
               Our research examines how existing digital platforms and legal frameworks fail to protect women from technology-facilitated abuse — specifically doxxing, non-consensual image sharing, and location tracking.
             </p>
@@ -100,29 +100,10 @@ export default function Research() {
         </div>
       </section>
 
-      {/* Methodology */}
-      <section className="py-12 md:py-20">
-        <div className="container max-w-3xl space-y-6 animate-on-scroll opacity-0 translate-y-4 transition-all duration-700">
-          <div className="flex items-center gap-3">
-            <div className="p-2.5 rounded-full bg-safety/10">
-              <FlaskConical className="h-5 w-5 text-safety" />
-            </div>
-            <h2 className="font-display text-2xl md:text-3xl font-semibold text-primary">
-              Methodology
-            </h2>
-          </div>
-          <p className="text-muted-foreground leading-relaxed">
-            This research uses a feminist epistemological framework with a survivor-informed lens. We center the experiences of those most affected by technology-facilitated abuse, recognizing that traditional "neutral" research often reproduces the power dynamics it claims to study.
-          </p>
-          <p className="text-muted-foreground leading-relaxed">
-            Our methodology combines qualitative analysis of survivor narratives, policy comparison across jurisdictions (Canada, EU, Australia, US), and technical auditing of platform safety features.
-          </p>
-        </div>
-      </section>
 
       {/* Download */}
-      <section className="py-12 md:py-20 bg-gradient-to-b from-accent/15 to-primary/8">
-        <div className="container max-w-3xl text-center space-y-6">
+      <section className="py-8 md:py-14 bg-accent/20">
+        <div className="container max-w-3xl text-center space-y-5">
           <div className="p-2.5 rounded-full bg-primary/10 w-fit mx-auto">
             <FileDown className="h-5 w-5 text-primary" />
           </div>

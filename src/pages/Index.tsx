@@ -71,6 +71,10 @@ export default function Index() {
               Made by young women, for all women.
             </p>
 
+            <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto animate-fade-up" style={{ animationDelay: '450ms' }}>
+              Safe Trace builds digital safety tools and policy frameworks to protect women from online harassment, doxxing, and technology-facilitated abuse.
+            </p>
+
             <div className="pt-4 animate-fade-up" style={{ animationDelay: '600ms' }}>
               <Button
                 size="lg"
