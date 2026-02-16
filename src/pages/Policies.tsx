@@ -140,7 +140,7 @@ export default function Policies() {
   return (
     <Layout>
       {/* Hero */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-primary/12 via-accent/30 to-background">
+      <section className="py-10 md:py-14 bg-gradient-to-b from-primary/12 via-accent/30 to-background">
         <div className="container max-w-3xl">
           <h1 className="font-display text-4xl md:text-5xl font-bold text-primary mb-4 animate-fade-up" style={{ animationDelay: '0ms' }}>
             Clear policies. No hidden compromises.
@@ -152,7 +152,7 @@ export default function Policies() {
       </section>
 
       {/* Policy Cards */}
-      <section className="py-12 md:py-20">
+      <section className="py-6 md:py-10">
         <div className="container max-w-3xl">
           <Accordion type="single" collapsible className="space-y-4">
             {policies.map((policy, i) => (
@@ -189,7 +189,7 @@ export default function Policies() {
       </section>
 
       {/* Why These Policies Exist */}
-      <section className="py-12 md:py-20 bg-gradient-to-b from-primary/8 to-accent/15">
+      <section className="py-6 md:py-10 bg-gradient-to-b from-primary/8 to-accent/15">
         <div className="container max-w-3xl space-y-6">
           <h2 className="font-display text-2xl md:text-3xl font-semibold text-primary">
             Why these policies exist
@@ -207,7 +207,7 @@ export default function Policies() {
       </section>
 
       {/* Companies That Agree */}
-      <section className="py-12 md:py-20">
+      <section className="py-6 md:py-10">
         <div className="container max-w-3xl space-y-6">
           <div className="flex items-center gap-3">
             <div className="p-2.5 rounded-full bg-primary/10">

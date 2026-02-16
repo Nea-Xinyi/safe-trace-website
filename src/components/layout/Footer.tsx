@@ -5,7 +5,7 @@ import logo from '@/assets/ribbon-logo.png';
 export function Footer() {
   return (
     <footer className="border-t border-primary/20 bg-primary/5">
-      <div className="container py-12">
+      <div className="container py-8">
         <div className="grid gap-8 md:grid-cols-4">
           {/* Brand */}
           <div className="space-y-4">
@@ -51,7 +51,7 @@ export function Footer() {
 
         </div>
 
-        <div className="mt-12 pt-6 border-t border-border/40">
+        <div className="mt-8 pt-4 border-t border-border/40">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground flex items-center gap-1">
               Made with <Heart className="h-4 w-4 text-primary" /> by women, for women
