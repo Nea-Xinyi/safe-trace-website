@@ -44,7 +44,7 @@ export default function Resources() {
     <Layout>
       <div className={`${plainTextMode ? 'font-mono text-sm' : ''}`}>
         {/* Header */}
-        <section className="py-12 md:py-16 bg-gradient-to-b from-destructive/8 via-accent/20 to-background">
+        <section className="py-8 md:py-12 bg-gradient-to-b from-destructive/8 via-accent/20 to-background">
           <div className="container">
             <div className="max-w-3xl">
               <h1 className="font-display text-3xl md:text-4xl font-bold text-primary mb-4 animate-fade-up" style={{ animationDelay: '0ms' }}>
@@ -74,9 +74,9 @@ export default function Resources() {
         </section>
 
         {/* Main Content */}
-        <section className="py-12 md:py-16">
+        <section className="py-6 md:py-10">
           <div className="container">
-            <div className="max-w-3xl space-y-12">
+            <div className="max-w-3xl space-y-8">
               
               {/* Section 1: If Your Information Was Leaked */}
               <div className="space-y-4 animate-on-scroll opacity-0 translate-y-4 transition-all duration-700 p-6 rounded-2xl bg-destructive/5 border border-destructive/15">

@@ -53,7 +53,7 @@ export default function Businesses() {
   return (
     <Layout>
       {/* Hero */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-primary/12 via-accent/20 to-background">
+      <section className="py-10 md:py-14 bg-gradient-to-b from-primary/12 via-accent/20 to-background">
         <div className="container max-w-3xl">
           <h1 className="font-display text-4xl md:text-5xl font-bold text-primary mb-4 animate-fade-up" style={{ animationDelay: '0ms' }}>
             Commit to Safe Trace
@@ -65,8 +65,8 @@ export default function Businesses() {
       </section>
 
       {/* Why It Matters */}
-      <section className="py-12 md:py-20">
-        <div className="container max-w-3xl space-y-8">
+      <section className="py-6 md:py-10">
+        <div className="container max-w-3xl space-y-6">
           <h2 className="font-display text-2xl md:text-3xl font-semibold text-primary">
             Why your organization should care
           </h2>
@@ -88,7 +88,7 @@ export default function Businesses() {
       </section>
 
       {/* Framework Alignment */}
-      <section className="py-12 md:py-20 bg-gradient-to-b from-primary/8 to-accent/15">
+      <section className="py-6 md:py-10 bg-gradient-to-b from-primary/8 to-accent/15">
         <div className="container max-w-3xl space-y-6">
           <h2 className="font-display text-2xl md:text-3xl font-semibold text-primary">
             Framework Alignment
@@ -115,7 +115,7 @@ export default function Businesses() {
       </section>
 
       {/* Commitment Form */}
-      <section className="py-12 md:py-20">
+      <section className="py-6 md:py-10">
         <div className="container max-w-xl space-y-6">
           <h2 className="font-display text-2xl md:text-3xl font-semibold text-primary">
             Make Your Commitment
