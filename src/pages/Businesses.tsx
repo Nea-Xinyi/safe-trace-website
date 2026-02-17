@@ -116,7 +116,7 @@ export default function Businesses() {
 
       {/* Commitment Form */}
       <section className="py-6 md:py-10">
-        <div className="container max-w-xl space-y-6">
+        <div className="container max-w-xl space-y-6 p-6 rounded-2xl bg-primary/5 dark:bg-primary/10 border border-primary/15">
           <h2 className="font-display text-2xl md:text-3xl font-semibold text-primary">
             Make Your Commitment
           </h2>
