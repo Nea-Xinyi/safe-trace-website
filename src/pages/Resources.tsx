@@ -35,7 +35,7 @@ export default function Resources() {
     <Layout>
       <div>
         {/* Header */}
-        <section className="py-8 md:py-12 bg-gradient-to-b from-destructive/8 via-accent/20 to-background">
+        <section className="py-8 md:py-12 bg-primary/5 dark:bg-primary/10">
           <div className="container">
             <div className="max-w-3xl">
               <h1 className="font-display text-3xl md:text-4xl font-bold text-primary mb-4 animate-fade-up" style={{ animationDelay: '0ms' }}>

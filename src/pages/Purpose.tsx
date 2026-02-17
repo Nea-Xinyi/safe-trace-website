@@ -61,7 +61,7 @@ export default function Purpose() {
   return (
     <Layout>
       {/* Hero */}
-      <section className="py-12 md:py-16 bg-gradient-to-b from-primary/15 via-accent/25 to-background">
+      <section className="py-12 md:py-16 bg-primary/5 dark:bg-primary/10">
         <div className="container max-w-3xl">
           <h1 className="font-display text-4xl md:text-5xl font-bold text-primary mb-4 animate-fade-up" style={{ animationDelay: '0ms' }}>
             Why Safe Trace Exists
