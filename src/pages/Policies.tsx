@@ -1,15 +1,11 @@
 import { useEffect } from 'react';
 import { Layout } from '@/components/layout/Layout';
 import {
-  Shield,
   Eye,
-  MapPin,
   Trash2,
   Bell,
-  Heart,
   Building2,
   Lock,
-  FileText,
   Scale,
 } from 'lucide-react';
 import {
@@ -32,20 +28,6 @@ const policies = [
       'Consent must be granular: users can agree to specific processing activities independently (e.g., consenting to account creation without consenting to analytics).',
       'Consent can be withdrawn at any time through a process no more complex than the one used to grant it, in compliance with GDPR Article 7(3).',
       'Records of consent (timestamp, scope, method) must be maintained and auditable.',
-    ],
-  },
-  {
-    icon: MapPin,
-    title: 'Anti-Stalking & Location Safeguards',
-    color: 'text-destructive',
-    bg: 'bg-destructive/10',
-    sectionBg: 'bg-destructive/5 dark:bg-destructive/10',
-    content: [
-      'Location data is classified as sensitive personal information and is never collected, stored, or processed without explicit, purpose-limited consent.',
-      'Any location-sharing feature must include a one-tap emergency disable that immediately and irrevocably ceases all location transmission and purges cached location data.',
-      'Location data must not be retained beyond the active session unless the user explicitly opts into storage, with a maximum retention period of 24 hours.',
-      'Geofencing, movement pattern analysis, or predictive location modeling is prohibited without independent ethical review and explicit user authorization.',
-      'All location-related access logs must be available to the user in real time, showing exactly who accessed their location and when.',
     ],
   },
   {
@@ -88,20 +70,6 @@ const policies = [
       'An annual transparency report must be published detailing: number of data requests received from law enforcement, number of breaches, data retention statistics, and third-party processor audits.',
       'All algorithmic decisions that affect user safety, content visibility, or data exposure must be documented and explainable to the user upon request.',
       'Security audit results from independent third parties must be published in summary form at least annually.',
-    ],
-  },
-  {
-    icon: Heart,
-    title: 'Survivor-Centered Design',
-    color: 'text-primary',
-    bg: 'bg-accent',
-    sectionBg: 'bg-accent/20 dark:bg-accent/30',
-    content: [
-      'Every feature, interface, and data flow must be evaluated through a threat model that asks: "Could this be weaponized against the most vulnerable user?" Features that present exploitation risk must be redesigned or removed.',
-      'Safety-critical features (quick exit, data purge, account lockdown) must be accessible within two interactions from any page and must not require authentication to activate.',
-      'No feature may be deployed that enables surveillance, location tracking, or behavioural monitoring of one user by another, unless the monitored user has independent, revocable control.',
-      'Content moderation and reporting systems must be designed to protect the reporter — not expose them to retaliation. Reporter identity must never be disclosed to the reported party.',
-      'All design decisions must be informed by direct consultation with survivor advocacy organizations. Compliance with this principle must be documented in product decision logs.',
     ],
   },
   {
