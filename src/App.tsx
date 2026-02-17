@@ -11,6 +11,7 @@ import Policies from "./pages/Policies";
 import Purpose from "./pages/Purpose";
 import Businesses from "./pages/Businesses";
 import Research from "./pages/Research";
+import SafeTraceApp from "./pages/SafeTraceApp";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,6 +32,7 @@ function App() {
               <Route path="/purpose" element={<Purpose />} />
               <Route path="/businesses" element={<Businesses />} />
               <Route path="/research" element={<Research />} />
+              <Route path="/safetrace-app" element={<SafeTraceApp />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>

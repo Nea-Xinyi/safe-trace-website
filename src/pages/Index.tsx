@@ -77,7 +77,7 @@ export default function Index() {
               Safe Trace builds digital safety tools and policy frameworks to protect women from online harassment, doxxing, and technology-facilitated abuse.
             </p>
 
-            <div className="pt-4 animate-fade-up" style={{ animationDelay: '600ms' }}>
+            <div className="pt-4 flex flex-wrap gap-4 justify-center animate-fade-up" style={{ animationDelay: '600ms' }}>
               <Button
                 size="lg"
                 variant="outline"
@@ -85,6 +85,15 @@ export default function Index() {
                 onClick={() => document.getElementById('values-section')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Explore
+                <ArrowDown className="ml-2 h-4 w-4" />
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="text-base px-8 rounded-full"
+                onClick={() => document.getElementById('help-section')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                Get Help
                 <ArrowDown className="ml-2 h-4 w-4" />
               </Button>
             </div>
@@ -139,7 +148,7 @@ export default function Index() {
       </section>
 
       {/* Gentle CTA Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-background to-primary/8">
+      <section id="help-section" className="py-16 md:py-24 bg-gradient-to-b from-background to-primary/8">
         <div className="container">
           <div className="max-w-2xl mx-auto text-center space-y-6">
             <h2 className="font-display text-2xl md:text-3xl font-semibold text-primary">
@@ -151,8 +160,8 @@ export default function Index() {
               No sign-up required.
             </p>
             <Button asChild size="lg" className="mt-4">
-              <Link to="/resources">
-                Access Resources
+              <Link to="/safetrace-app">
+                Access SafeTrace App
                 <ArrowDown className="ml-2 h-4 w-4" />
               </Link>
             </Button>
