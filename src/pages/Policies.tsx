@@ -140,7 +140,7 @@ export default function Policies() {
   return (
     <Layout>
       {/* Hero */}
-      <section className="py-10 md:py-14 bg-gradient-to-b from-primary/12 via-accent/30 to-background">
+      <section className="py-10 md:py-14 bg-primary/5 dark:bg-primary/10">
         <div className="container max-w-3xl">
           <h1 className="font-display text-4xl md:text-5xl font-bold text-primary mb-4 animate-fade-up" style={{ animationDelay: '0ms' }}>
             Clear policies. No hidden compromises.
