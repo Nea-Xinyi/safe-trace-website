@@ -54,7 +54,6 @@ export default function Index() {
               <Link to="/purpose" className="text-sm font-medium text-foreground hover:text-primary transition-calm">Why We Exist</Link>
               <Link to="/businesses" className="text-sm font-medium text-foreground hover:text-primary transition-calm">Take Action</Link>
               <Link to="/research" className="text-sm font-medium text-foreground hover:text-primary transition-calm">The Data</Link>
-              <Link to="/safetrace-app" className="text-sm font-medium text-foreground hover:text-primary transition-calm">SafeTrace App</Link>
             </nav>
             <div className="flex items-center gap-2">
               <ThemeToggle />
