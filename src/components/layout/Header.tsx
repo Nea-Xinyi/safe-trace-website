@@ -49,6 +49,12 @@ export function Header() {
           >
             The Data
           </Link>
+          <Link 
+            to="/safetrace-app" 
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-calm"
+          >
+            SafeTrace App
+          </Link>
         </nav>
 
         {/* Right side controls */}
