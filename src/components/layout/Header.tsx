@@ -23,31 +23,31 @@ export function Header() {
             to="/resources" 
             className="text-sm font-medium text-muted-foreground hover:text-foreground transition-calm"
           >
-            Resources
+            Protect Yourself
           </Link>
           <Link 
             to="/policies" 
             className="text-sm font-medium text-muted-foreground hover:text-foreground transition-calm"
           >
-            Policies
+            Our Standards
           </Link>
           <Link 
             to="/purpose" 
             className="text-sm font-medium text-muted-foreground hover:text-foreground transition-calm"
           >
-            Our Purpose
+            Why We Exist
           </Link>
           <Link 
             to="/businesses" 
             className="text-sm font-medium text-muted-foreground hover:text-foreground transition-calm"
           >
-            For Businesses
+            Take Action
           </Link>
           <Link 
             to="/research" 
             className="text-sm font-medium text-muted-foreground hover:text-foreground transition-calm"
           >
-            Research
+            The Data
           </Link>
         </nav>
 
