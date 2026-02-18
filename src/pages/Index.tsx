@@ -49,12 +49,12 @@ export default function Index() {
               <span className="font-display text-xl font-semibold text-primary">SafeTrace</span>
             </Link>
             <nav className="hidden md:flex items-center gap-6">
-              <Link to="/resources" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-calm">Protect Yourself</Link>
-              <Link to="/policies" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-calm">Our Standards</Link>
-              <Link to="/purpose" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-calm">Why We Exist</Link>
-              <Link to="/businesses" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-calm">Take Action</Link>
-              <Link to="/research" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-calm">The Data</Link>
-              <Link to="/safetrace-app" className="text-sm font-semibold text-primary hover:text-primary/80 transition-calm">SafeTrace App</Link>
+              <Link to="/resources" className="text-sm font-medium text-foreground hover:text-primary transition-calm">Protect Yourself</Link>
+              <Link to="/policies" className="text-sm font-medium text-foreground hover:text-primary transition-calm">Our Standards</Link>
+              <Link to="/purpose" className="text-sm font-medium text-foreground hover:text-primary transition-calm">Why We Exist</Link>
+              <Link to="/businesses" className="text-sm font-medium text-foreground hover:text-primary transition-calm">Take Action</Link>
+              <Link to="/research" className="text-sm font-medium text-foreground hover:text-primary transition-calm">The Data</Link>
+              <Link to="/safetrace-app" className="text-sm font-medium text-foreground hover:text-primary transition-calm">SafeTrace App</Link>
             </nav>
             <div className="flex items-center gap-2">
               <ThemeToggle />

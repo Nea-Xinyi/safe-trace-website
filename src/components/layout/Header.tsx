@@ -21,37 +21,37 @@ export function Header() {
         <nav className="hidden md:flex items-center gap-6">
           <Link 
             to="/resources" 
-            className="text-sm font-medium text-muted-foreground hover:text-foreground px-2.5 py-1 rounded-md hover:bg-accent transition-calm"
+            className="text-sm font-medium text-foreground hover:text-primary transition-calm"
           >
             Protect Yourself
           </Link>
           <Link 
             to="/policies" 
-            className="text-sm font-medium text-muted-foreground hover:text-foreground px-2.5 py-1 rounded-md hover:bg-accent transition-calm"
+            className="text-sm font-medium text-foreground hover:text-primary transition-calm"
           >
             Our Standards
           </Link>
           <Link 
             to="/purpose" 
-            className="text-sm font-medium text-muted-foreground hover:text-foreground px-2.5 py-1 rounded-md hover:bg-accent transition-calm"
+            className="text-sm font-medium text-foreground hover:text-primary transition-calm"
           >
             Why We Exist
           </Link>
           <Link 
             to="/businesses" 
-            className="text-sm font-medium text-muted-foreground hover:text-foreground px-2.5 py-1 rounded-md hover:bg-accent transition-calm"
+            className="text-sm font-medium text-foreground hover:text-primary transition-calm"
           >
             Take Action
           </Link>
           <Link 
             to="/research" 
-            className="text-sm font-medium text-muted-foreground hover:text-foreground px-2.5 py-1 rounded-md hover:bg-accent transition-calm"
+            className="text-sm font-medium text-foreground hover:text-primary transition-calm"
           >
             The Data
           </Link>
           <Link 
             to="/safetrace-app" 
-            className="text-sm font-medium text-muted-foreground hover:text-foreground px-2.5 py-1 rounded-md hover:bg-accent transition-calm"
+            className="text-sm font-medium text-foreground hover:text-primary transition-calm"
           >
             SafeTrace App
           </Link>
