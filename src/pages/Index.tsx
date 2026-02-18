@@ -54,6 +54,7 @@ export default function Index() {
               <Link to="/purpose" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-calm">Why We Exist</Link>
               <Link to="/businesses" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-calm">Take Action</Link>
               <Link to="/research" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-calm">The Data</Link>
+              <Link to="/safetrace-app" className="text-sm font-semibold text-primary hover:text-primary/80 transition-calm">SafeTrace App</Link>
             </nav>
             <div className="flex items-center gap-2">
               <ThemeToggle />
@@ -87,6 +88,12 @@ export default function Index() {
                 Explore
                 <ArrowDown className="ml-2 h-4 w-4" />
               </Button>
+              <Button asChild size="lg" className="text-base px-8 rounded-full">
+                <Link to="/safetrace-app">
+                  <Camera className="mr-2 h-4 w-4" />
+                  SafeTrace App
+                </Link>
+              </Button>
             </div>
           </div>
         </div>
@@ -116,13 +123,13 @@ export default function Index() {
               <Link
                 key={card.to}
                 to={card.to}
-                className="group p-6 rounded-2xl bg-card dark:bg-card/80 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 animate-on-scroll opacity-0 translate-y-4"
+                className="group p-6 rounded-2xl bg-card dark:bg-card/80 border-2 border-primary/20 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 animate-on-scroll opacity-0 translate-y-4"
                 style={{ transitionDelay: `${i * 100}ms` }}
               >
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center mb-4 group-hover:bg-primary/30 transition-colors">
                   <card.icon className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="font-display font-semibold text-lg mb-2 group-hover:text-primary transition-colors">{card.title}</h3>
+                <h3 className="font-display font-bold text-lg mb-2 text-primary transition-colors">{card.title}</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">{card.desc}</p>
               </Link>
             ))}
