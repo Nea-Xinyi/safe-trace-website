@@ -87,12 +87,6 @@ export default function Index() {
                 Explore
                 <ArrowDown className="ml-2 h-4 w-4" />
               </Button>
-              <Button asChild size="lg" className="text-base px-8 rounded-full">
-                <Link to="/safetrace-app">
-                  <Camera className="mr-2 h-4 w-4" />
-                  SafeTrace App
-                </Link>
-              </Button>
             </div>
           </div>
         </div>
@@ -149,6 +143,30 @@ export default function Index() {
                 <ArrowDown className="ml-2 h-4 w-4" />
               </Link>
             </Button>
+          </div>
+
+          {/* Resources section */}
+          <div className="max-w-3xl mx-auto mt-16">
+            <h3 className="font-display text-xl md:text-2xl font-semibold text-primary text-center mb-8">
+              Protect Yourself
+            </h3>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {[
+                { title: 'Lock Down Your Accounts', desc: 'Step by step guides to secure your social media, email, and devices from unwanted access.' },
+                { title: 'Remove Leaked Information', desc: 'Learn how to find and request removal of your personal data from the internet.' },
+                { title: 'Recognize Warning Signs', desc: 'Understand the tactics used in technology facilitated abuse so you can spot them early.' },
+                { title: 'Emergency Resources', desc: 'Hotlines, legal aid, and support organizations that can help when you need it most.' },
+              ].map((item) => (
+                <Link
+                  key={item.title}
+                  to="/resources"
+                  className="p-5 rounded-xl bg-card border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300"
+                >
+                  <h4 className="font-display font-semibold text-base mb-1 text-primary">{item.title}</h4>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </section>
