@@ -138,8 +138,8 @@ export default function Index() {
               Need help right now?
             </h2>
             <Button asChild size="lg" className="mt-4">
-              <Link to="/safetrace-app">
-                Access SafeTrace App
+              <Link to="/resources">
+                Protect Yourself
                 <ArrowDown className="ml-2 h-4 w-4" />
               </Link>
             </Button>
