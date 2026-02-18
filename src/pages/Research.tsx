@@ -36,7 +36,7 @@ export default function Research() {
             Our Research
           </h1>
           <p className="text-lg text-muted-foreground leading-relaxed animate-fade-up" style={{ animationDelay: '200ms' }}>
-            The data behind Safe Trace — plain language, clear sources.
+            The data behind Safe Trace, in plain language with clear sources.
           </p>
         </div>
       </section>
@@ -88,13 +88,13 @@ export default function Research() {
           </div>
           <div className="space-y-3 text-muted-foreground leading-relaxed">
             <p>
-              Our research examines how existing digital platforms and legal frameworks fail to protect women from technology-facilitated abuse — specifically doxxing, non-consensual image sharing, and location tracking.
+              Our research examines how existing digital platforms and legal frameworks fail to protect women from technology facilitated abuse, specifically doxxing, non-consensual image sharing, and location tracking.
             </p>
             <p>
-              Through interviews, case studies, and policy analysis, we identified critical gaps: most platforms moderate reactively rather than preventively, privacy tools are either paywalled or require technical expertise, and legal protections vary dramatically across jurisdictions.
+              Through interviews, case studies, and policy analysis, we identified critical gaps. Most platforms moderate reactively rather than preventively, privacy tools are either paywalled or require technical expertise, and legal protections vary dramatically across jurisdictions.
             </p>
             <p>
-              The Safe Trace framework proposes a new standard — one that treats digital safety as a design requirement, not an afterthought. Our policies are informed by survivor experiences and built to be adoptable by organizations of any size.
+              The Safe Trace framework proposes a new standard, one that treats digital safety as a design requirement instead of an afterthought. Our policies are informed by survivor experiences and built to be adoptable by organizations of any size.
             </p>
           </div>
         </div>

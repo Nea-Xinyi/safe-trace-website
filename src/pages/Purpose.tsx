@@ -10,7 +10,7 @@ const sections = [
     iconBg: 'bg-destructive/10',
     iconColor: 'text-destructive',
     content:
-      'Women being tracked through their own devices. Personal photos weaponized. Addresses shared publicly as punishment. An entire ecosystem of technology designed without considering the safety of its most vulnerable users — and then blaming them when things go wrong.',
+      'We saw women being tracked through their own devices, personal photos turned into weapons, and addresses shared publicly as punishment. An entire ecosystem of technology was designed without considering the safety of its most vulnerable users, and then it blamed them when things went wrong.',
   },
   {
     icon: ShieldOff,
@@ -19,7 +19,7 @@ const sections = [
     iconBg: 'bg-safety/10',
     iconColor: 'text-safety',
     content:
-      'Prevention, not just reaction. Most resources only appear after harm is done — after images are shared, after addresses are published, after someone is already in danger. We needed tools and policies that stop harm before it starts, not just respond to it after.',
+      'What was missing was prevention, not just reaction. Most resources only appear after harm is already done, after images are shared, after addresses are published, after someone is already in danger. We needed tools and policies that stop harm before it starts instead of only responding to it after the fact.',
   },
   {
     icon: Lock,
@@ -28,7 +28,7 @@ const sections = [
     iconBg: 'bg-primary/10',
     iconColor: 'text-primary',
     content:
-      "Privacy tools are paywalled. Reporting mechanisms are slow and dismissive. Platform moderation is reactive and inconsistent. Legal protections vary wildly by jurisdiction and rarely keep pace with technology. The burden of proof falls on the person being harmed, not the person causing harm.",
+      "Privacy tools are locked behind paywalls while reporting mechanisms remain slow and dismissive. Platform moderation is reactive and inconsistent, and legal protections vary wildly by jurisdiction while rarely keeping pace with technology. The burden of proof almost always falls on the person being harmed instead of the person causing it.",
   },
   {
     icon: Users,
@@ -37,7 +37,7 @@ const sections = [
     iconBg: 'bg-accent',
     iconColor: 'text-accent-foreground',
     content:
-      "Young women who got tired of waiting for someone else to fix it. We're researchers, designers, and advocates building what the system never did: a standard for digital safety that centers survivors, not corporations. We believe women shouldn't have to choose between participating online and being safe.",
+      "We are young women who got tired of waiting for someone else to fix it. We're researchers, designers, and advocates building what the system never did, which is a standard for digital safety that centers survivors instead of corporations. We believe women shouldn't have to choose between participating online and being safe.",
   },
 ];
 

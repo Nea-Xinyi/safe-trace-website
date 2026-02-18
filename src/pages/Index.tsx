@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowDown, Heart, Shield, Users } from 'lucide-react';
+import { ArrowDown, Shield, Heart, Users, Scale, BarChart3, Camera } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Layout } from '@/components/layout/Layout';
 import { AccessibilityControls } from '@/components/layout/AccessibilityControls';
@@ -74,7 +74,7 @@ export default function Index() {
             </p>
 
             <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto animate-fade-up" style={{ animationDelay: '450ms' }}>
-              Safe Trace builds digital safety tools and policy frameworks to protect women from online harassment, doxxing, and technology-facilitated abuse.
+              We build digital safety tools and policy frameworks that protect women from online harassment, doxxing, and technology facilitated abuse.
             </p>
 
             <div className="pt-4 flex flex-wrap gap-4 justify-center animate-fade-up" style={{ animationDelay: '600ms' }}>
@@ -92,48 +92,40 @@ export default function Index() {
         </div>
       </div>
 
-      {/* Values Section */}
+      {/* Explore Section */}
       <section id="values-section" className="py-16 md:py-24 bg-primary/5 dark:bg-primary/10">
         <div className="container">
           <div className="max-w-2xl mx-auto text-center mb-12">
             <h2 className="font-display text-2xl md:text-3xl font-semibold text-primary mb-4">
-              Built on trust, not tracking
+              See what we're building
             </h2>
             <p className="text-muted-foreground">
-              We believe safety tools should protect you, not monitor you.
+              Everything here is free, open, and made with you in mind.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="p-6 rounded-2xl bg-card dark:bg-card/80 border border-border/50 hover:border-primary/30 transition-calm animate-on-scroll opacity-0 translate-y-4 transition-all duration-500" style={{ transitionDelay: '0ms' }}>
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                <Shield className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="font-display font-semibold text-lg mb-2">Privacy First</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                No tracking, no data harvesting. Your information stays yours—we don't collect what we don't need.
-              </p>
-            </div>
-
-            <div className="p-6 rounded-2xl bg-card dark:bg-card/80 border border-border/50 hover:border-primary/30 transition-calm animate-on-scroll opacity-0 translate-y-4 transition-all duration-500" style={{ transitionDelay: '150ms' }}>
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                <Heart className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="font-display font-semibold text-lg mb-2">Survivor-Centered</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                Every feature is designed with survivors in mind. We understand that safety looks different for everyone.
-              </p>
-            </div>
-
-            <div className="p-6 rounded-2xl bg-card dark:bg-card/80 border border-border/50 hover:border-primary/30 transition-calm animate-on-scroll opacity-0 translate-y-4 transition-all duration-500" style={{ transitionDelay: '300ms' }}>
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                <Users className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="font-display font-semibold text-lg mb-2">By Women, For Women</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                Created by young women who understand the unique digital threats women face every day.
-              </p>
-            </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {[
+              { icon: Shield, to: '/resources', title: 'Protect Yourself', desc: 'Practical guides to lock down your accounts, remove leaked info, and take back control of your digital life.' },
+              { icon: Scale, to: '/policies', title: 'Our Standards', desc: 'The specific, enforceable policies we hold ourselves and every partner organization to. No vague promises.' },
+              { icon: Heart, to: '/purpose', title: 'Why We Exist', desc: 'The story behind Safe Trace and the gaps in protection that pushed us to build something better.' },
+              { icon: Users, to: '/businesses', title: 'Take Action', desc: 'If your organization handles personal data, this is how you commit to doing it responsibly.' },
+              { icon: BarChart3, to: '/research', title: 'The Data', desc: 'Real statistics, sourced research, and the evidence that shows why digital safety needs to change.' },
+              { icon: Camera, to: '/safetrace-app', title: 'SafeTrace App', desc: 'Upload a photo before you post it and let our AI flag anything that could be used to find or identify you.' },
+            ].map((card, i) => (
+              <Link
+                key={card.to}
+                to={card.to}
+                className="group p-6 rounded-2xl bg-card dark:bg-card/80 border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300 animate-on-scroll opacity-0 translate-y-4"
+                style={{ transitionDelay: `${i * 100}ms` }}
+              >
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                  <card.icon className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="font-display font-semibold text-lg mb-2 group-hover:text-primary transition-colors">{card.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{card.desc}</p>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

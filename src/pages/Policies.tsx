@@ -25,7 +25,7 @@ const policies = [
     sectionBg: 'bg-primary/5 dark:bg-primary/10',
     content: [
       'The company shall not disclose a client\'s personal information without the individual\'s explicit, informed consent.',
-      'Personal information includes any information that identifies, relates to, or could reasonably be linked, directly or indirectly, to an individual — such as names, contact details, location data, online identifiers, or similar identifying information.',
+      'Personal information includes any information that identifies, relates to, or could reasonably be linked to an individual, whether directly or indirectly. This covers names, contact details, location data, online identifiers, and similar identifying information.',
       'Location data shall not be accessible to third parties, including family members or partners, without the explicit, revocable consent of the individual being tracked.',
       'Users shall have the ability to quickly disable location sharing in emergency situations.',
     ],
@@ -123,7 +123,7 @@ export default function Policies() {
             Clear policies. No hidden compromises.
           </h1>
           <p className="text-lg text-muted-foreground leading-relaxed animate-fade-up" style={{ animationDelay: '200ms' }}>
-            We believe the platforms that protect women should hold themselves to a higher standard than the ones that fail them. These are the specific, enforceable commitments that Safe Trace — and every organization that signs on — must uphold.
+            We believe the platforms that protect women should hold themselves to a higher standard than the ones that fail them. These are the specific, enforceable commitments that Safe Trace and every organization that signs on must uphold.
           </p>
         </div>
       </section>
@@ -172,13 +172,13 @@ export default function Policies() {
             Why these policies exist
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            Current laws and platforms consistently fail survivors of technology-facilitated abuse. Most privacy policies are written to protect the company, not the user. Most platforms moderate reactively — after harm has already been done.
+            Current laws and platforms consistently fail survivors of technology facilitated abuse. Most privacy policies are written to protect the company, not the user, and most platforms only moderate reactively after harm has already been done.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            Safe Trace policies are preventive. They are modeled on the strongest international standards — GDPR, Quebec's Law 25, ISO 27001, SOC 2 — and then go further, because compliance is a floor, not a ceiling.
+            Safe Trace policies are preventive. They are modeled on the strongest international standards like GDPR, Quebec's Law 25, ISO 27001, and SOC 2, and then go further because compliance is a floor, not a ceiling.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            Every policy above is designed to be specific, auditable, and enforceable. Vague commitments to "user safety" are insufficient. These are the concrete standards we hold ourselves and our partners to.
+            Every policy above is designed to be specific, auditable, and enforceable. Vague commitments to "user safety" just aren't enough, so these are the concrete standards we hold ourselves and our partners to.
           </p>
         </div>
       </section>
