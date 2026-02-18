@@ -21,37 +21,37 @@ export function Header() {
         <nav className="hidden md:flex items-center gap-6">
           <Link 
             to="/resources" 
-            className="text-sm font-medium text-muted-foreground hover:text-foreground px-3 py-1.5 rounded-full border border-border/50 hover:border-primary/30 hover:bg-primary/5 transition-calm"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground px-2.5 py-1 rounded-md hover:bg-accent transition-calm"
           >
             Protect Yourself
           </Link>
           <Link 
             to="/policies" 
-            className="text-sm font-medium text-muted-foreground hover:text-foreground px-3 py-1.5 rounded-full border border-border/50 hover:border-primary/30 hover:bg-primary/5 transition-calm"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground px-2.5 py-1 rounded-md hover:bg-accent transition-calm"
           >
             Our Standards
           </Link>
           <Link 
             to="/purpose" 
-            className="text-sm font-medium text-muted-foreground hover:text-foreground px-3 py-1.5 rounded-full border border-border/50 hover:border-primary/30 hover:bg-primary/5 transition-calm"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground px-2.5 py-1 rounded-md hover:bg-accent transition-calm"
           >
             Why We Exist
           </Link>
           <Link 
             to="/businesses" 
-            className="text-sm font-medium text-muted-foreground hover:text-foreground px-3 py-1.5 rounded-full border border-border/50 hover:border-primary/30 hover:bg-primary/5 transition-calm"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground px-2.5 py-1 rounded-md hover:bg-accent transition-calm"
           >
             Take Action
           </Link>
           <Link 
             to="/research" 
-            className="text-sm font-medium text-muted-foreground hover:text-foreground px-3 py-1.5 rounded-full border border-border/50 hover:border-primary/30 hover:bg-primary/5 transition-calm"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground px-2.5 py-1 rounded-md hover:bg-accent transition-calm"
           >
             The Data
           </Link>
           <Link 
             to="/safetrace-app" 
-            className="text-sm font-semibold text-primary px-3 py-1.5 rounded-full border border-primary/30 bg-primary/10 hover:bg-primary/20 transition-calm"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground px-2.5 py-1 rounded-md hover:bg-accent transition-calm"
           >
             SafeTrace App
           </Link>
