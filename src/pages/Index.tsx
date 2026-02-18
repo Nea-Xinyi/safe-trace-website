@@ -49,11 +49,11 @@ export default function Index() {
               <span className="font-display text-xl font-semibold text-primary">SafeTrace</span>
             </Link>
             <nav className="hidden md:flex items-center gap-6">
-              <Link to="/resources" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-calm">Resources</Link>
-              <Link to="/policies" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-calm">Policies</Link>
-              <Link to="/purpose" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-calm">Our Purpose</Link>
-              <Link to="/businesses" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-calm">For Businesses</Link>
-              <Link to="/research" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-calm">Research</Link>
+              <Link to="/resources" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-calm">Protect Yourself</Link>
+              <Link to="/policies" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-calm">Our Standards</Link>
+              <Link to="/purpose" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-calm">Why We Exist</Link>
+              <Link to="/businesses" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-calm">Take Action</Link>
+              <Link to="/research" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-calm">The Data</Link>
             </nav>
             <div className="flex items-center gap-2">
               <ThemeToggle />
@@ -154,11 +154,6 @@ export default function Index() {
             <h2 className="font-display text-2xl md:text-3xl font-semibold text-primary">
               Need help right now?
             </h2>
-            <p className="text-muted-foreground leading-relaxed">
-              Our resources page has practical guides for protecting yourself online, 
-              understanding your legal options, and finding emotional support. 
-              No sign-up required.
-            </p>
             <Button asChild size="lg" className="mt-4">
               <Link to="/safetrace-app">
                 Access SafeTrace App
