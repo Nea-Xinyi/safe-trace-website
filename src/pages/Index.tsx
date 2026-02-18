@@ -87,15 +87,6 @@ export default function Index() {
                 Explore
                 <ArrowDown className="ml-2 h-4 w-4" />
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="text-base px-8 rounded-full"
-                onClick={() => document.getElementById('help-section')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Get Help
-                <ArrowDown className="ml-2 h-4 w-4" />
-              </Button>
             </div>
           </div>
         </div>
