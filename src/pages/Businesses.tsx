@@ -44,10 +44,10 @@ export default function Businesses() {
   };
 
   const cards = [
-    { icon: Building2, title: 'Governance Gap', color: 'bg-primary/5 dark:bg-primary/10 border-primary/15', iconColor: 'text-primary', desc: 'Most data protection policies weren\'t designed with technology-facilitated abuse in mind. Safe Trace fills that gap.' },
+    { icon: Building2, title: 'Governance Gap', color: 'bg-primary/5 dark:bg-primary/10 border-primary/15', iconColor: 'text-primary', desc: 'Most data protection policies weren\'t designed with technology facilitated abuse in mind, and Safe Trace fills that gap.' },
     { icon: ShieldCheck, title: 'Beyond Compliance', color: 'bg-[hsl(175_45%_45%/0.05)] dark:bg-[hsl(175_45%_45%/0.12)] border-[hsl(175_45%_45%/0.15)]', iconColor: 'text-safety', desc: 'Our policies align with and exceed SOC 2, ISO 27001, GDPR, and Quebec Law 25 requirements for data protection.' },
-    { icon: Globe, title: 'Public Trust', color: 'bg-accent/20 dark:bg-accent/30 border-accent/30', iconColor: 'text-primary', desc: 'Committing to survivor-centered policies signals that your organization takes data safety seriously — beyond legal minimums.' },
-    { icon: FileText, title: 'Clear Standards', color: 'bg-destructive/5 dark:bg-destructive/10 border-destructive/15', iconColor: 'text-safety', desc: 'Safe Trace policies are specific, actionable, and auditable — not vague promises buried in legal documents.' },
+    { icon: Globe, title: 'Public Trust', color: 'bg-accent/20 dark:bg-accent/30 border-accent/30', iconColor: 'text-primary', desc: 'Committing to survivor centered policies signals that your organization takes data safety seriously, going beyond legal minimums.' },
+    { icon: FileText, title: 'Clear Standards', color: 'bg-destructive/5 dark:bg-destructive/10 border-destructive/15', iconColor: 'text-safety', desc: 'Safe Trace policies are specific, actionable, and auditable instead of vague promises buried in legal documents.' },
   ];
 
   return (
@@ -59,7 +59,7 @@ export default function Businesses() {
             Commit to Safe Trace
           </h1>
           <p className="text-lg text-muted-foreground leading-relaxed animate-fade-up" style={{ animationDelay: '200ms' }}>
-            Doxxing isn't a niche issue — it's a governance failure. Organizations that collect personal data have a responsibility to protect the people behind it.
+            Doxxing isn't a niche issue, it's a governance failure. Organizations that collect personal data have a responsibility to protect the people behind it.
           </p>
         </div>
       </section>
@@ -94,7 +94,7 @@ export default function Businesses() {
             Framework Alignment
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            Safe Trace policies align with the following international standards — and go further where they fall short on survivor protection.
+            Safe Trace policies align with the following international standards and go further where they fall short on survivor protection.
           </p>
           <div className="grid gap-4 sm:grid-cols-2">
             {alignments.map((a, i) => (

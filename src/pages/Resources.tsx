@@ -65,7 +65,7 @@ export default function Resources() {
                 </div>
                 
                 <p className="text-muted-foreground">
-                  Being doxxed is frightening. Here are immediate steps you can take to protect yourself.
+                  Being doxxed is frightening, but there are immediate steps you can take right now to protect yourself.
                 </p>
 
                 <div className="space-y-3 mt-4">
@@ -193,7 +193,7 @@ export default function Resources() {
                 </div>
                 
                 <p className="text-muted-foreground">
-                  The truth is that legal protections against doxxing are inconsistent and often inadequate. Here's what you should know.
+                  The truth is that legal protections against doxxing are inconsistent and often inadequate, but here's what you should know.
                 </p>
 
                 <div className="p-5 rounded-xl bg-muted/50 border border-border space-y-4 mt-4">
@@ -217,9 +217,9 @@ export default function Resources() {
                     </ul>
                   </div>
 
-                  <p className="text-sm text-muted-foreground border-t border-border pt-4">
-                    <strong>In Canada:</strong> There is no specific anti-doxxing law. Legal recourse often depends on whether the behavior fits existing harassment, stalking, or privacy laws. Civil remedies may be available in some cases.
-                  </p>
+                   <p className="text-sm text-muted-foreground border-t border-border pt-4">
+                    <strong>In Canada:</strong> There is no specific anti-doxxing law, so legal recourse often depends on whether the behavior fits existing harassment, stalking, or privacy laws. Civil remedies may be available in some cases.
+                   </p>
                 </div>
               </div>
 
@@ -236,13 +236,13 @@ export default function Resources() {
                 
                 <div className="prose prose-sm text-muted-foreground max-w-none space-y-4">
                   <p>
-                    If you're reading this, you may be scared, overwhelmed, or exhausted. 
-                    That's a completely valid response to having your safety violated.
+                   If you're reading this, you may be feeling scared, overwhelmed, or exhausted, and 
+                    that's a completely valid response to having your safety violated.
                   </p>
-                  <p>
-                    <strong className="text-foreground">You are not overreacting.</strong> Digital harassment and doxxing are real threats with real consequences. 
-                    Your fear is not paranoia—it's a reasonable response to an unreasonable situation.
-                  </p>
+                   <p>
+                     <strong className="text-foreground">You are not overreacting.</strong> Digital harassment and doxxing are real threats with real consequences, and 
+                     your fear is not paranoia. It's a reasonable response to an unreasonable situation.
+                   </p>
                   <p>
                     <strong className="text-foreground">This is not your fault.</strong> No matter what someone claims you "did" to deserve this, 
                     sharing someone's private information to intimidate or harm them is wrong. Full stop.
@@ -256,10 +256,10 @@ export default function Resources() {
                     <li>Support organizations for domestic violence or tech abuse</li>
                     <li>Online communities of people who've been through similar experiences</li>
                   </ul>
-                  <p>
-                    <strong className="text-foreground">It's okay to step back.</strong> Reducing your online presence, even temporarily, 
-                    is not "letting them win"—it's protecting yourself. Your safety matters more than staying visible.
-                  </p>
+                   <p>
+                     <strong className="text-foreground">It's okay to step back.</strong> Reducing your online presence, even temporarily, 
+                     is not "letting them win." It's protecting yourself, and your safety matters more than staying visible.
+                   </p>
                 </div>
               </div>
 

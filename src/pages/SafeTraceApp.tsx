@@ -12,7 +12,7 @@ export default function SafeTraceApp() {
               SafeTrace App
             </h1>
             <p className="text-lg text-muted-foreground">
-              Upload a photo before you post it. Our AI scans for details that could be used to stalk, locate, or identify you — so you can share safely.
+              Upload a photo before you post it. Our AI scans for details that could be used to stalk, locate, or identify you so you can share safely.
             </p>
           </div>
         </div>
@@ -26,10 +26,10 @@ export default function SafeTraceApp() {
             </h2>
             <div className="grid gap-6 text-left">
               {[
-                { step: '1', title: 'Verify Your Identity', desc: 'Complete our multistep security protocol to confirm you are a real person seeking protection — not someone misusing the tool.' },
+                { step: '1', title: 'Verify Your Identity', desc: 'Complete our multistep security protocol to confirm you are a real person seeking protection, not someone misusing the tool.' },
                 { step: '2', title: 'Upload Your Photo', desc: 'Choose any image you\'re about to post on social media. It never leaves the secure analysis environment.' },
                 { step: '3', title: 'AI Scans for Risks', desc: 'Our AI detects location markers, reflections, background details, metadata, and other information that could be used to track or identify you.' },
-                { step: '4', title: 'Get Your Results', desc: 'Receive a clear, plain-language report of what was found — and suggestions for how to post more safely.' },
+                { step: '4', title: 'Get Your Results', desc: 'Receive a clear, plain language report of what was found along with suggestions for how to post more safely.' },
                 { step: '5', title: 'Data Deleted', desc: 'Your photo and all analysis data are permanently deleted immediately after your session. We keep nothing.' },
               ].map((item) => (
                 <div key={item.step} className="flex gap-4 p-5 rounded-xl bg-card border border-border/50 hover:border-primary/30 transition-all duration-300">
@@ -54,17 +54,17 @@ export default function SafeTraceApp() {
               {
                 icon: Camera,
                 title: 'AI Photo Analysis',
-                description: 'Detects street signs, reflections, landmarks, license plates, and other identifying details hidden in your photos.',
+                description: 'Scans for street signs, reflections, landmarks, license plates, and other identifying details hiding in your photos.',
               },
               {
                 icon: Lock,
                 title: 'Multistep Security',
-                description: 'A verification protocol ensures only real users access the tool — protecting against misuse.',
+                description: 'A verification protocol ensures only real users can access the tool, protecting against misuse.',
               },
               {
                 icon: Trash2,
                 title: 'Instant Data Deletion',
-                description: 'Your photo and all analysis results are permanently erased the moment your session ends. Zero retention.',
+                description: 'Your photo and all analysis results are permanently erased the moment your session ends, with absolutely zero retention.',
               },
               {
                 icon: Shield,
@@ -74,7 +74,7 @@ export default function SafeTraceApp() {
               {
                 icon: Eye,
                 title: 'No Tracking',
-                description: 'We don\'t collect analytics, track usage, or store any personal data. Ever.',
+                description: 'We don\'t collect analytics, track usage, or store any personal data, and we never will.',
               },
               {
                 icon: ShieldCheck,
@@ -104,7 +104,7 @@ export default function SafeTraceApp() {
               Coming Soon
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              The SafeTrace App is currently in development. We're building it with survivors in mind — no tracking, no data harvesting, just safety.
+              The SafeTrace App is currently in development. We're building it with survivors in mind, with no tracking, no data harvesting, and nothing but safety.
             </p>
             <Button size="lg" variant="outline" disabled>
               Launch Coming Soon
