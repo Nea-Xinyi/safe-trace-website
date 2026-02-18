@@ -35,23 +35,20 @@ export default function Resources() {
     <Layout>
       <div>
         {/* Header */}
-        <section className="py-8 md:py-12 bg-primary/5 dark:bg-primary/10">
-          <div className="container">
-            <div className="max-w-3xl">
-              <h1 className="font-display text-3xl md:text-4xl font-bold text-primary mb-4 animate-fade-up" style={{ animationDelay: '0ms' }}>
-                Resources for Digital Safety
-              </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed animate-fade-up" style={{ animationDelay: '200ms' }}>
-                Practical help for protecting yourself online. No account needed, no tracking on this page.
-              </p>
-            </div>
+        <section className="py-12 md:py-16 bg-primary/5 dark:bg-primary/10">
+          <div className="container max-w-3xl">
+            <h1 className="font-display text-4xl md:text-5xl font-bold text-primary mb-4 animate-fade-up" style={{ animationDelay: '0ms' }}>
+              Resources for Digital Safety
+            </h1>
+            <p className="text-lg text-muted-foreground leading-relaxed animate-fade-up" style={{ animationDelay: '200ms' }}>
+              Practical help for protecting yourself online. No account needed, no tracking on this page.
+            </p>
           </div>
         </section>
 
         {/* Main Content */}
-        <section className="py-6 md:py-10">
-          <div className="container">
-            <div className="max-w-3xl space-y-8">
+        <section className="py-2 md:py-4">
+          <div className="container max-w-3xl space-y-5">
               
               {/* Section 1: If Your Information Was Leaked */}
               <div className="space-y-4 animate-on-scroll opacity-0 translate-y-4 transition-all duration-700 p-6 rounded-2xl bg-destructive/5 dark:bg-destructive/10 border border-destructive/15">
@@ -263,7 +260,6 @@ export default function Resources() {
                 </div>
               </div>
 
-            </div>
           </div>
         </section>
       </div>
