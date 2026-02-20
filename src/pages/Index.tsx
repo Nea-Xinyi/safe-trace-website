@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { ArrowDown, Shield, Heart, Users, Scale, BarChart3, Camera } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Layout } from '@/components/layout/Layout';
@@ -53,11 +53,11 @@ export default function Index() {
               <span className="font-display text-xl font-semibold text-primary">SafeTrace</span>
             </Link>
             <nav className="hidden md:flex items-center gap-6">
-              <Link to="/resources" className="text-sm font-medium text-foreground hover:text-primary transition-calm">{t.nav.protectYourself}</Link>
-              <Link to="/policies" className="text-sm font-medium text-foreground hover:text-primary transition-calm">{t.nav.ourStandards}</Link>
-              <Link to="/purpose" className="text-sm font-medium text-foreground hover:text-primary transition-calm">{t.nav.whyWeExist}</Link>
-              <Link to="/businesses" className="text-sm font-medium text-foreground hover:text-primary transition-calm">{t.nav.takeAction}</Link>
-              <Link to="/research" className="text-sm font-medium text-foreground hover:text-primary transition-calm">{t.nav.theData}</Link>
+              <NavLink to="/resources" className={({ isActive }) => `text-sm font-medium transition-calm rounded-full px-3 py-1.5 ${isActive ? 'bg-primary/10 text-primary' : 'text-foreground hover:text-primary'}`}>{t.nav.protectYourself}</NavLink>
+              <NavLink to="/policies" className={({ isActive }) => `text-sm font-medium transition-calm rounded-full px-3 py-1.5 ${isActive ? 'bg-primary/10 text-primary' : 'text-foreground hover:text-primary'}`}>{t.nav.ourStandards}</NavLink>
+              <NavLink to="/purpose" className={({ isActive }) => `text-sm font-medium transition-calm rounded-full px-3 py-1.5 ${isActive ? 'bg-primary/10 text-primary' : 'text-foreground hover:text-primary'}`}>{t.nav.whyWeExist}</NavLink>
+              <NavLink to="/businesses" className={({ isActive }) => `text-sm font-medium transition-calm rounded-full px-3 py-1.5 ${isActive ? 'bg-primary/10 text-primary' : 'text-foreground hover:text-primary'}`}>{t.nav.takeAction}</NavLink>
+              <NavLink to="/research" className={({ isActive }) => `text-sm font-medium transition-calm rounded-full px-3 py-1.5 ${isActive ? 'bg-primary/10 text-primary' : 'text-foreground hover:text-primary'}`}>{t.nav.theData}</NavLink>
             </nav>
             <div className="flex items-center gap-2">
               <LanguageSwitcher />
