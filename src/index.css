@@ -137,21 +137,8 @@
     transition: background-color 0.6s ease, color 0.6s ease;
   }
 
-  html *:not(img) {
+  html * {
     transition: background-color 0.6s ease, color 0.6s ease, border-color 0.6s ease, box-shadow 0.6s ease;
-  }
-
-  /* Language switch fade */
-  .lang-fade {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  .lang-fade img.logo-persistent {
-    opacity: 1 !important;
-  }
-  .lang-visible {
-    opacity: 1;
-    transition: opacity 0.3s ease;
   }
 
   body {
