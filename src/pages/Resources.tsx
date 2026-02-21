@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { AlertTriangle, Shield, Scale, Heart, CheckCircle2 } from 'lucide-react';
+import { AlertTriangle, Shield, Scale, Heart, CheckCircle2, ExternalLink } from 'lucide-react';
 import { Layout } from '@/components/layout/Layout';
 import { useLanguage } from '@/contexts/LanguageContext';
 import {
