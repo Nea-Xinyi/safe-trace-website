@@ -146,6 +146,9 @@
     opacity: 0;
     transition: opacity 0.3s ease;
   }
+  .lang-fade img.logo-persistent {
+    opacity: 1 !important;
+  }
   .lang-visible {
     opacity: 1;
     transition: opacity 0.3s ease;
