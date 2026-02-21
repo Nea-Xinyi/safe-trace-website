@@ -132,6 +132,11 @@ export const en = {
     ],
     canadaNote: 'In Canada:',
     canadaDesc: 'There is no specific anti-doxxing law, so legal recourse often depends on whether the behavior fits existing harassment, stalking, or privacy laws. Civil remedies may be available in some cases.',
+    canadaLinks: [
+      { name: 'Office of the Privacy Commissioner of Canada', url: 'https://www.priv.gc.ca' },
+      { name: 'Canadian Anti-Fraud Centre', url: 'https://www.antifraudcentre-centreantifraude.ca' },
+      { name: 'Cyberbullying.ca', url: 'https://www.cyberbullying.ca' },
+    ],
     emotionalSupport: 'Emotional Support',
     emotionalP1: 'If you\'re reading this, you may be feeling scared, overwhelmed, or exhausted, and that\'s a completely valid response to having your safety violated.',
     notOverreacting: 'You are not overreacting.',

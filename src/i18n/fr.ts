@@ -132,6 +132,11 @@ export const fr = {
     ],
     canadaNote: 'Au Canada :',
     canadaDesc: 'Il n\'existe pas de loi spécifique contre le doxxing, donc les recours juridiques dépendent souvent de la correspondance du comportement avec les lois existantes sur le harcèlement, la traque ou la vie privée. Des recours civils peuvent être disponibles dans certains cas.',
+    canadaLinks: [
+      { name: 'Commissariat à la protection de la vie privée du Canada', url: 'https://www.priv.gc.ca' },
+      { name: 'Centre antifraude du Canada', url: 'https://www.antifraudcentre-centreantifraude.ca' },
+      { name: 'Cyberbullying.ca', url: 'https://www.cyberbullying.ca' },
+    ],
     emotionalSupport: 'Soutien Émotionnel',
     emotionalP1: 'Si vous lisez ceci, vous vous sentez peut-être effrayé·e, submergé·e ou épuisé·e, et c\'est une réponse tout à fait valide au fait d\'avoir sa sécurité violée.',
     notOverreacting: 'Vous ne réagissez pas de façon excessive.',
