@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { AlertTriangle, Shield, Scale, Heart, CheckCircle2 } from 'lucide-react';
+import { AlertTriangle, Shield, Scale, Heart, CheckCircle2, ExternalLink } from 'lucide-react';
 import { Layout } from '@/components/layout/Layout';
 import { useLanguage } from '@/contexts/LanguageContext';
 import {
@@ -58,6 +58,22 @@ export default function Resources() {
                 <ChecklistItem><strong>{t.resources.alertContacts}</strong> {t.resources.alertDesc}</ChecklistItem>
                 <ChecklistItem><strong>{t.resources.policeReport}</strong> {t.resources.policeDesc}</ChecklistItem>
               </div>
+              {/* Helpful Links */}
+              <div className="mt-6 space-y-3">
+                <h3 className="font-display text-lg font-semibold text-primary">{t.resources.helpfulLinks}</h3>
+                <p className="text-sm text-muted-foreground">{t.resources.helpfulLinksDesc}</p>
+                <div className="grid gap-2 mt-3">
+                  {t.resources.helpfulLinksItems.map((link, i) => (
+                    <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 p-3 rounded-lg bg-card border border-border hover:border-primary/30 transition-calm group">
+                      <ExternalLink className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                      <div>
+                        <span className="text-sm font-medium text-primary group-hover:underline">{link.name}</span>
+                        <p className="text-xs text-muted-foreground mt-0.5">{link.desc}</p>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </div>
             </div>
 
             {/* Digital Self-Defense */}
@@ -109,6 +125,18 @@ export default function Resources() {
               </div>
               <p className="text-muted-foreground">{t.resources.legalContextDesc}</p>
               <div className="p-5 rounded-xl bg-muted/50 border border-border space-y-4 mt-4">
+                <div className="p-4 rounded-lg bg-primary/5 border border-primary/20">
+                  <h4 className="font-medium text-foreground mb-2">{t.resources.canadaNote}</h4>
+                  <p className="text-sm text-muted-foreground">{t.resources.canadaDesc}</p>
+                  <div className="flex flex-wrap gap-2 mt-3">
+                    {t.resources.canadaLinks.map((link, i) => (
+                      <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs text-primary hover:underline">
+                        <ExternalLink className="h-3 w-3" />
+                        {link.name}
+                      </a>
+                    ))}
+                  </div>
+                </div>
                 <div>
                   <h4 className="font-medium text-foreground mb-2">{t.resources.lawCovers}</h4>
                   <ul className="space-y-2 text-muted-foreground text-sm">
@@ -121,9 +149,6 @@ export default function Resources() {
                     {t.resources.lawFailsItems.map((item, i) => <li key={i}>• {item}</li>)}
                   </ul>
                 </div>
-                <p className="text-sm text-muted-foreground border-t border-border pt-4">
-                  <strong>{t.resources.canadaNote}</strong> {t.resources.canadaDesc}
-                </p>
               </div>
             </div>
 
