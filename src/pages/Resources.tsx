@@ -58,6 +58,22 @@ export default function Resources() {
                 <ChecklistItem><strong>{t.resources.alertContacts}</strong> {t.resources.alertDesc}</ChecklistItem>
                 <ChecklistItem><strong>{t.resources.policeReport}</strong> {t.resources.policeDesc}</ChecklistItem>
               </div>
+              {/* Helpful Links */}
+              <div className="mt-6 space-y-3">
+                <h3 className="font-display text-lg font-semibold text-primary">{t.resources.helpfulLinks}</h3>
+                <p className="text-sm text-muted-foreground">{t.resources.helpfulLinksDesc}</p>
+                <div className="grid gap-2 mt-3">
+                  {t.resources.helpfulLinksItems.map((link, i) => (
+                    <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 p-3 rounded-lg bg-card border border-border hover:border-primary/30 transition-calm group">
+                      <ExternalLink className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                      <div>
+                        <span className="text-sm font-medium text-primary group-hover:underline">{link.name}</span>
+                        <p className="text-xs text-muted-foreground mt-0.5">{link.desc}</p>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </div>
             </div>
 
             {/* Digital Self-Defense */}
