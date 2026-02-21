@@ -75,7 +75,7 @@ export default function Index() {
             <p className="text-xl md:text-2xl text-primary/80 font-display font-medium animate-fade-up" style={{ animationDelay: '300ms' }}>
               {t.index.heroSubtitle}
             </p>
-            <p className="text-base md:text-lg text-foreground/80 font-medium max-w-xl mx-auto animate-fade-up" style={{ animationDelay: '450ms' }}>
+            <p className="text-base md:text-lg text-foreground font-semibold max-w-xl mx-auto animate-fade-up" style={{ animationDelay: '450ms' }}>
               {t.index.heroDesc}
             </p>
             <div className="pt-4 flex flex-wrap gap-4 justify-center animate-fade-up" style={{ animationDelay: '600ms' }}>
