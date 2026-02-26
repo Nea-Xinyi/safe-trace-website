@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Layout } from '@/components/layout/Layout';
 import { Eye, Trash2, Bell, Building2, Lock, Scale, ShieldCheck } from 'lucide-react';
 import fisherSecurityLogo from '@/assets/fisher-security-logo.png';
+import theStudyLogo from '@/assets/the-study-logo.gif';
 import { useLanguage } from '@/contexts/LanguageContext';
 import {
   Accordion,
@@ -89,7 +90,7 @@ export default function Policies() {
             {t.policies.companiesAgreeDescEnd}
           </p>
           <div className="flex flex-wrap items-center gap-10 mt-2">
-             {[{ src: fisherSecurityLogo, alt: 'FisherSecurity by BlueRing' }].map((logo, i) => (
+             {[{ src: fisherSecurityLogo, alt: 'FisherSecurity by BlueRing' }, { src: theStudyLogo, alt: 'The Study' }].map((logo, i) => (
                <img key={i} src={logo.src} alt={logo.alt} className="h-16 object-contain opacity-0 animate-fade-in" style={{ animationDelay: `${i * 150}ms`, animationFillMode: 'forwards' }} />
              ))}
            </div>
