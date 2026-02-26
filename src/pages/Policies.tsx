@@ -88,9 +88,9 @@ export default function Policies() {
             <a href="/businesses" className="text-primary underline underline-offset-2 hover:text-primary/80 transition-calm">{t.policies.forBusinesses}</a>{' '}
             {t.policies.companiesAgreeDescEnd}
           </p>
-          <div className="p-8 rounded-xl border border-dashed border-primary/30 text-center text-muted-foreground bg-primary/5">
-            {t.policies.beFirst}
-          </div>
+          <div className="p-8 rounded-xl border border-dashed border-primary/30 bg-primary/5 flex flex-wrap items-center justify-center gap-8">
+             <img src={fisherSecurityLogo} alt="FisherSecurity by BlueRing" className="h-20 object-contain" />
+           </div>
         </div>
       </section>
     </Layout>
