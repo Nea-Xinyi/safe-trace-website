@@ -89,7 +89,7 @@ export default function Policies() {
             {t.policies.companiesAgreeDescEnd}
           </p>
           <div className="flex flex-wrap items-center gap-10 mt-2">
-             {[{ src: fisherSecurityLogo, alt: 'FisherSecurity by BlueRing' }].map((logo, i) => (
+             {[{ src: fisherSecurityLogo, alt: 'FisherSecurity by BlueRing' }, { src: theStudyLogo, alt: 'The Study' }].map((logo, i) => (
                <img key={i} src={logo.src} alt={logo.alt} className="h-16 object-contain opacity-0 animate-fade-in" style={{ animationDelay: `${i * 150}ms`, animationFillMode: 'forwards' }} />
              ))}
            </div>
