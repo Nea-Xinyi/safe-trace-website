@@ -88,8 +88,10 @@ export default function Policies() {
             <a href="/businesses" className="text-primary underline underline-offset-2 hover:text-primary/80 transition-calm">{t.policies.forBusinesses}</a>{' '}
             {t.policies.companiesAgreeDescEnd}
           </p>
-          <div className="p-8 rounded-xl border border-dashed border-primary/30 bg-primary/5 flex flex-wrap items-center justify-center gap-8">
-             <img src={fisherSecurityLogo} alt="FisherSecurity by BlueRing" className="h-20 object-contain" />
+          <div className="flex flex-wrap items-center gap-10 mt-2">
+             {[{ src: fisherSecurityLogo, alt: 'FisherSecurity by BlueRing' }].map((logo, i) => (
+               <img key={i} src={logo.src} alt={logo.alt} className="h-16 object-contain opacity-0 animate-fade-in" style={{ animationDelay: `${i * 150}ms`, animationFillMode: 'forwards' }} />
+             ))}
            </div>
         </div>
       </section>
