@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Layout } from '@/components/layout/Layout';
 import { Eye, Trash2, Bell, Building2, Lock, Scale, ShieldCheck } from 'lucide-react';
+import fisherSecurityLogo from '@/assets/fisher-security-logo.png';
 import { useLanguage } from '@/contexts/LanguageContext';
 import {
   Accordion,
@@ -87,9 +88,9 @@ export default function Policies() {
             <a href="/businesses" className="text-primary underline underline-offset-2 hover:text-primary/80 transition-calm">{t.policies.forBusinesses}</a>{' '}
             {t.policies.companiesAgreeDescEnd}
           </p>
-          <div className="p-8 rounded-xl border border-dashed border-primary/30 text-center text-muted-foreground bg-primary/5">
-            {t.policies.beFirst}
-          </div>
+          <div className="p-8 rounded-xl border border-dashed border-primary/30 bg-primary/5 flex flex-wrap items-center justify-center gap-8">
+             <img src={fisherSecurityLogo} alt="FisherSecurity by BlueRing" className="h-20 object-contain" />
+           </div>
         </div>
       </section>
     </Layout>
