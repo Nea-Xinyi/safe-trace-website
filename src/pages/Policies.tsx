@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Layout } from '@/components/layout/Layout';
 import { Eye, Trash2, Bell, Building2, Lock, Scale, ShieldCheck } from 'lucide-react';
+import fisherSecurityLogo from '@/assets/fisher-security-logo.png';
 import { useLanguage } from '@/contexts/LanguageContext';
 import {
   Accordion,
