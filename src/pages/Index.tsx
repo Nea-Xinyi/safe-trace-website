@@ -83,10 +83,9 @@ export default function Index() {
                 {t.index.explore}
                 <ArrowDown className="ml-2 h-4 w-4" />
               </Button>
-              <Button asChild size="lg" className="text-base px-8 rounded-full">
-                <Link to="/resources">
-                  Get Help Now
-                </Link>
+              <Button size="lg" className="text-base px-8 rounded-full" onClick={() => document.getElementById('help-section')?.scrollIntoView({ behavior: 'smooth' })}>
+                Get Help Now
+                <ArrowDown className="ml-2 h-4 w-4" />
               </Button>
             </div>
           </div>
