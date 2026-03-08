@@ -11,7 +11,8 @@ import logo from '@/assets/ribbon-logo.png';
 
 export default function Index() {
   const heroRef = useRef<HTMLDivElement>(null);
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const zhFont = language === 'zh' ? 'font-[\"ZCOOL_XiaoWei\"]' : '';
 
   useEffect(() => {
     const observer = new IntersectionObserver(
