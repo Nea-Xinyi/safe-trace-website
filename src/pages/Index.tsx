@@ -70,13 +70,13 @@ export default function Index() {
 
         <div className="container py-20 md:py-32" ref={heroRef}>
           <div className="max-w-3xl mx-auto text-center space-y-8">
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight animate-fade-up" style={{ animationDelay: '0ms', fontFamily: isZh ? "'LXGW WenKai', 'KaiTi', 'AR PL KaitiM GB', serif" : undefined }}>
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight animate-fade-up" style={{ animationDelay: '0ms', fontFamily: isZh ? "'Noto Serif SC', serif" : undefined }}>
               {t.index.heroTitle}
             </h1>
-            <p className="text-xl md:text-2xl text-primary/80 font-display font-medium animate-fade-up" style={{ animationDelay: '300ms', fontFamily: isZh ? "'LXGW WenKai', 'KaiTi', 'AR PL KaitiM GB', serif" : undefined }}>
+            <p className="text-xl md:text-2xl text-primary/80 font-display font-medium animate-fade-up" style={{ animationDelay: '300ms', fontFamily: isZh ? "'Noto Serif SC', serif" : undefined }}>
               {t.index.heroSubtitle}
             </p>
-            <p className="text-base md:text-lg text-primary font-semibold max-w-xl mx-auto animate-fade-up" style={{ animationDelay: '450ms', fontFamily: isZh ? "'LXGW WenKai', 'KaiTi', 'AR PL KaitiM GB', serif" : undefined }}>
+            <p className="text-base md:text-lg text-primary font-semibold max-w-xl mx-auto animate-fade-up" style={{ animationDelay: '450ms', fontFamily: isZh ? "'Noto Serif SC', serif" : undefined }}>
               {t.index.heroDesc}
             </p>
             <div className="pt-4 flex flex-wrap gap-4 justify-center animate-fade-up" style={{ animationDelay: '600ms' }}>
