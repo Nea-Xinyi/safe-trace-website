@@ -41,6 +41,7 @@ export const fr = {
     safeTraceAppDesc: 'Téléchargez une photo avant de la publier et laissez notre IA signaler tout ce qui pourrait être utilisé pour vous trouver ou vous identifier.',
     needHelp: 'Besoin d\'aide maintenant?',
     protectYourself: 'Se Protéger',
+    getHelpNow: 'Obtenir de l\'aide',
   },
 
   // Resources
