@@ -11,7 +11,8 @@ import logo from '@/assets/ribbon-logo.png';
 
 export default function Index() {
   const heroRef = useRef<HTMLDivElement>(null);
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const zhFont = language === 'zh' ? 'font-[\"ZCOOL_XiaoWei\"]' : '';
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -40,7 +41,7 @@ export default function Index() {
 
   return (
     <Layout hideHeader>
-      <div className="relative">
+      <div className={`relative ${zhFont}`}>
         <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover opacity-50 -z-20">
           <source src="/videos/hero-bg.mp4" type="video/mp4" />
         </video>
