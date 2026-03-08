@@ -30,6 +30,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     setTransitioning(true);
     setTimeout(() => {
       setLanguageState(lang);
+      localStorage.setItem('safetrace-lang', lang);
       setTransitioning(false);
     }, 200);
   }, [language]);
