@@ -18,7 +18,10 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 const translations = { en, fr, zh };
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguageState] = useState<Language>('en');
+  const [language, setLanguageState] = useState<Language>(() => {
+    const saved = localStorage.getItem('safetrace-lang');
+    return (saved === 'en' || saved === 'fr' || saved === 'zh') ? saved : 'en';
+  });
   const [transitioning, setTransitioning] = useState(false);
   const t = translations[language];
 
@@ -27,6 +30,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     setTransitioning(true);
     setTimeout(() => {
       setLanguageState(lang);
+      localStorage.setItem('safetrace-lang', lang);
       setTransitioning(false);
     }, 200);
   }, [language]);
