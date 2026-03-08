@@ -41,6 +41,7 @@ export const en = {
     safeTraceAppDesc: 'Upload a photo before you post it and let our AI flag anything that could be used to find or identify you.',
     needHelp: 'Need help right now?',
     protectYourself: 'Protect Yourself',
+    getHelpNow: 'Get Help Now',
   },
 
   // Resources

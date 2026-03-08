@@ -41,6 +41,7 @@ export const zh = {
     safeTraceAppDesc: '在发布照片之前上传它，让我们的AI标记出任何可能被用来定位或识别您的内容。',
     needHelp: '现在需要帮助？',
     protectYourself: '保护自己',
+    getHelpNow: '立即获取帮助',
   },
 
   // Resources

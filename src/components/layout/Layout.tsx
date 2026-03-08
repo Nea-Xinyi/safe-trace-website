@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Camera } from 'lucide-react';
 import { Header } from './Header';
 import { Footer } from './Footer';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 interface LayoutProps {
   children: ReactNode;
@@ -10,6 +11,8 @@ interface LayoutProps {
 }
 
 export function Layout({ children, hideHeader }: LayoutProps) {
+  const { t } = useLanguage();
+
   return (
     <div className="min-h-screen flex flex-col">
       {!hideHeader && <Header />}
@@ -23,7 +26,7 @@ export function Layout({ children, hideHeader }: LayoutProps) {
         aria-label="Open SafeTrace App"
       >
         <Camera className="h-4 w-4" />
-        SafeTrace App
+        {t.index.safeTraceApp}
       </Link>
     </div>
   );

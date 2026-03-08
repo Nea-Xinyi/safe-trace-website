@@ -84,7 +84,7 @@ export default function Index() {
                 <ArrowDown className="ml-2 h-4 w-4" />
               </Button>
               <Button size="lg" className="text-base px-8 rounded-full" onClick={() => document.getElementById('help-section')?.scrollIntoView({ behavior: 'smooth' })}>
-                Get Help Now
+                {t.index.getHelpNow}
                 <ArrowDown className="ml-2 h-4 w-4" />
               </Button>
             </div>
