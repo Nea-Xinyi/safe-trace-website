@@ -37,6 +37,24 @@ export function LanguageSwitcher() {
         >
           中文
         </DropdownMenuItem>
+        <DropdownMenuItem
+          onClick={() => setLanguage('ar')}
+          className={language === 'ar' ? 'font-semibold text-primary' : ''}
+        >
+          العربية
+        </DropdownMenuItem>
+        <DropdownMenuItem
+          onClick={() => setLanguage('es')}
+          className={language === 'es' ? 'font-semibold text-primary' : ''}
+        >
+          Español
+        </DropdownMenuItem>
+        <DropdownMenuItem
+          onClick={() => setLanguage('it')}
+          className={language === 'it' ? 'font-semibold text-primary' : ''}
+        >
+          Italiano
+        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );

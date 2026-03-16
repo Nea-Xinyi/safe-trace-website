@@ -23,7 +23,7 @@ const translations = { en, fr, zh, ar, es, it };
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguageState] = useState<Language>(() => {
     const saved = localStorage.getItem('safetrace-lang');
-    return (saved === 'en' || saved === 'fr' || saved === 'zh') ? saved : 'en';
+    return (['en', 'fr', 'zh', 'ar', 'es', 'it'] as Language[]).includes(saved as Language) ? (saved as Language) : 'en';
   });
   const [transitioning, setTransitioning] = useState(false);
   const t = translations[language];
