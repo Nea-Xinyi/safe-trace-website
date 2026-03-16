@@ -2,8 +2,11 @@ import { createContext, useContext, useState, useCallback, ReactNode } from 'rea
 import { en } from '@/i18n/en';
 import { fr } from '@/i18n/fr';
 import { zh } from '@/i18n/zh';
+import { ar } from '@/i18n/ar';
+import { es } from '@/i18n/es';
+import { it } from '@/i18n/it';
 
-type Language = 'en' | 'fr' | 'zh';
+type Language = 'en' | 'fr' | 'zh' | 'ar' | 'es' | 'it';
 type Translations = typeof en;
 
 interface LanguageContextType {
@@ -15,12 +18,12 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-const translations = { en, fr, zh };
+const translations = { en, fr, zh, ar, es, it };
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguageState] = useState<Language>(() => {
     const saved = localStorage.getItem('safetrace-lang');
-    return (saved === 'en' || saved === 'fr' || saved === 'zh') ? saved : 'en';
+    return (['en', 'fr', 'zh', 'ar', 'es', 'it'] as Language[]).includes(saved as Language) ? (saved as Language) : 'en';
   });
   const [transitioning, setTransitioning] = useState(false);
   const t = translations[language];
