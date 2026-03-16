@@ -2,8 +2,11 @@ import { createContext, useContext, useState, useCallback, ReactNode } from 'rea
 import { en } from '@/i18n/en';
 import { fr } from '@/i18n/fr';
 import { zh } from '@/i18n/zh';
+import { ar } from '@/i18n/ar';
+import { es } from '@/i18n/es';
+import { it } from '@/i18n/it';
 
-type Language = 'en' | 'fr' | 'zh';
+type Language = 'en' | 'fr' | 'zh' | 'ar' | 'es' | 'it';
 type Translations = typeof en;
 
 interface LanguageContextType {
