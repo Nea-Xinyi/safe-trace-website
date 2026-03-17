@@ -272,7 +272,7 @@ export const zh = {
       { value: '四分之一', label: '的女性经历过令她们担心自身安全的网络骚扰', source: 'Pew Research Center, 2021' },
       { value: '73%', label: '经历过网络虐待的女性报告了焦虑、压力或恐慌发作', source: 'The Economist Intelligence Unit, 2021' },
       { value: '58%', label: '的少女经历过某种形式的技术助长的虐待', source: 'Plan International, 2020' },
-      { value: '258%', label: '2018年至2022年间涉及技术的虐待案件增长率', source: 'Refuge, 2024' },
+      { value: '258%', label: '2018年至2022年间报告的技术助长虐待案件增幅', source: 'Refuge, 2024' },
     ],
     researchSummary: '研究摘要',
     summaryP1: '我们的研究考察了现有数字平台和法律框架如何未能保护女性免受技术助长的虐待，特别是人肉搜索、非自愿图像分享和位置跟踪。',
