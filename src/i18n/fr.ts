@@ -272,7 +272,7 @@ export const fr = {
       { value: '1 sur 4', label: 'femmes subissent du harcèlement en ligne qui leur fait craindre pour leur sécurité', source: 'Pew Research Center, 2021' },
       { value: '73%', label: 'des femmes ayant subi des abus en ligne ont signalé de l\'anxiété, du stress ou des crises de panique', source: 'The Economist Intelligence Unit, 2021' },
       { value: '58%', label: 'des adolescentes ont subi une forme d\'abus facilité par la technologie', source: 'Plan International, 2020' },
-      { value: '258%', label: 'augmentation des cas d\'abus impliquant la technologie entre 2018–2022', source: 'Refuge, 2024' },
+      { value: '258%', label: 'augmentation des cas d\'abus facilités par la technologie signalés entre 2018 et 2022', source: 'Refuge, 2024' },
     ],
     researchSummary: 'Résumé de la Recherche',
     summaryP1: 'Notre recherche examine comment les plateformes numériques et les cadres juridiques existants échouent à protéger les femmes contre les abus facilités par la technologie, spécifiquement le doxxing, le partage non consensuel d\'images et le suivi de localisation.',

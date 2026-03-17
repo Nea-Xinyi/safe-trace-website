@@ -272,7 +272,7 @@ export const en = {
       { value: '1 in 4', label: 'women experience online harassment that makes them fear for their safety', source: 'Pew Research Center, 2021' },
       { value: '73%', label: 'of women who experienced online abuse reported anxiety, stress, or panic attacks', source: 'The Economist Intelligence Unit, 2021' },
       { value: '58%', label: 'of teen girls have experienced some form of technology-facilitated abuse', source: 'Plan International, 2020' },
-      { value: '258%', label: 'increase of abuse cases involving tech between 2018–2022', source: 'Refuge, 2024' },
+      { value: '258%', label: 'increase in technology-facilitated abuse cases reported between 2018 and 2022', source: 'Refuge, 2024' },
     ],
     researchSummary: 'Research Summary',
     summaryP1: 'Our research examines how existing digital platforms and legal frameworks fail to protect women from technology facilitated abuse, specifically doxxing, non-consensual image sharing, and location tracking.',
