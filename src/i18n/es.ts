@@ -272,7 +272,7 @@ export const es = {
       { value: '1 de 4', label: 'mujeres experimentan acoso en línea que las hace temer por su seguridad', source: 'Pew Research Center, 2021' },
       { value: '73%', label: 'de las mujeres que experimentaron abuso en línea reportaron ansiedad, estrés o ataques de pánico', source: 'The Economist Intelligence Unit, 2021' },
       { value: '58%', label: 'de las adolescentes han experimentado alguna forma de abuso facilitado por la tecnología', source: 'Plan International, 2020' },
-      { value: '$0', label: 'es el costo de la mayoría de las "herramientas de privacidad" que realmente funcionan — porque aún no existen', source: 'Safe Trace Research, 2025' },
+      { value: '258%', label: 'aumento de casos de abuso que involucran tecnología entre 2018–2022', source: 'Refuge, 2024' },
     ],
     researchSummary: 'Resumen de la Investigación',
     summaryP1: 'Nuestra investigación examina cómo las plataformas digitales existentes y los marcos legales fallan en proteger a las mujeres del abuso facilitado por la tecnología, específicamente el doxxing, el intercambio no consensual de imágenes y el rastreo de ubicación.',
