@@ -272,7 +272,7 @@ export const it = {
       { value: '1 su 4', label: 'donne subiscono molestie online che le fanno temere per la loro sicurezza', source: 'Pew Research Center, 2021' },
       { value: '73%', label: 'delle donne che hanno subito abusi online hanno riportato ansia, stress o attacchi di panico', source: 'The Economist Intelligence Unit, 2021' },
       { value: '58%', label: 'delle adolescenti hanno subito qualche forma di abuso facilitato dalla tecnologia', source: 'Plan International, 2020' },
-      { value: '€0', label: 'è il costo della maggior parte degli "strumenti per la privacy" che funzionano davvero — perché non esistono ancora', source: 'Safe Trace Research, 2025' },
+      { value: '258%', label: 'aumento dei casi di abuso che coinvolgono la tecnologia tra il 2018–2022', source: 'Refuge, 2024' },
     ],
     researchSummary: 'Riepilogo della Ricerca',
     summaryP1: 'La nostra ricerca esamina come le piattaforme digitali esistenti e i quadri giuridici falliscano nel proteggere le donne dagli abusi facilitati dalla tecnologia, in particolare il doxxing, la condivisione non consensuale di immagini e il tracciamento della posizione.',
