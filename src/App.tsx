@@ -13,6 +13,7 @@ import Purpose from "./pages/Purpose";
 import Businesses from "./pages/Businesses";
 import Research from "./pages/Research";
 import SafeTraceApp from "./pages/SafeTraceApp";
+import Unsubscribe from "./pages/Unsubscribe";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -35,6 +36,7 @@ function AppContent() {
           <Route path="/businesses" element={<Businesses />} />
           <Route path="/research" element={<Research />} />
           <Route path="/safetrace-app" element={<SafeTraceApp />} />
+          <Route path="/unsubscribe" element={<Unsubscribe />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
