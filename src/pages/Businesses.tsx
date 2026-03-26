@@ -7,6 +7,8 @@ import { Label } from '@/components/ui/label';
 import { Checkbox } from '@/components/ui/checkbox';
 import { useToast } from '@/hooks/use-toast';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { supabase } from '@/integrations/supabase/client';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Businesses() {
   const { toast } = useToast();
@@ -37,8 +39,29 @@ export default function Businesses() {
     return () => observer.disconnect();
   }, []);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const form = e.currentTarget;
+    const companyName = (form.elements.namedItem('company') as HTMLInputElement).value;
+    const contactEmail = (form.elements.namedItem('contact') as HTMLInputElement).value;
+    const contactName = (form.elements.namedItem('name') as HTMLInputElement).value;
+
+    const id = crypto.randomUUID();
+
+    // Send notification email to safetrace11@gmail.com
+    try {
+      await supabase.functions.invoke('send-transactional-email', {
+        body: {
+          templateName: 'commitment-notification',
+          recipientEmail: 'safetrace11@gmail.com',
+          idempotencyKey: `commitment-${id}`,
+          templateData: { companyName, contactEmail, contactName },
+        },
+      });
+    } catch (err) {
+      console.error('Failed to send notification email:', err);
+    }
+
     setSubmitted(true);
     toast({ title: t.businesses.toastTitle, description: t.businesses.toastDesc });
   };
