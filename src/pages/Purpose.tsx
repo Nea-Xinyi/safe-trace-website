@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Layout } from '@/components/layout/Layout';
-import { Eye, ShieldOff, Lock, Users } from 'lucide-react';
+import { Eye, ShieldOff, Lock, Users, Heart } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Purpose() {
