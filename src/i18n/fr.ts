@@ -217,6 +217,7 @@ export const fr = {
   purpose: {
     title: 'Pourquoi Safe Trace Existe',
     subtitle: 'Parce que les systèmes censés protéger les femmes n\'ont pas été construits par des femmes, et ça se voit.',
+    donateText: 'Soutenez notre mission',
     whatWeSaw: 'Ce Que Nous Avons Vu',
     whatWeSawContent: 'Nous avons vu des femmes traquées à travers leurs propres appareils, des photos personnelles transformées en armes et des adresses partagées publiquement comme punition. Tout un écosystème technologique a été conçu sans considérer la sécurité de ses utilisatrices les plus vulnérables, puis les a blâmées quand les choses ont mal tourné.',
     whatWasMissing: 'Ce Qui Manquait',

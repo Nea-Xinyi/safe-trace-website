@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Layout } from '@/components/layout/Layout';
-import { Eye, ShieldOff, Lock, Users } from 'lucide-react';
+import { Eye, ShieldOff, Lock, Users, Heart } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Purpose() {
@@ -29,6 +29,16 @@ export default function Purpose() {
         <div className="container max-w-3xl">
           <h1 className="font-display text-4xl md:text-5xl font-bold text-primary mb-4 animate-fade-up" style={{ animationDelay: '0ms' }}>{t.purpose.title}</h1>
           <p className="text-lg text-muted-foreground leading-relaxed animate-fade-up" style={{ animationDelay: '200ms' }}>{t.purpose.subtitle}</p>
+          <a
+            href="https://www.zeffy.com/en-CA/donation-form/revolutionizing-online-privacy-protection"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 mt-4 px-6 py-3 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors animate-fade-up"
+            style={{ animationDelay: '400ms' }}
+          >
+            <Heart className="h-4 w-4" />
+            {t.purpose.donateText}
+          </a>
         </div>
       </section>
 

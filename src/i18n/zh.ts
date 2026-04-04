@@ -217,6 +217,7 @@ export const zh = {
   purpose: {
     title: '为什么Safe Trace存在',
     subtitle: '因为那些本应保护女性的系统不是由女性建立的，这一点显而易见。',
+    donateText: '支持我们的使命',
     whatWeSaw: '我们看到了什么',
     whatWeSawContent: '我们看到女性通过自己的设备被跟踪，个人照片被当作武器，地址被公开分享作为惩罚。整个技术生态系统在设计时没有考虑到最脆弱用户的安全，然后在出问题时指责她们。',
     whatWasMissing: '缺少了什么',
