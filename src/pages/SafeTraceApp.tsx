@@ -15,6 +15,15 @@ export default function SafeTraceApp() {
           <div className="max-w-3xl mx-auto text-center space-y-4">
             <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-primary">{t.safeTraceApp.title}</h1>
             <p className="text-lg text-muted-foreground">{t.safeTraceApp.subtitle}</p>
+            <a
+              href="https://app.safetrace.ca"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 mt-2 px-6 py-3 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors"
+            >
+              <Camera className="h-4 w-4" />
+              {t.safeTraceApp.launchButton}
+            </a>
           </div>
         </div>
       </section>
@@ -62,9 +71,14 @@ export default function SafeTraceApp() {
       <section className="py-16 md:py-24">
         <div className="container">
           <div className="max-w-2xl mx-auto text-center space-y-6">
-            <h2 className="font-display text-2xl md:text-3xl font-semibold text-primary">{t.safeTraceApp.comingSoonTitle}</h2>
-            <p className="text-muted-foreground leading-relaxed">{t.safeTraceApp.comingSoonDesc}</p>
-            <Button size="lg" variant="outline" disabled>{t.safeTraceApp.launchComingSoon}</Button>
+            <h2 className="font-display text-2xl md:text-3xl font-semibold text-primary">{t.safeTraceApp.launchTitle}</h2>
+            <p className="text-muted-foreground leading-relaxed">{t.safeTraceApp.launchDesc}</p>
+            <Button size="lg" asChild>
+              <a href="https://app.safetrace.ca" target="_blank" rel="noopener noreferrer">
+                <Camera className="h-4 w-4" />
+                {t.safeTraceApp.launchButton}
+              </a>
+            </Button>
           </div>
         </div>
       </section>
