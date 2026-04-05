@@ -1,5 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 import { ArrowDown, Shield, Heart, Users, Scale, BarChart3, Camera } from 'lucide-react';
+
 import { Button } from '@/components/ui/button';
 import { Layout } from '@/components/layout/Layout';
 import { AccessibilityControls } from '@/components/layout/AccessibilityControls';
@@ -84,9 +85,11 @@ export default function Index() {
                 {t.index.explore}
                 <ArrowDown className="ml-2 h-4 w-4" />
               </Button>
-              <Button size="lg" className="text-base px-8 rounded-full" onClick={() => document.getElementById('help-section')?.scrollIntoView({ behavior: 'smooth' })}>
-                {t.index.getHelpNow}
-                <ArrowDown className="ml-2 h-4 w-4" />
+              <Button size="lg" className="text-base px-8 rounded-full" asChild>
+                <a href="https://www.zeffy.com/en-CA/donation-form/revolutionizing-online-privacy-protection" target="_blank" rel="noopener noreferrer">
+                  <Heart className="ml-2 h-4 w-4" />
+                  {t.purpose.donateText}
+                </a>
               </Button>
             </div>
           </div>
@@ -113,19 +116,6 @@ export default function Index() {
         </div>
       </section>
 
-      <section id="help-section" className="py-16 md:py-24 bg-gradient-to-b from-background to-primary/8">
-        <div className="container">
-          <div className="max-w-2xl mx-auto text-center space-y-6">
-            <h2 className="font-display text-2xl md:text-3xl font-semibold text-primary">{t.index.needHelp}</h2>
-            <Button asChild size="lg" className="mt-4">
-              <Link to="/resources">
-                {t.index.protectYourself}
-                <ArrowDown className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
     </Layout>
   );
 }
