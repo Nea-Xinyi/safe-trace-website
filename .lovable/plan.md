@@ -1,40 +1,33 @@
-## Plan: Restore Title Spacing + Add Dark Mode
 
-### 1. Restore Purpose Page Title Spacing
 
-The hero section on the Our Purpose page was previously compressed too aggressively. The section titles ("What We Saw", "What Was Missing", etc.) should remain in their current positions within the cards -- the issue is the gap between the hero title and the first card module. I'll restore more natural padding to the hero section (back to something like `py-12 md:py-16`) while keeping the card-to-card spacing tight.
+## Plan: Replace SafeTrace App Placeholder with Links to Live App
 
-### 2. Add Dark Mode Toggle
+The SafeTrace App is now live at **app.safetrace.ca**. The current site has a placeholder page and an internal floating button — both should point users to the live app instead.
 
-A dark/light mode toggle will be added to the header (next to the accessibility controls) across the entire site.
+### Changes
 
-**What changes:**
+**1. Update the floating button (Layout.tsx)**
+Change the persistent bottom-right button from an internal `<Link to="/safetrace-app">` to an external `<a href="https://app.safetrace.ca">` that opens in a new tab.
 
-- **New component**: `src/components/layout/ThemeToggle.tsx` -- a simple Sun/Moon icon button that toggles a `dark` class on the `<html>` element and persists the choice in localStorage.
-- **Header update** (`src/components/layout/Header.tsx`): Add the ThemeToggle button next to AccessibilityControls.
-- **Homepage header** (`src/pages/Index.tsx`): Add the ThemeToggle button to the homepage's custom header bar as well.
+**2. Update the SafeTrace App page (SafeTraceApp.tsx)**
+- Replace the "Coming Soon" bottom section with a prominent CTA button linking to `https://app.safetrace.ca` (e.g. "Launch SafeTrace App" / "Try It Now").
+- Keep the how-it-works steps and feature cards — they serve as a useful explainer before users go to the live app.
+- Add a secondary CTA at the top hero section as well, so users can go straight to the app.
 
-### 3. Dark Mode Color Tuning
+**3. Update the homepage card (Index.tsx)**
+The SafeTrace App card in the "See what we're building" grid currently links to `/safetrace-app`. Keep it linking to the internal explainer page (so users learn about it first), but optionally the card description can be updated to reflect that the app is now live.
 
-Update the `.dark` CSS variables in `src/index.css`:
+**4. Update translations (all 6 i18n files)**
+- Replace `comingSoonTitle`, `comingSoonDesc`, and `launchComingSoon` with new "live" text, e.g.:
+  - `launchTitle`: "Try SafeTrace App"
+  - `launchDesc`: "The SafeTrace App is live. Scan your photos for hidden risks before you post — free, private, and built for survivors."
+  - `launchButton`: "Launch SafeTrace App"
+- Update `safeTraceAppDesc` on the homepage to reflect the app is live.
+- Translate equivalents for FR, ZH, AR, ES, IT.
 
-- **Background**: Very dark grey/near-black (e.g., `0 0% 7%` or similar)
-- **Primary (purple)**: Switch to a light pastel purple (e.g., `270 60% 78%`) so it reads clearly on the dark background
-- **Card, popover backgrounds**: Dark grey and purple tones
-- **Foreground text**: Light grey/white for readability
-- **Muted foreground**: Lighter value so text remains legible
+### Files to modify
+- `src/components/layout/Layout.tsx` — external link
+- `src/pages/SafeTraceApp.tsx` — replace coming soon with live CTA
+- `src/pages/Index.tsx` — update card description
+- `src/i18n/en.ts`, `fr.ts`, `zh.ts`, `ar.ts`, `es.ts`, `it.ts` — updated copy
 
----
-
-### Technical Details
-
-**Files to create:**
-
-- `src/components/layout/ThemeToggle.tsx` -- Toggle button using `Sun`/`Moon` icons from lucide-react. Reads/writes `localStorage` for persistence and toggles the `dark` class on `document.documentElement`.
-
-**Files to modify:**
-
-- `src/index.css` -- Update `.dark` block with very dark grey background and pastel purple primary colors
-- `src/components/layout/Header.tsx` -- Import and render `ThemeToggle` next to `AccessibilityControls`
-- `src/pages/Index.tsx` -- Add `ThemeToggle` to the homepage's custom header controls
-- `src/pages/Purpose.tsx` -- Restore hero section padding to `py-12 md:py-16` to give proper spacing between the page title and the content modules below
