@@ -228,6 +228,8 @@ export const es = {
     whoWeAreContent: 'Somos mujeres jóvenes que se cansaron de esperar a que alguien más lo arreglara. Somos investigadoras, diseñadoras y defensoras construyendo lo que el sistema nunca hizo: un estándar para la seguridad digital que centra a las sobrevivientes en lugar de las corporaciones. Creemos que las mujeres no deberían tener que elegir entre participar en línea y estar seguras.',
     closingTitle: 'Esto es solo el comienzo.',
     closingDesc: 'Safe Trace es un proyecto vivo — moldeado por la investigación, la retroalimentación de sobrevivientes y la creencia de que la seguridad digital es un derecho, no un privilegio.',
+    asSeenOn: 'Visto en las noticias',
+    watchFeature: 'Ver el reportaje',
   },
 
   // Businesses

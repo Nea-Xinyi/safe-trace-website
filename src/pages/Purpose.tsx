@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Layout } from '@/components/layout/Layout';
-import { Eye, ShieldOff, Lock, Users } from 'lucide-react';
+import { Eye, ShieldOff, Lock, Users, Play } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Purpose() {
@@ -43,6 +43,23 @@ export default function Purpose() {
               <p className="text-muted-foreground leading-relaxed text-lg pl-14">{section.content}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="py-8 md:py-12">
+        <div className="container max-w-3xl">
+          <div className="rounded-2xl border border-primary/20 bg-primary/5 dark:bg-primary/10 p-6 md:p-8 text-center space-y-4">
+            <h2 className="font-display text-2xl md:text-3xl font-semibold text-primary">{t.purpose.asSeenOn}</h2>
+            <a
+              href="https://www.youtube.com/watch?v=Rc__RPQCoyE"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors"
+            >
+              <Play className="h-4 w-4 fill-current" />
+              {t.purpose.watchFeature}
+            </a>
+          </div>
         </div>
       </section>
 
