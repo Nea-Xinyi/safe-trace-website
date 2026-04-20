@@ -1,10 +1,14 @@
 import { useEffect } from 'react';
 import { Layout } from '@/components/layout/Layout';
 import { Eye, ShieldOff, Lock, Users, Play } from 'lucide-react';
+import { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
+
+const VIDEO_ID = 'Rc__RPQCoyE';
 
 export default function Purpose() {
   const { t } = useLanguage();
+  const [playing, setPlaying] = useState(false);
 
   const sections = [
     { icon: Eye, title: t.purpose.whatWeSaw, color: 'bg-destructive/5 dark:bg-destructive/10 border-destructive/15', iconBg: 'bg-destructive/10', iconColor: 'text-destructive', content: t.purpose.whatWeSawContent },
@@ -32,6 +36,44 @@ export default function Purpose() {
         </div>
       </section>
 
+      <section className="py-8 md:py-10">
+        <div className="container max-w-3xl space-y-4">
+          <h2 className="font-display text-2xl md:text-3xl font-semibold text-primary text-center">{t.purpose.asSeenOn}</h2>
+          <div className="relative w-full overflow-hidden rounded-2xl border border-primary/20 shadow-lg aspect-video bg-black">
+            {playing ? (
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src={`https://www.youtube.com/embed/${VIDEO_ID}?autoplay=1&rel=0`}
+                title="SafeTrace news feature"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            ) : (
+              <button
+                type="button"
+                onClick={() => setPlaying(true)}
+                className="group absolute inset-0 w-full h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                aria-label={t.purpose.watchFeature}
+              >
+                <img
+                  src={`https://i.ytimg.com/vi/${VIDEO_ID}/maxresdefault.jpg`}
+                  onError={(e) => { (e.currentTarget as HTMLImageElement).src = `https://i.ytimg.com/vi/${VIDEO_ID}/hqdefault.jpg`; }}
+                  alt={t.purpose.watchFeature}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="flex items-center justify-center w-20 h-20 rounded-full bg-primary text-primary-foreground shadow-2xl transition-transform duration-300 group-hover:scale-110">
+                    <Play className="h-8 w-8 fill-current ml-1" />
+                  </div>
+                </div>
+              </button>
+            )}
+          </div>
+        </div>
+      </section>
+
       <section className="py-2 md:py-4">
         <div className="container max-w-3xl space-y-5">
           {sections.map((section, i) => (
@@ -43,23 +85,6 @@ export default function Purpose() {
               <p className="text-muted-foreground leading-relaxed text-lg pl-14">{section.content}</p>
             </div>
           ))}
-        </div>
-      </section>
-
-      <section className="py-8 md:py-12">
-        <div className="container max-w-3xl">
-          <div className="rounded-2xl border border-primary/20 bg-primary/5 dark:bg-primary/10 p-6 md:p-8 text-center space-y-4">
-            <h2 className="font-display text-2xl md:text-3xl font-semibold text-primary">{t.purpose.asSeenOn}</h2>
-            <a
-              href="https://www.youtube.com/watch?v=Rc__RPQCoyE"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors"
-            >
-              <Play className="h-4 w-4 fill-current" />
-              {t.purpose.watchFeature}
-            </a>
-          </div>
         </div>
       </section>
 
