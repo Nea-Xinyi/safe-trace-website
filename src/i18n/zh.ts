@@ -228,6 +228,8 @@ export const zh = {
     whoWeAreContent: '我们是厌倦了等待别人来解决问题的年轻女性。我们是研究人员、设计师和倡导者，正在构建系统从未做过的事情——一个以幸存者而非企业为中心的数字安全标准。我们相信女性不应该在参与网络世界和保持安全之间做出选择。',
     closingTitle: '这仅仅是开始。',
     closingDesc: 'Safe Trace是一个活的项目——由研究、幸存者反馈以及数字安全是权利而非特权的信念所塑造。',
+    asSeenOn: '新闻报道',
+    watchFeature: '观看报道',
   },
 
   // Businesses

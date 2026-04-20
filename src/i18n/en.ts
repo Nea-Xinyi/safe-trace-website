@@ -228,6 +228,8 @@ export const en = {
     whoWeAreContent: "We are young women who got tired of waiting for someone else to fix it. We're researchers, designers, and advocates building what the system never did, which is a standard for digital safety that centers survivors instead of corporations. We believe women shouldn't have to choose between participating online and being safe.",
     closingTitle: 'This is just the beginning.',
     closingDesc: 'Safe Trace is a living project — shaped by research, survivor feedback, and the belief that digital safety is a right, not a privilege.',
+    asSeenOn: 'As seen on the news',
+    watchFeature: 'Watch the feature',
   },
 
   // Businesses
