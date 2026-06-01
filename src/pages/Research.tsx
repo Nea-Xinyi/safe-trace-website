@@ -3,6 +3,7 @@ import { Layout } from '@/components/layout/Layout';
 import { BookOpen, BarChart3, FileDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
+import literatureReview from '@/assets/Literature_Review.pdf.asset.json';
 
 const statColors = [
   'bg-destructive/5 dark:bg-destructive/10 border-destructive/15',
@@ -70,7 +71,12 @@ export default function Research() {
           <div className="p-2.5 rounded-full bg-primary/10 w-fit mx-auto"><FileDown className="h-5 w-5 text-primary" /></div>
           <h2 className="font-display text-2xl md:text-3xl font-semibold text-primary">{t.research.downloadTitle}</h2>
           <p className="text-muted-foreground max-w-md mx-auto">{t.research.downloadDesc}</p>
-          <Button size="lg" variant="outline" disabled>{t.research.comingSoon}</Button>
+          <Button size="lg" asChild>
+            <a href={literatureReview.url} target="_blank" rel="noopener noreferrer" download>
+              <FileDown className="mr-2 h-4 w-4" />
+              {t.research.downloadTitle}
+            </a>
+          </Button>
         </div>
       </section>
     </Layout>
